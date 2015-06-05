@@ -94,3 +94,5 @@ func build(pattern string) *regexp.Regexp {
 	}
 	return re
 }
+
+// refactor: rename tests for clarity
