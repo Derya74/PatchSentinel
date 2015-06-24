@@ -27,3 +27,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - sensitive-path detection via a `**` glob matcher,
     - explainable large-change review-cost estimate,
     - a stable SHA-256 content hash for reproducibility.
+  - Policy engine with a built-in default policy and a JSON loader that
+    overlays partial policies and rejects unknown fields.
+  - Verdict model (`pass` / `warn` / `fail`) mapped to exit codes `0` / `1` / `2`,
+    with a `-strict` mode that escalates warnings to failures.
+  - Output formats: `json`, `text`, `markdown`, `annotations`.
+- **TypeScript renderer (`web/`)** - zero runtime dependencies:
+  - Self-contained HTML report (inline CSS, no network assets).
+  - GitHub-style Markdown check summary.
+  - GitHub Actions annotation formatter (`::error` / `::warning`).
