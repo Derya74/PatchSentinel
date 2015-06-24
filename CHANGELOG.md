@@ -36,3 +36,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Self-contained HTML report (inline CSS, no network assets).
   - GitHub-style Markdown check summary.
   - GitHub Actions annotation formatter (`::error` / `::warning`).
+  - Node CLI reading the Go JSON from a file or stdin.
+- Example diffs (`clean`, `risky`, `generated`) and a sample strict policy.
+- Documentation: rich `README.md` with Mermaid diagrams, `docs/POLICY.md`.
+- Tooling: `Makefile`, GitHub Actions CI, `.gitignore`, MIT `LICENSE`.
+- Focused test suites for Go (parser, glob, analyzer, policy, render, CLI) and
+  TypeScript (renderer, formatter, arg parsing, injection safety).
+
+## [0.9.0] - 2026-05-12
+
