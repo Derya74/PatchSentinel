@@ -54,3 +54,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- The review-cost estimate is now reported per file in the JSON payload, not
+  only as a total, so a reviewer can see which file carries the cost.
+
+## [0.8.0] - 2026-01-20
+
+### Added
+
+- Repetition signal: fraction of added meaningful production lines that are
+  duplicates of an earlier line in the same change, reported as
