@@ -45,3 +45,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.9.0] - 2026-05-12
 
+### Added
+
+- `-strict` flag: promote a `warn` verdict to exit code `2` without editing
+  the policy, so warnings can block a pipeline outright.
+- `annotations` output format emitting `::error` / `::warning` workflow
+  commands, with `%` and newline escaping.
+
+### Changed
+
