@@ -71,3 +71,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Trivial lines (braces, blanks, sub-4-character lines) no longer count
   towards the repetition ratio, which was inflated by boilerplate braces.
 
+## [0.7.0] - 2025-11-04
+
+### Added
+
+- Sensitive-path detection with a dedicated `**` glob matcher
+  (`internal/glob`), matching paths segment-wise with `/` separators and
+  normalizing Windows `\` to `/`.
+- `sensitivePathIsWarning` policy switch so a repo can route sensitive files
+  to a domain owner instead of blocking the merge.
