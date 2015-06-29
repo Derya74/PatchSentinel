@@ -63,3 +63,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Repetition signal: fraction of added meaningful production lines that are
   duplicates of an earlier line in the same change, reported as
+  `repetitionRatio` and gated at `maxRepetitionRatio`.
+- `examples/generated.diff` - a uniform file that trips the repetition gate.
+
+### Fixed
+
+- Trivial lines (braces, blanks, sub-4-character lines) no longer count
+  towards the repetition ratio, which was inflated by boilerplate braces.
+
