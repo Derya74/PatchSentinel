@@ -80,3 +80,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   normalizing Windows `\` to `/`.
 - `sensitivePathIsWarning` policy switch so a repo can route sensitive files
   to a domain owner instead of blocking the merge.
+
+## [0.6.0] - 2025-06-18
+
+### Added
+
+- Policy overlays loaded from JSON: fields you omit keep their built-in
+  defaults, unknown fields are rejected so typos fail loudly.
+- `examples/policy.strict.json` - tightened thresholds for demonstration.
+
