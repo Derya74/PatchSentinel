@@ -89,3 +89,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   defaults, unknown fields are rejected so typos fail loudly.
 - `examples/policy.strict.json` - tightened thresholds for demonstration.
 
+### Changed
+
+- The report carries a SHA-256 content hash, making identical input produce
+  byte-identical, cacheable output.
+
+## [0.5.0] - 2024-10-08
+
+### Added
+
