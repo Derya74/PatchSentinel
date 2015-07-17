@@ -18,3 +18,5 @@
 }
 
 // feat: cache parsed internal/glob
+
+// perf: reduce allocations in benches
