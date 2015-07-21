@@ -107,3 +107,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Verdict model and exit-code contract (`0` pass, `1` warn, `2` fail), with
+  exit code `2` reused for operational errors such as an unreadable policy.
+- GitHub-style Markdown report (`-format markdown`) for the job summary.
+
+## [0.3.0] - 2023-05-23
+
+### Added
+
+- Stable JSON report schema consumed by the renderer, documented against
