@@ -98,3 +98,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Test-to-code ratio signal, only evaluated once the change crosses
+  `minProductionLinesForTestCheck`, so a one-line diff is never nagged.
+- Explainable review-cost estimate: added lines, removed lines, per-file
+  overhead, multiplied by a sensitive-path factor.
+
+## [0.4.0] - 2024-02-19
+
+### Added
+
