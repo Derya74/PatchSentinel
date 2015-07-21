@@ -125,3 +125,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - First Go implementation: the diff parser, risk-pattern engine and analyzer
   move off the Python prototype into a single standard-library-only binary.
+- Weighted risk patterns (`hardcoded-secret`, `disable-tls`, `eval-usage`,
+  `sql-format`, `shell-exec`, `wildcard-cors`, `unsafe-yaml`, `broad-except`,
+  `todo-marker`, `debug-print`).
+
+### Removed
+
+- The Python prototype and its packaging (`setup.py`, `requirements.txt`);
+  the Go binary replaces it entirely.
+
