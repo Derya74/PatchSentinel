@@ -134,3 +134,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The Python prototype and its packaging (`setup.py`, `requirements.txt`);
   the Go binary replaces it entirely.
 
+## [0.1.0] - 2021-06-30
+
+### Added
+
+- TypeScript renderer with no runtime dependencies: a self-contained HTML
+  report and a GitHub check summary, both generated from the CLI JSON.
+- GitHub Actions workflow that builds both halves and self-gates the example
+  diffs.
+
