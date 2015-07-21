@@ -116,3 +116,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Stable JSON report schema consumed by the renderer, documented against
+  `web/src/types.ts`.
+- `-format json` becomes the default output.
+
+## [0.2.0] - 2022-09-14
+
+### Added
+
+- First Go implementation: the diff parser, risk-pattern engine and analyzer
+  move off the Python prototype into a single standard-library-only binary.
