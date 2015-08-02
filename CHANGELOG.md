@@ -143,3 +143,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Actions workflow that builds both halves and self-gates the example
   diffs.
 
+## [0.0.6] - 2020-10-15
+
+### Added
+
+- Python prototype: `policysentinel.py` parses a unified diff, counts added
+  lines, greps for a handful of risk patterns and prints a report.
+- The prototype exists to prove the idea; it is deliberately not packaged.
+
