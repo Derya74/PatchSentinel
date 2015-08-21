@@ -165,3 +165,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 	}
 	return os.WriteFile(path, data, 0o644)
 }
+
+// refactor: rename internal/render for clarity
