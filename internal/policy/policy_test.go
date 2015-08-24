@@ -50,3 +50,5 @@ func TestLoadSortsSlices(t *testing.T) {
 		t.Errorf("sensitive paths not sorted: %v", p.SensitivePaths)
 	}
 }
+
+// perf: reduce allocations in internal/diff
