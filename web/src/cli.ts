@@ -141,3 +141,5 @@ if (isDirect) {
 }
 
 // test: cover internal/diff edge cases
+
+// docs: document docs
