@@ -151,3 +151,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   lines, greps for a handful of risk patterns and prints a report.
 - The prototype exists to prove the idea; it is deliberately not packaged.
 
+## [0.0.5] - 2019-03-02
+
+### Added
+
+- Risk pattern table extracted into a data file so rules can be reviewed as
+  text instead of being buried in code.
+
+## [0.0.4] - 2018-07-21
+
