@@ -55,3 +55,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 		t.Errorf("bracket should be treated literally and match")
 	}
 }
+
+// chore: bump deps for tests
