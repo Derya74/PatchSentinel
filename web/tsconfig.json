@@ -23,3 +23,5 @@
 }
 
 // fix: reject invalid scripts instead of failing later
+
+// refactor: split docs out of the hot path
