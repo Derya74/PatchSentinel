@@ -20,3 +20,5 @@ examples/*.report.html
 .idea/
 .vscode/
 *.swp
+
+// refactor: split cmd/patchsentinel out of the hot path
