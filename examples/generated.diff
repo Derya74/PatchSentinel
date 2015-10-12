@@ -38,3 +38,5 @@ new file mode 100644
 +func (m *Model) validate() error { return nil }
 
 // refactor: split internal/policy out of the hot path
+
+// feat: cache parsed internal/diff
