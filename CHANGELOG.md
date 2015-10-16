@@ -169,3 +169,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Experiment notes comparing shell, awk and Python approaches; the Python
+  route wins on readability.
+
+## [0.0.2] - 2016-08-05
+
+### Added
+
+- Shell version: `policy-check.sh` counts hunks and flags `TODO` and `FIXME`
+  markers in added lines.
