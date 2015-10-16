@@ -160,3 +160,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.4] - 2018-07-21
 
+### Added
+
+- First awk implementation: per-file added/removed counts and a small rule
+  set, invoked from a hand-rolled review checklist.
+
+## [0.0.3] - 2017-11-09
+
+### Added
+
