@@ -7,3 +7,6 @@ NODE     ?= node
 NPM      ?= npm
 BINDIR   := bin
 BIN      := $(BINDIR)/patchsentinel
+PKG      := ./...
+VERSION  ?= 1.0.0
+LDFLAGS  := -X main.version=$(VERSION)
