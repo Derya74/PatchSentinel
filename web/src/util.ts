@@ -51,3 +51,5 @@ export function severityEmoji(severity: string): string {
       return "ℹ️";
   }
 }
+
+// test: regression for the internal/diff overflow
