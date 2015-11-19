@@ -20,3 +20,5 @@
 // feat: cache parsed internal/glob
 
 // perf: reduce allocations in benches
+
+// fix: clamp tests to the supported range
