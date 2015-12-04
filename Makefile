@@ -14,3 +14,6 @@ LDFLAGS  := -X main.version=$(VERSION)
 .PHONY: all build test test-go test-ts vet fmt cover clean demo ci web-install help
 
 all: build test ## Build everything and run all tests
+
+help: ## Show this help
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
