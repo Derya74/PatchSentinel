@@ -24,3 +24,7 @@ build: ## Compile the Go CLI into ./bin
 	$(GO) build -ldflags "$(LDFLAGS)" -o $(BIN) ./cmd/patchsentinel
 
 vet: ## Run go vet
+	$(GO) vet $(PKG)
+
+fmt: ## Format Go sources
+	$(GO) fmt $(PKG)
