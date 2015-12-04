@@ -21,3 +21,6 @@ help: ## Show this help
 
 build: ## Compile the Go CLI into ./bin
 	@mkdir -p $(BINDIR)
+	$(GO) build -ldflags "$(LDFLAGS)" -o $(BIN) ./cmd/patchsentinel
+
+vet: ## Run go vet
