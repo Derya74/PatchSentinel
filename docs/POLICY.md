@@ -125,3 +125,5 @@ It is intentionally conservative so the tool is useful with no configuration.
 Override only the fields you need.
 
 > feat: add tests handling
+
+> docs: add an example for tests
