@@ -28,3 +28,6 @@ vet: ## Run go vet
 
 fmt: ## Format Go sources
 	$(GO) fmt $(PKG)
+
+test-go: ## Run Go tests
+	$(GO) test $(PKG)
