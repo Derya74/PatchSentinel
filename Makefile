@@ -41,3 +41,7 @@ web-install: ## Install TypeScript dev dependencies
 
 test-ts: web-install ## Type-check, build and test the TypeScript renderer
 	cd web && $(NPM) test
+
+test: test-go test-ts ## Run all tests (Go + TypeScript)
+
+demo: build test-ts ## Produce demo reports from example diffs
