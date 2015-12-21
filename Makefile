@@ -38,3 +38,6 @@ cover: ## Run Go tests with coverage report
 
 web-install: ## Install TypeScript dev dependencies
 	cd web && $(NPM) install --no-audit --no-fund
+
+test-ts: web-install ## Type-check, build and test the TypeScript renderer
+	cd web && $(NPM) test
