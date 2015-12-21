@@ -31,3 +31,7 @@ fmt: ## Format Go sources
 
 test-go: ## Run Go tests
 	$(GO) test $(PKG)
+
+cover: ## Run Go tests with coverage report
+	$(GO) test -coverprofile=coverage.out $(PKG)
+	$(GO) tool cover -func=coverage.out
