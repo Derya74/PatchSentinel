@@ -35,3 +35,6 @@ test-go: ## Run Go tests
 cover: ## Run Go tests with coverage report
 	$(GO) test -coverprofile=coverage.out $(PKG)
 	$(GO) tool cover -func=coverage.out
+
+web-install: ## Install TypeScript dev dependencies
+	cd web && $(NPM) install --no-audit --no-fund
