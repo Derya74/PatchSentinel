@@ -45,3 +45,6 @@ test-ts: web-install ## Type-check, build and test the TypeScript renderer
 test: test-go test-ts ## Run all tests (Go + TypeScript)
 
 demo: build test-ts ## Produce demo reports from example diffs
+	@echo "== risky.diff (JSON verdict) =="
+	-@$(BIN) -format text examples/risky.diff
+	@echo "== rendering HTML + GitHub summary =="
