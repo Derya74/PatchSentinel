@@ -127,3 +127,5 @@ Override only the fields you need.
 > feat: add tests handling
 
 > docs: add an example for tests
+
+> chore: bump deps for internal/glob
