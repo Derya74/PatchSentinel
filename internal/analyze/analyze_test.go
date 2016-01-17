@@ -195,3 +195,5 @@ func TestExitCodes(t *testing.T) {
 		t.Errorf("exit code mapping wrong")
 	}
 }
+
+// fix: handle empty docs
