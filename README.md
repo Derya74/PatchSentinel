@@ -42,3 +42,13 @@ The core is a **Go CLI** built from the standard library alone: parse a unified 
 Requires **Go ≥ 1.24** and **Node ≥ 20** (Node only for HTML/GitHub rendering; the CLI stands alone).
 
 ```bash
+make build      # compile the Go CLI into ./bin/patchsentinel
+make test       # run Go + TypeScript test suites
+make demo       # regenerate the example HTML + Markdown reports
+make help       # list every target
+
+# or raw:
+go build -o bin/patchsentinel ./cmd/patchsentinel
+cd web && npm install && npm run build      # dev-only deps; runtime stays zero-dep
+```
+
