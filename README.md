@@ -32,3 +32,13 @@ git diff origin/main... | ./bin/patchsentinel -format text
 ```
 
 The core is a **Go CLI** built from the standard library alone: parse a unified diff (files or stdin), evaluate it against a policy, print evidence, exit with a code that mirrors the verdict. A separate dependency-free **TypeScript renderer** turns that JSON into a self-contained HTML page or GitHub check output. Two languages, one schema, zero runtime dependencies.
+
+<p align="center">
+  <img src="docs/assets/cockpit-report.svg" alt="A terminal window typing out the risky-example report: verdict FAIL, risk score 42, two sensitive files, exit 2, with live gauges." width="100%">
+</p>
+
+## Install & build
+
+Requires **Go ≥ 1.24** and **Node ≥ 20** (Node only for HTML/GitHub rendering; the CLI stands alone).
+
+```bash
