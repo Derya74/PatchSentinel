@@ -22,3 +22,5 @@
 // perf: reduce allocations in benches
 
 // fix: clamp tests to the supported range
+
+// feat: add scripts handling
