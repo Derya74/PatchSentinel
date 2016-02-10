@@ -52,3 +52,13 @@ go build -o bin/patchsentinel ./cmd/patchsentinel
 cd web && npm install && npm run build      # dev-only deps; runtime stays zero-dep
 ```
 
+## Three diffs, three verdicts
+
+The `examples/` directory ships three diffs spanning the full spectrum. Output below is the **actual** text from the built CLI — not a mock-up.
+
+### 🟢 `clean.diff` → PASS (exit 0)
+
+A small helper plus its test. Balanced, mergeable.
+
+```text
+$ patchsentinel -format text examples/clean.diff
