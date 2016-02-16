@@ -62,3 +62,13 @@ A small helper plus its test. Balanced, mergeable.
 
 ```text
 $ patchsentinel -format text examples/clean.diff
+Verdict: PASS
+------------------------------------------------------------
+Files changed      : 2
+Lines +/-          : +23 / -0
+Production added   : 11
+Test added         : 12
+Test-to-code ratio : 1.09
+Risk score         : 0
+Repetition ratio   : 0.00
+Sensitive files    : 0
