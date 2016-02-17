@@ -72,3 +72,13 @@ Test-to-code ratio : 1.09
 Risk score         : 0
 Repetition ratio   : 0.00
 Sensitive files    : 0
+Est. review time   : 11 min
+
+Findings:
+  [INFO] No policy violations detected
+    All configured gates passed.
+
+Files:
+  modified  +11   -0    pkg/mathutil/mathutil.go
+  added     +12   -0    pkg/mathutil/mathutil_test.go  (test)
+```
