@@ -82,3 +82,13 @@ Files:
   modified  +11   -0    pkg/mathutil/mathutil.go
   added     +12   -0    pkg/mathutil/mathutil_test.go  (test)
 ```
+
+### 🔴 `risky.diff` → FAIL (exit 2)
+
+Hardcoded secrets, `eval`, string-built SQL, wildcard CORS, a TODO, plus edits to an auth service and a CI workflow. Two hard gates trip.
+
+```text
+$ patchsentinel -format text examples/risky.diff
+Verdict: FAIL
+------------------------------------------------------------
+Files changed      : 2
