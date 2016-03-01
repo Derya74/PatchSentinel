@@ -92,3 +92,13 @@ $ patchsentinel -format text examples/risky.diff
 Verdict: FAIL
 ------------------------------------------------------------
 Files changed      : 2
+Lines +/-          : +27 / -0
+Production added   : 27
+Test added         : 0
+Test-to-code ratio : 0.00
+Risk score         : 42
+Repetition ratio   : 0.00
+Sensitive files    : 2
+Est. review time   : 18 min
+
+Findings:
