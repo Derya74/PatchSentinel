@@ -102,3 +102,13 @@ Sensitive files    : 2
 Est. review time   : 18 min
 
 Findings:
+  [ERROR] Risk score exceeds maximum
+    Cumulative risk score 42 ≥ max 25.
+  [ERROR] Sensitive paths modified
+    2 sensitive file(s) changed; require domain-owner review.
+
+Risk signals:
+  (w10 x2) hardcoded-secret [services/auth/login.go] Possible hardcoded secret
+    var apiKey = "sk_live_51H8xYzABCDEFghijklmnop"
+  (w8 x1) eval-usage [services/auth/login.go] Dynamic code evaluation via eval()
+    eval("dangerousDynamicCode()")
