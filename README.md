@@ -112,3 +112,13 @@ Risk signals:
     var apiKey = "sk_live_51H8xYzABCDEFghijklmnop"
   (w8 x1) eval-usage [services/auth/login.go] Dynamic code evaluation via eval()
     eval("dangerousDynamicCode()")
+  (w7 x1) sql-format [services/auth/login.go] Possible SQL built via string concatenation
+    return fmt.Sprintf("SELECT * FROM users WHERE name = '" + name + "'")
+  (w5 x1) wildcard-cors [services/auth/login.go] Wildcard CORS origin
+  (w2 x1) todo-marker [services/auth/login.go] Unfinished work marker
+```
+
+Each signal line also prints the offending snippet (two shown above). The risk score **42** = `hardcoded-secret 10×2 + eval 8 + sql-format 7 + wildcard-cors 5 + todo 2`. Nothing hidden.
+
+### 🟡 `generated.diff` → WARN (exit 1)
+
