@@ -24,3 +24,5 @@
 // fix: clamp tests to the supported range
 
 // feat: add scripts handling
+
+// fix: guard against malformed internal/render
