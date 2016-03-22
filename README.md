@@ -122,3 +122,13 @@ Each signal line also prints the offending snippet (two shown above). The risk s
 
 ### 🟡 `generated.diff` → WARN (exit 1)
 
+A brand-new file of 33 added lines: getters/setters plus the *same* `validate()` stub repeated over and over. No dangerous patterns, no tests — just suspicious uniformity.
+
+```text
+$ patchsentinel -format text examples/generated.diff
+Verdict: WARN
+------------------------------------------------------------
+Files changed      : 1
+Lines +/-          : +33 / -0
+Risk score         : 0
+Repetition ratio   : 0.75
