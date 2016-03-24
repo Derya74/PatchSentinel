@@ -132,3 +132,13 @@ Files changed      : 1
 Lines +/-          : +33 / -0
 Risk score         : 0
 Repetition ratio   : 0.75
+Sensitive files    : 0
+Est. review time   : 12 min
+
+Findings:
+  [WARN] High repetition in added code
+    Repetition ratio 0.75 ≥ 0.60 suggests boilerplate or generated code that needs closer review.
+```
+
+That `0.75` is the fraction of added *meaningful* production lines that are duplicates — the closest thing to a "smells machine-made" signal, phrased as a nudge, not an accusation.
+
