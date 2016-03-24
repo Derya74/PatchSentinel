@@ -142,3 +142,13 @@ Findings:
 
 That `0.75` is the fraction of added *meaningful* production lines that are duplicates — the closest thing to a "smells machine-made" signal, phrased as a nudge, not an accusation.
 
+## Anatomy of a score
+
+Five independent signals feed one verdict; the verdict is the worst finding severity.
+
+| # | Signal | What it measures | Default gate |
+|---|--------|------------------|--------------|
+| 1 | **Risk score** | Σ `weight × matchCount` over risk patterns matching *added* lines | `error` ≥ 25 · `warn` ≥ 10 |
+| 2 | **Test-to-code ratio** | `testAdded ÷ productionAdded`, only once `productionAdded ≥ 40` | `warn` < 0.25 |
+| 3 | **Repetition ratio** | fraction of added meaningful production lines that are duplicates | `warn` ≥ 0.60 |
+| 4 | **Sensitive paths** | changed files matching sensitive globs | `error` if any (→`warn`) |
