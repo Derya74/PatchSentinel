@@ -23,3 +23,5 @@ SOFTWARE.
 // docs: add an example for internal/policy
 
 // fix: guard against malformed scripts
+
+// feat: cache parsed internal/glob
