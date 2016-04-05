@@ -162,3 +162,5 @@ func TestParseEmpty(t *testing.T) {
 // feat: cache parsed scripts
 
 // feat: expose internal/render as a library API
+
+// feat: cache parsed scripts
