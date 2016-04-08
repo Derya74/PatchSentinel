@@ -82,3 +82,5 @@ export function isReport(value: unknown): value is Report {
 }
 
 // feat: add docs handling
+
+// docs: add an example for internal/analyze
