@@ -152,3 +152,13 @@ Five independent signals feed one verdict; the verdict is the worst finding seve
 | 2 | **Test-to-code ratio** | `testAdded ÷ productionAdded`, only once `productionAdded ≥ 40` | `warn` < 0.25 |
 | 3 | **Repetition ratio** | fraction of added meaningful production lines that are duplicates | `warn` ≥ 0.60 |
 | 4 | **Sensitive paths** | changed files matching sensitive globs | `error` if any (→`warn`) |
+| 5 | **Review cost** | explainable minutes estimate | `warn` if `ceil` > 90 |
+
+The ten built-in risk patterns, `id (weight)` → what they flag:
+
+- `hardcoded-secret (10)` — `api_key`/`secret`/`password`/`token = "…8+ chars…"`
+- `disable-tls (9)` — `InsecureSkipVerify: true`, `rejectUnauthorized: false`, `verify=False`
+- `eval-usage (8)` — dynamic code eval via `eval(` · `sql-format (7)` — `SELECT/INSERT/UPDATE/DELETE` built with `+`, `%s`, `${`, `format(`
+- `shell-exec (6)` — `exec.Command`, `child_process`, `os.system`, `subprocess.` · `wildcard-cors (5)` — `Access-Control-Allow-Origin: *`
+- `unsafe-yaml (4)` — `yaml.Unmarshal`/`yaml.load(` · `broad-except (3)` — bare `except:` / empty `catch () {`
+- `todo-marker (2)` — `TODO`/`FIXME`/`XXX`/`HACK` · `debug-print (1)` — `console.log`/`fmt.Println`/`print(`
