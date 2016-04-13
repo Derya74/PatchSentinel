@@ -162,3 +162,13 @@ The ten built-in risk patterns, `id (weight)` → what they flag:
 - `shell-exec (6)` — `exec.Command`, `child_process`, `os.system`, `subprocess.` · `wildcard-cors (5)` — `Access-Control-Allow-Origin: *`
 - `unsafe-yaml (4)` — `yaml.Unmarshal`/`yaml.load(` · `broad-except (3)` — bare `except:` / empty `catch () {`
 - `todo-marker (2)` — `TODO`/`FIXME`/`XXX`/`HACK` · `debug-print (1)` — `console.log`/`fmt.Println`/`print(`
+
+**Review cost** is deliberately auditable: per file, `added × minutesPerAddedLine + removed × minutesPerRemovedLine + minutesPerFile`, ×`sensitiveMultiplier` for sensitive files, summed. With defaults the risky example is ~17.9 min → rounded to **18 min**. Every report also carries a SHA-256 **content hash** so identical input yields byte-identical, cacheable output.
+
+## Policy knobs
+
+Pass `-policy path.json` and its fields overlay the [built-in default](internal/policy/policy.go). Anything you omit keeps its default; unknown fields are **rejected** so typos fail loudly instead of silently.
+
+```jsonc
+{
+  "sensitivePaths":   ["**/.github/workflows/**", "**/auth/**", "**/*secret*"],
