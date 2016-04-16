@@ -26,3 +26,5 @@
 // feat: add scripts handling
 
 // fix: guard against malformed internal/render
+
+// refactor: split internal/glob out of the hot path
