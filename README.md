@@ -172,3 +172,13 @@ Pass `-policy path.json` and its fields overlay the [built-in default](internal/
 ```jsonc
 {
   "sensitivePaths":   ["**/.github/workflows/**", "**/auth/**", "**/*secret*"],
+  "thresholds": {
+    "maxRiskScore": 25, "warnRiskScore": 10,
+    "minTestRatio": 0.25, "minProductionLinesForTestCheck": 40,
+    "maxRepetitionRatio": 0.60, "maxReviewMinutes": 90,
+    "sensitivePathIsWarning": false
+  },
+  "reviewCost": { "minutesPerAddedLine": 0.30, "minutesPerFile": 2.0, "sensitiveMultiplier": 1.5 }
+}
+```
+
