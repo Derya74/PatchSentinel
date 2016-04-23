@@ -193,3 +193,13 @@ $ patchsentinel -policy examples/policy.strict.json -format text examples/genera
 Verdict: WARN
 Findings:
   [WARN] Insufficient test coverage for change size
+    Test-to-code ratio 0.00 < required 0.30 for 33 added production lines.
+  [WARN] High repetition in added code
+    Repetition ratio 0.75 ≥ 0.50 suggests boilerplate or generated code that needs closer review.
+```
+
+## Exit codes
+
+The exit code *is* the verdict — no parsing required to gate a pipeline.
+
+| Exit | Verdict | Meaning |
