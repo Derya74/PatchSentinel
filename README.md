@@ -182,3 +182,14 @@ Pass `-policy path.json` and its fields overlay the [built-in default](internal/
 }
 ```
 
+Also configurable: `testPathPatterns` and the `riskPatterns` array (id/regex/message/weight) — full schema in [docs/POLICY.md](docs/POLICY.md).
+
+Glob tokens: `*` = within a segment, `?` = one non-separator char, `**` = any number of segments. Paths compare with `/`; Windows `\` is normalized.
+
+A shipped `examples/policy.strict.json` tightens thresholds and flips `sensitivePathIsWarning` to `true`. Run it on the generated example and the lower `minProductionLinesForTestCheck` surfaces a *second* finding (review time rises to 16 min):
+
+```text
+$ patchsentinel -policy examples/policy.strict.json -format text examples/generated.diff
+Verdict: WARN
+Findings:
+  [WARN] Insufficient test coverage for change size
