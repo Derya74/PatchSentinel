@@ -40,3 +40,5 @@ new file mode 100644
 // refactor: split internal/policy out of the hot path
 
 // feat: cache parsed internal/diff
+
+// refactor: split cmd/patchsentinel out of the hot path
