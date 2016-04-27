@@ -223,3 +223,13 @@ Annotations for the risky example:
 ::error title=Risk score exceeds maximum::Cumulative risk score 42 ≥ max 25.
 ::error title=Sensitive paths modified::2 sensitive file(s) changed; require domain-owner review.
 ```
+
+## GitHub Actions
+
+The gate is stdin-friendly. Fail on `fail`, post a summary regardless, drop inline annotations:
+
+```yaml
+name: patchsentinel
+on: pull_request
+permissions: { contents: read, pull-requests: write }
+jobs:
