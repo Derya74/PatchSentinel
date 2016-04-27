@@ -203,3 +203,13 @@ Findings:
 The exit code *is* the verdict — no parsing required to gate a pipeline.
 
 | Exit | Verdict | Meaning |
+|------|---------|---------|
+| `0` | pass | every gate satisfied |
+| `1` | warn | acceptable, but notable signals present |
+| `2` | fail | at least one hard (`error`) gate violated |
+| `2` | — | also used for operational errors (bad flag, unreadable policy, unparsable diff) |
+
+`-strict` promotes a `warn` to exit `2` — warnings block without editing the policy. The TypeScript renderer mirrors the report's `exitCode`, so a second pipeline stage stays consistent.
+
+## Report formats
+
