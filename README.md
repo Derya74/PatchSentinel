@@ -213,3 +213,13 @@ The exit code *is* the verdict — no parsing required to gate a pipeline.
 
 ## Report formats
 
+**Go CLI** `-format`: `json` (default — canonical schema, [web/src/types.ts](web/src/types.ts)) · `text` (stable CI logs) · `markdown` (GitHub summary / PR comment) · `annotations` (`::error`/`::warning` workflow commands).
+
+**TypeScript renderer** `node web/dist/cli.js --format`: `html` (self-contained page) · `github` (the Markdown summary from JSON) · `annotations` (workflow commands with `%`/newline escaping).
+
+Annotations for the risky example:
+
+```text
+::error title=Risk score exceeds maximum::Cumulative risk score 42 ≥ max 25.
+::error title=Sensitive paths modified::2 sensitive file(s) changed; require domain-owner review.
+```
