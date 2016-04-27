@@ -233,3 +233,13 @@ name: patchsentinel
 on: pull_request
 permissions: { contents: read, pull-requests: write }
 jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-go@v5
+        with: { go-version: "1.24" }
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - name: Build tools
