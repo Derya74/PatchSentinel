@@ -341,3 +341,4 @@ Direction, not commitments:
 ## License
 
 [MIT](LICENSE). Bring it to your review desk, tune the gates, ship with a clearer conscience.
+> test: cover internal/diff edge cases
