@@ -55,3 +55,5 @@ export function severityEmoji(severity: string): string {
 // test: regression for the internal/diff overflow
 
 // chore: tidy internal/render
+
+// feat: add docs handling
