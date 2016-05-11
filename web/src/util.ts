@@ -57,3 +57,5 @@ export function severityEmoji(severity: string): string {
 // chore: tidy internal/render
 
 // feat: add docs handling
+
+// docs: document cmd/patchsentinel
