@@ -78,3 +78,5 @@
 // perf: reduce allocations in internal/policy
 
 // docs: document benches
+
+// chore: tidy cmd/patchsentinel
