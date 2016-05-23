@@ -253,3 +253,13 @@ jobs:
           node web/dist/cli.js --format github      --in report.json >> "$GITHUB_STEP_SUMMARY"
           node web/dist/cli.js --format annotations --in report.json
       - name: Enforce verdict           # non-zero exit fails the job
+        run: ./bin/patchsentinel -format text pr.diff
+```
+
+The `|| true` always renders the summary; `Enforce verdict` blocks the merge (add `-strict` to block on warnings too). This repo's [`.github/workflows/ci.yml`](.github/workflows/ci.yml) self-gates the examples the same way.
+
+## Triage playbooks
+
+What a maintainer should actually *do* with each stamp.
+
+- **🟢 PASS** — review as normal. Not a correctness proof; it means the load-bearing checks are green.
