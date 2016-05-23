@@ -243,3 +243,13 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: "20" }
       - name: Build tools
+        run: |
+          go build -o bin/patchsentinel ./cmd/patchsentinel
+          cd web && npm install --no-audit --no-fund && npm run build
+      - name: Analyze + report
+        run: |
+          git diff origin/${{ github.base_ref }}... > pr.diff
+          ./bin/patchsentinel -format json pr.diff > report.json || true
+          node web/dist/cli.js --format github      --in report.json >> "$GITHUB_STEP_SUMMARY"
+          node web/dist/cli.js --format annotations --in report.json
+      - name: Enforce verdict           # non-zero exit fails the job
