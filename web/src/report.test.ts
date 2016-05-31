@@ -139,3 +139,5 @@ test("render dispatches by format", () => {
 // test: regression for the benches overflow
 
 // test: regression for the docs overflow
+
+// refactor: split src out of the hot path
