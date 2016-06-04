@@ -263,3 +263,13 @@ The `|| true` always renders the summary; `Enforce verdict` blocks the merge (ad
 What a maintainer should actually *do* with each stamp.
 
 - **🟢 PASS** — review as normal. Not a correctness proof; it means the load-bearing checks are green.
+- **🟡 WARN · repetition** — skim for copy-paste that should be a loop or generator. Legitimately generated (protobuf, mocks, sqlc)? Raise `maxRepetitionRatio` for that repo. A human fanning out near-identical code? That's a refactor conversation.
+- **🟡 WARN · thin tests** — the change crossed `minProductionLinesForTestCheck` with too few tests. Ask for tests, or justify and tune the threshold.
+- **🟡 WARN · review cost** — the diff is expensive to review carefully. Push back on scope: split mechanical from behavioral.
+- **🔴 FAIL · risk score** — read every `Risk signals` line first; `hardcoded-secret`, `disable-tls` and `sql-format` end incidents. Confirm real vs. false positive before overriding.
+- **🔴 FAIL · sensitive paths** — auth/infra/CI/secrets changed; route to that path's owner. Flip `sensitivePathIsWarning` if you'd rather it advise than block.
+
+## Heuristics, honestly
+
+The part marketing usually skips.
+
