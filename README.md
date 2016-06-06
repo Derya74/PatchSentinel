@@ -283,3 +283,13 @@ The part marketing usually skips.
 - **Binary files** are tracked (flagged `binary`) but not line-scanned — they add file-level review cost only.
 - **Renames** are detected and reported with `oldPath`; **deletions** never trip risk patterns (only *added* lines are scanned) and cost less.
 - **Tiny diffs** skip the test-ratio gate entirely — below `minProductionLinesForTestCheck` (default 40) a one-liner is never nagged for missing tests.
+- **Trivial lines** (`{`, `}`, blanks, sub-4-char lines) are excluded from repetition analysis so braces don't inflate the ratio.
+- **Zero production, some tests** → ratio `1` by definition; **zero of both** → `0`.
+- **Invalid regex** in a custom policy is skipped defensively instead of crashing.
+- **Multiple diff files** on the command line are concatenated (newline-safe) and analyzed as one change.
+
+## Limitations
+
+- **Line-oriented, not semantic** — no AST, taint tracking or dataflow. It reads diffs, not programs.
+- **Regex risk patterns have false positives and negatives** — the accepted trade for zero dependencies and total determinism.
+- **Language-agnostic**, so it can't apply language-specific rules (`errcheck`, ESLint). Pair it with real linters; it isn't one.
