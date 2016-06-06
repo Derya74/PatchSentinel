@@ -273,3 +273,13 @@ What a maintainer should actually *do* with each stamp.
 
 The part marketing usually skips.
 
+- **PatchSentinel does not detect AI.** No model, no classifier, no "confidence this was written by an LLM." The `repetition` signal correlates with boilerplate and *some* generated output, but human boilerplate scores identically and hand-crafted AI output can score zero. Treat it as *"worth a closer look,"* never as proof of origin.
+- **Risk patterns are regexes over added lines** — they find *shapes*, not *meaning*. `eval(` in a comment counts; an obfuscated secret may not.
+- **The verdict is evidence for a human, not a replacement.** Nothing here understands your architecture or threat model; a person still owns the merge.
+- **Determinism is the actual promise.** Same diff + same policy ⇒ same bytes, every run, every OS — cacheable and trustworthy, with no claim of intelligence.
+
+## Edge cases
+
+- **Binary files** are tracked (flagged `binary`) but not line-scanned — they add file-level review cost only.
+- **Renames** are detected and reported with `oldPath`; **deletions** never trip risk patterns (only *added* lines are scanned) and cost less.
+- **Tiny diffs** skip the test-ratio gate entirely — below `minProductionLinesForTestCheck` (default 40) a one-liner is never nagged for missing tests.
