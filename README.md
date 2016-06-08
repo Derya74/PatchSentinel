@@ -293,3 +293,13 @@ The part marketing usually skips.
 - **Line-oriented, not semantic** — no AST, taint tracking or dataflow. It reads diffs, not programs.
 - **Regex risk patterns have false positives and negatives** — the accepted trade for zero dependencies and total determinism.
 - **Language-agnostic**, so it can't apply language-specific rules (`errcheck`, ESLint). Pair it with real linters; it isn't one.
+- **Context-free** — it sees the diff, not the surrounding file or history, so an "unused" new function may actually be wired up elsewhere.
+- **Review-cost is a heuristic** calibrated by your numbers — minutes are relative, not a stopwatch.
+
+## Customization recipes
+
+A supplied `riskPatterns` array *replaces* the defaults (arrays don't merge), so add a rule like `{ "id": "banned-md5", "regex": "crypto/md5|hashlib\\.md5", "weight": 9 }` alongside the built-ins you keep. Common threshold tweaks:
+
+```json
+{ "thresholds": { "sensitivePathIsWarning": true } }   // sensitive paths advise, not block
+{ "thresholds": { "maxRepetitionRatio": 0.85 } }       // relax for a mocks-heavy service
