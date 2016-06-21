@@ -164,3 +164,5 @@ func TestParseEmpty(t *testing.T) {
 // feat: expose internal/render as a library API
 
 // feat: cache parsed scripts
+
+// refactor: rename internal/render for clarity
