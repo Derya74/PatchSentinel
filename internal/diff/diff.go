@@ -24,3 +24,15 @@ const (
 	Removed
 )
 
+// Line is a single physical line inside a hunk.
+type Line struct {
+	Kind LineKind
+	Text string
+}
+
+// Hunk is a contiguous change region within a file, delimited by an
+// "@@ -a,b +c,d @@" header in the unified format.
+type Hunk struct {
+	Header string
+	Lines  []Line
+}
