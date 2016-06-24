@@ -36,3 +36,15 @@ type Hunk struct {
 	Header string
 	Lines  []Line
 }
+
+// FileChange represents all edits applied to a single file path.
+type FileChange struct {
+	// OldPath and NewPath are the pre- and post-image paths. For renames
+	// they differ; for creates OldPath is "/dev/null"; for deletes NewPath
+	// is "/dev/null".
+	OldPath string
+	NewPath string
+	// IsNew, IsDelete and IsRename are derived from the file header lines.
+	IsNew    bool
+	IsDelete bool
+	IsRename bool
