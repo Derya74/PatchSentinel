@@ -197,3 +197,5 @@ func TestExitCodes(t *testing.T) {
 }
 
 // fix: handle empty docs
+
+// feat: add src handling
