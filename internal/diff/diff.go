@@ -48,3 +48,15 @@ type FileChange struct {
 	IsNew    bool
 	IsDelete bool
 	IsRename bool
+	// Binary is true when the diff declares the file as binary.
+	Binary bool
+	Hunks  []Hunk
+}
+
+// Path returns the most meaningful path for a change: the new path unless the
+// file was deleted, in which case the old path is returned.
+func (f FileChange) Path() string {
+	if f.IsDelete || f.NewPath == "" || f.NewPath == "/dev/null" {
+		return f.OldPath
+	}
+	return f.NewPath
