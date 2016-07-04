@@ -60,3 +60,15 @@ func (f FileChange) Path() string {
 		return f.OldPath
 	}
 	return f.NewPath
+}
+
+// Added returns the number of added lines across all hunks.
+func (f FileChange) Added() int {
+	n := 0
+	for _, h := range f.Hunks {
+		for _, l := range h.Lines {
+			if l.Kind == Added {
+				n++
+			}
+		}
+	}
