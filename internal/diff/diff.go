@@ -84,3 +84,15 @@ func (f FileChange) Removed() int {
 				n++
 			}
 		}
+	}
+	return n
+}
+
+// Patch is a parsed unified diff: an ordered set of file changes.
+type Patch struct {
+	Files []FileChange
+}
+
+// TotalAdded sums added lines across all files.
+func (p Patch) TotalAdded() int {
+	n := 0
