@@ -72,3 +72,15 @@ func (f FileChange) Added() int {
 			}
 		}
 	}
+	return n
+}
+
+// Removed returns the number of removed lines across all hunks.
+func (f FileChange) Removed() int {
+	n := 0
+	for _, h := range f.Hunks {
+		for _, l := range h.Lines {
+			if l.Kind == Removed {
+				n++
+			}
+		}
