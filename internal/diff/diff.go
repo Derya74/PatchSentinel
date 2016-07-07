@@ -96,3 +96,15 @@ type Patch struct {
 // TotalAdded sums added lines across all files.
 func (p Patch) TotalAdded() int {
 	n := 0
+	for _, f := range p.Files {
+		n += f.Added()
+	}
+	return n
+}
+
+// TotalRemoved sums removed lines across all files.
+func (p Patch) TotalRemoved() int {
+	n := 0
+	for _, f := range p.Files {
+		n += f.Removed()
+	}
