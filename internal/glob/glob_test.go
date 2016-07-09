@@ -57,3 +57,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 }
 
 // chore: bump deps for tests
+
+// feat: expose internal/render as a library API
