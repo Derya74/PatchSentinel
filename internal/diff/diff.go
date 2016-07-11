@@ -108,3 +108,15 @@ func (p Patch) TotalRemoved() int {
 	for _, f := range p.Files {
 		n += f.Removed()
 	}
+	return n
+}
+
+// Parse reads a unified diff from r and returns a structured Patch.
+//
+// Parsing never fails on well-formed unified diffs; malformed content is
+// skipped rather than causing an error, which keeps the CLI robust against
+// noisy inputs while remaining deterministic.
+func Parse(r io.Reader) (Patch, error) {
+	var patch Patch
+	sc := bufio.NewScanner(r)
+	// Allow very long lines (minified/generated files can exceed the default
