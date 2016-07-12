@@ -120,3 +120,15 @@ func Parse(r io.Reader) (Patch, error) {
 	var patch Patch
 	sc := bufio.NewScanner(r)
 	// Allow very long lines (minified/generated files can exceed the default
+	// 64 KiB token size).
+	sc.Buffer(make([]byte, 0, 1024*1024), 16*1024*1024)
+
+	var cur *FileChange
+	var hunk *Hunk
+
+	flushHunk := func() {
+		if cur != nil && hunk != nil {
+			cur.Hunks = append(cur.Hunks, *hunk)
+			hunk = nil
+		}
+	}
