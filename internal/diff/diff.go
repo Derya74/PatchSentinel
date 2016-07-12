@@ -132,3 +132,15 @@ func Parse(r io.Reader) (Patch, error) {
 			hunk = nil
 		}
 	}
+	flushFile := func() {
+		flushHunk()
+		if cur != nil {
+			patch.Files = append(patch.Files, *cur)
+			cur = nil
+		}
+	}
+
+	for sc.Scan() {
+		line := sc.Text()
+
+		switch {
