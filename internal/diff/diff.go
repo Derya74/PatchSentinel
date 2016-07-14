@@ -144,3 +144,15 @@ func Parse(r io.Reader) (Patch, error) {
 		line := sc.Text()
 
 		switch {
+		case strings.HasPrefix(line, "diff --git "):
+			flushFile()
+			cur = &FileChange{}
+			o, n := parseDiffGitPaths(line)
+			cur.OldPath, cur.NewPath = o, n
+
+		case strings.HasPrefix(line, "new file mode"):
+			if cur != nil {
+				cur.IsNew = true
+				cur.OldPath = "/dev/null"
+			}
+
