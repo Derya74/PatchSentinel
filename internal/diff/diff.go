@@ -180,3 +180,15 @@ func Parse(r io.Reader) (Patch, error) {
 				cur.Binary = true
 			}
 
+		case strings.HasPrefix(line, "--- "):
+			// Old-file marker. Only start a new file when there is no active
+			// "diff --git" header (plain `diff -u` output).
+			if cur == nil {
+				flushFile()
+				cur = &FileChange{}
+			}
+			cur.OldPath = normalizePath(strings.TrimPrefix(line, "--- "))
+
+		case strings.HasPrefix(line, "+++ "):
+			if cur != nil {
+				cur.NewPath = normalizePath(strings.TrimPrefix(line, "+++ "))
