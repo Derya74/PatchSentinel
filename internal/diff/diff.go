@@ -192,3 +192,15 @@ func Parse(r io.Reader) (Patch, error) {
 		case strings.HasPrefix(line, "+++ "):
 			if cur != nil {
 				cur.NewPath = normalizePath(strings.TrimPrefix(line, "+++ "))
+			}
+
+		case strings.HasPrefix(line, "@@"):
+			flushHunk()
+			if cur == nil {
+				cur = &FileChange{}
+			}
+			hunk = &Hunk{Header: line}
+
+		default:
+			if hunk == nil {
+				continue
