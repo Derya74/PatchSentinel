@@ -204,3 +204,14 @@ func Parse(r io.Reader) (Patch, error) {
 		default:
 			if hunk == nil {
 				continue
+			}
+			if line == "" {
+				// A truly empty line inside a hunk is a context line.
+				hunk.Lines = append(hunk.Lines, Line{Kind: Context, Text: ""})
+				continue
+			}
+			switch line[0] {
+			case '+':
+				hunk.Lines = append(hunk.Lines, Line{Kind: Added, Text: line[1:]})
+			case '-':
+				hunk.Lines = append(hunk.Lines, Line{Kind: Removed, Text: line[1:]})
