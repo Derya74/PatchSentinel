@@ -156,3 +156,15 @@ func Parse(r io.Reader) (Patch, error) {
 				cur.OldPath = "/dev/null"
 			}
 
+		case strings.HasPrefix(line, "deleted file mode"):
+			if cur != nil {
+				cur.IsDelete = true
+				cur.NewPath = "/dev/null"
+			}
+
+		case strings.HasPrefix(line, "rename from "):
+			if cur != nil {
+				cur.IsRename = true
+				cur.OldPath = strings.TrimPrefix(line, "rename from ")
+			}
+
