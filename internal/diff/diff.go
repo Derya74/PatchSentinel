@@ -168,3 +168,15 @@ func Parse(r io.Reader) (Patch, error) {
 				cur.OldPath = strings.TrimPrefix(line, "rename from ")
 			}
 
+		case strings.HasPrefix(line, "rename to "):
+			if cur != nil {
+				cur.IsRename = true
+				cur.NewPath = strings.TrimPrefix(line, "rename to ")
+			}
+
+		case strings.HasPrefix(line, "Binary files "),
+			strings.HasPrefix(line, "GIT binary patch"):
+			if cur != nil {
+				cur.Binary = true
+			}
+
