@@ -215,3 +215,15 @@ func Parse(r io.Reader) (Patch, error) {
 				hunk.Lines = append(hunk.Lines, Line{Kind: Added, Text: line[1:]})
 			case '-':
 				hunk.Lines = append(hunk.Lines, Line{Kind: Removed, Text: line[1:]})
+			case ' ':
+				hunk.Lines = append(hunk.Lines, Line{Kind: Context, Text: line[1:]})
+			case '\\':
+				// "\ No newline at end of file" — metadata, ignore.
+			default:
+				// Unknown prefix: treat as context to avoid data loss.
+				hunk.Lines = append(hunk.Lines, Line{Kind: Context, Text: line})
+			}
+		}
+	}
+	flushFile()
+
