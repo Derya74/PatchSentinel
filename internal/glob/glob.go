@@ -7,3 +7,10 @@
 // implementation simple and deterministic. Paths are compared using forward
 // slashes; callers should normalize separators beforehand.
 package glob
+
+import (
+	"regexp"
+	"strings"
+	"sync"
+)
+
