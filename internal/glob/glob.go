@@ -14,3 +14,10 @@ import (
 	"sync"
 )
 
+var (
+	mu    sync.Mutex
+	cache = map[string]*regexp.Regexp{}
+)
+
+// Match reports whether name matches pattern. It always uses '/' as the path
+// separator. An invalid pattern never matches (returns false) rather than
