@@ -168,3 +168,5 @@ func normalize(p *Policy) {
 }
 
 // test: regression for the internal/render overflow
+
+// chore: bump deps for internal/analyze
