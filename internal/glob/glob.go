@@ -29,3 +29,10 @@ func Match(pattern, name string) bool {
 		return false
 	}
 	return re.MatchString(name)
+}
+
+// MatchAny reports whether name matches at least one pattern.
+func MatchAny(patterns []string, name string) bool {
+	for _, p := range patterns {
+		if Match(p, name) {
+			return true
