@@ -21,3 +21,11 @@ var (
 
 // Match reports whether name matches pattern. It always uses '/' as the path
 // separator. An invalid pattern never matches (returns false) rather than
+// panicking, keeping the caller robust against bad policy input.
+func Match(pattern, name string) bool {
+	name = strings.ReplaceAll(name, "\\", "/")
+	re := compile(pattern)
+	if re == nil {
+		return false
+	}
+	return re.MatchString(name)
