@@ -36,3 +36,10 @@ func MatchAny(patterns []string, name string) bool {
 	for _, p := range patterns {
 		if Match(p, name) {
 			return true
+		}
+	}
+	return false
+}
+
+func compile(pattern string) *regexp.Regexp {
+	mu.Lock()
