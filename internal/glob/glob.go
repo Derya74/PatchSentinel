@@ -43,3 +43,10 @@ func MatchAny(patterns []string, name string) bool {
 
 func compile(pattern string) *regexp.Regexp {
 	mu.Lock()
+	defer mu.Unlock()
+	if re, ok := cache[pattern]; ok {
+		return re
+	}
+	re := build(pattern)
+	cache[pattern] = re // may be nil; caches the failure too
+	return re
