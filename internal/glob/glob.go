@@ -50,3 +50,10 @@ func compile(pattern string) *regexp.Regexp {
 	re := build(pattern)
 	cache[pattern] = re // may be nil; caches the failure too
 	return re
+}
+
+// build translates a glob pattern to an anchored regexp.
+func build(pattern string) *regexp.Regexp {
+	pattern = strings.ReplaceAll(pattern, "\\", "/")
+	var b strings.Builder
+	b.WriteString("^")
