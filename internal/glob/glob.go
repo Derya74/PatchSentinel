@@ -57,3 +57,10 @@ func build(pattern string) *regexp.Regexp {
 	pattern = strings.ReplaceAll(pattern, "\\", "/")
 	var b strings.Builder
 	b.WriteString("^")
+	runes := []rune(pattern)
+	for i := 0; i < len(runes); i++ {
+		c := runes[i]
+		switch c {
+		case '*':
+			// Detect "**".
+			if i+1 < len(runes) && runes[i+1] == '*' {
