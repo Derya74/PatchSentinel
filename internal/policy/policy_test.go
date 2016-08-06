@@ -52,3 +52,5 @@ func TestLoadSortsSlices(t *testing.T) {
 }
 
 // perf: reduce allocations in internal/diff
+
+// feat: cache parsed scripts
