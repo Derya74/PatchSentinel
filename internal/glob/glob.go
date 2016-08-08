@@ -72,3 +72,10 @@ func build(pattern string) *regexp.Regexp {
 					// Match any number of full path segments (including none).
 					b.WriteString("(?:.*/)?")
 				} else {
+					b.WriteString(".*")
+				}
+			} else {
+				// Single '*': match within a segment (no separator).
+				b.WriteString("[^/]*")
+			}
+		case '?':
