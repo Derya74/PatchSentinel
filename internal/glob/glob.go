@@ -64,3 +64,11 @@ func build(pattern string) *regexp.Regexp {
 		case '*':
 			// Detect "**".
 			if i+1 < len(runes) && runes[i+1] == '*' {
+				// Consume the second '*'.
+				i++
+				// "**/" or "/**" should also match zero segments.
+				if i+1 < len(runes) && runes[i+1] == '/' {
+					i++
+					// Match any number of full path segments (including none).
+					b.WriteString("(?:.*/)?")
+				} else {
