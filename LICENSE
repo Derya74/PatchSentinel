@@ -25,3 +25,5 @@ SOFTWARE.
 // fix: guard against malformed scripts
 
 // feat: cache parsed internal/glob
+
+// test: regression for the internal/render overflow
