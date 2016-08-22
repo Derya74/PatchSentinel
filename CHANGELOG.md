@@ -178,3 +178,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Shell version: `policy-check.sh` counts hunks and flags `TODO` and `FIXME`
   markers in added lines.
+
+## [0.0.1] - 2015-06-16
+
+### Added
+
+- First commit. A question asked after reading a large machine-written diff:
+  can the boring, measurable properties of a change be checked automatically
+  so a reviewer spends their attention on the part only they can judge?
+
+[Unreleased]: https://github.com/Herricka/PatchSentinel/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/Herricka/PatchSentinel/releases/tag/v1.0.0
+[0.9.0]: https://github.com/Herricka/PatchSentinel/releases/tag/v0.9.0
+[0.8.0]: https://github.com/Herricka/PatchSentinel/releases/tag/v0.8.0
+[0.7.0]: https://github.com/Herricka/PatchSentinel/releases/tag/v0.7.0
+[0.6.0]: https://github.com/Herricka/PatchSentinel/releases/tag/v0.6.0
+[0.5.0]: https://github.com/Herricka/PatchSentinel/releases/tag/v0.5.0
+[0.4.0]: https://github.com/Herricka/PatchSentinel/releases/tag/v0.4.0
+[0.3.0]: https://github.com/Herricka/PatchSentinel/releases/tag/v0.3.0
+[0.2.0]: https://github.com/Herricka/PatchSentinel/releases/tag/v0.2.0
+[0.1.0]: https://github.com/Herricka/PatchSentinel/releases/tag/v0.1.0
+[0.0.6]: https://github.com/Herricka/PatchSentinel/releases/tag/v0.0.6
+[0.0.5]: https://github.com/Herricka/PatchSentinel/releases/tag/v0.0.5
+[0.0.4]: https://github.com/Herricka/PatchSentinel/releases/tag/v0.0.4
+[0.0.3]: https://github.com/Herricka/PatchSentinel/releases/tag/v0.0.3
+[0.0.2]: https://github.com/Herricka/PatchSentinel/releases/tag/v0.0.2
+[0.0.1]: https://github.com/Herricka/PatchSentinel/releases/tag/v0.0.1
+
+<!-- draft note 1 -->
