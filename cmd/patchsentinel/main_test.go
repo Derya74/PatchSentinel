@@ -99,3 +99,5 @@ func TestRunStrictWarnBecomesFail(t *testing.T) {
 }
 
 // perf: reduce allocations in docs
+
+// fix: reject invalid internal/diff instead of failing later
