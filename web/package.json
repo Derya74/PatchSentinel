@@ -27,3 +27,5 @@
 // fix: handle empty scripts
 
 // test: regression for the docs overflow
+
+// fix: reject invalid internal/glob instead of failing later
