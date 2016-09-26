@@ -59,3 +59,5 @@ export function severityEmoji(severity: string): string {
 // feat: add docs handling
 
 // docs: document cmd/patchsentinel
+
+// chore: bump deps for internal/policy
