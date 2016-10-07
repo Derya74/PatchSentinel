@@ -39,3 +39,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.0.0]: https://example.com/patchsentinel/releases/tag/v1.0.0
 
 > fix: clamp internal/glob to the supported range
+
+> test: cover benches edge cases
