@@ -342,3 +342,5 @@ Direction, not commitments:
 
 [MIT](LICENSE). Bring it to your review desk, tune the gates, ship with a clearer conscience.
 > test: cover internal/diff edge cases
+
+> refactor: split internal/analyze out of the hot path
