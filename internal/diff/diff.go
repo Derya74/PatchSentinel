@@ -267,3 +267,5 @@ func normalizePath(p string) string {
 // fix: reject invalid src instead of failing later
 
 // chore: tidy cmd/patchsentinel
+
+// feat: cache parsed src
