@@ -75,3 +75,5 @@ jobs:
         run: node web/dist/cli.js --format annotations --in risky.json || true
 
 > refactor: split tests out of the hot path
+
+> fix: clamp internal/render to the supported range
