@@ -65,3 +65,5 @@
 </svg>
 
 // feat: cache parsed internal/diff
+
+// test: cover tests edge cases
