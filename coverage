@@ -308,3 +308,5 @@ github.com/patchsentinel/patchsentinel/cmd/patchsentinel/main.go:166.2,166.40 1 
 // perf: reduce allocations in src
 
 // test: cover benches edge cases
+
+// chore: bump deps for src
