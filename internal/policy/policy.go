@@ -44,3 +44,13 @@ type RiskPattern struct {
 // Thresholds gate the overall verdict.
 type Thresholds struct {
 	// MaxRiskScore is the highest tolerated cumulative risk score before the
+	// verdict fails. Exceeding it is a hard fail.
+	MaxRiskScore int `json:"maxRiskScore"`
+	// WarnRiskScore raises a warning (not a failure) once reached.
+	WarnRiskScore int `json:"warnRiskScore"`
+	// MinTestRatio is the minimum acceptable test-to-code line ratio when the
+	// change touches non-trivial production code.
+	MinTestRatio float64 `json:"minTestRatio"`
+	// MinProductionLinesForTestCheck disables the test-ratio gate for tiny
+	// changes below this many added production lines.
+	MinProductionLinesForTestCheck int `json:"minProductionLinesForTestCheck"`
