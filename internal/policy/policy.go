@@ -24,3 +24,13 @@ type Policy struct {
 
 	// TestPathPatterns identify files that count as tests for the
 	// test-to-code ratio.
+	TestPathPatterns []string `json:"testPathPatterns"`
+
+	// Thresholds control verdict computation.
+	Thresholds Thresholds `json:"thresholds"`
+
+	// ReviewCost tunes the review-effort model.
+	ReviewCost ReviewCost `json:"reviewCost"`
+}
+
+// RiskPattern is a named regular expression with a severity weight.
