@@ -34,3 +34,13 @@ type Policy struct {
 }
 
 // RiskPattern is a named regular expression with a severity weight.
+type RiskPattern struct {
+	ID      string `json:"id"`
+	Regex   string `json:"regex"`
+	Message string `json:"message"`
+	Weight  int    `json:"weight"`
+}
+
+// Thresholds gate the overall verdict.
+type Thresholds struct {
+	// MaxRiskScore is the highest tolerated cumulative risk score before the
