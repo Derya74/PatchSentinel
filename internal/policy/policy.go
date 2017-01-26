@@ -54,3 +54,13 @@ type Thresholds struct {
 	// MinProductionLinesForTestCheck disables the test-ratio gate for tiny
 	// changes below this many added production lines.
 	MinProductionLinesForTestCheck int `json:"minProductionLinesForTestCheck"`
+	// MaxRepetitionRatio flags likely generated/boilerplate code when the
+	// fraction of duplicated added lines meets or exceeds this value.
+	MaxRepetitionRatio float64 `json:"maxRepetitionRatio"`
+	// MaxReviewMinutes fails changes whose estimated review time is too high.
+	MaxReviewMinutes int `json:"maxReviewMinutes"`
+	// SensitivePathIsWarning downgrades sensitive-path hits from fail to warn.
+	SensitivePathIsWarning bool `json:"sensitivePathIsWarning"`
+}
+
+// ReviewCost parameters feed a simple, explainable effort model.
