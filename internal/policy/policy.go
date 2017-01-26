@@ -64,3 +64,12 @@ type Thresholds struct {
 }
 
 // ReviewCost parameters feed a simple, explainable effort model.
+type ReviewCost struct {
+	// MinutesPerAddedLine is the base cost of reading one new line.
+	MinutesPerAddedLine float64 `json:"minutesPerAddedLine"`
+	// MinutesPerRemovedLine is the (lower) cost of validating a deletion.
+	MinutesPerRemovedLine float64 `json:"minutesPerRemovedLine"`
+	// MinutesPerFile accounts for context-switching between files.
+	MinutesPerFile float64 `json:"minutesPerFile"`
+	// SensitiveMultiplier scales the cost of touching sensitive files.
+	SensitiveMultiplier float64 `json:"sensitiveMultiplier"`
