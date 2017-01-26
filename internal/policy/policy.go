@@ -73,3 +73,13 @@ type ReviewCost struct {
 	MinutesPerFile float64 `json:"minutesPerFile"`
 	// SensitiveMultiplier scales the cost of touching sensitive files.
 	SensitiveMultiplier float64 `json:"sensitiveMultiplier"`
+}
+
+// Default returns the built-in policy. It is intentionally opinionated but
+// conservative, so that PatchSentinel is useful out of the box.
+func Default() Policy {
+	return Policy{
+		Version: 1,
+		SensitivePaths: []string{
+			"**/.github/workflows/**",
+			"**/*Dockerfile*",
