@@ -83,3 +83,13 @@ func Default() Policy {
 		SensitivePaths: []string{
 			"**/.github/workflows/**",
 			"**/*Dockerfile*",
+			"**/Dockerfile",
+			"**/*.tf",
+			"**/*.tfvars",
+			"**/k8s/**",
+			"**/kubernetes/**",
+			"**/helm/**",
+			"**/auth/**",
+			"**/*auth*",
+			"**/security/**",
+			"**/*secret*",
