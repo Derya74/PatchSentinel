@@ -93,3 +93,13 @@ func Default() Policy {
 			"**/*auth*",
 			"**/security/**",
 			"**/*secret*",
+			"**/*credential*",
+			"**/.env*",
+			"**/migrations/**",
+			"**/*.pem",
+			"**/*.key",
+		},
+		TestPathPatterns: []string{
+			"**/*_test.go",
+			"**/*.test.ts",
+			"**/*.test.js",
