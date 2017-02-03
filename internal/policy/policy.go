@@ -103,3 +103,13 @@ func Default() Policy {
 			"**/*_test.go",
 			"**/*.test.ts",
 			"**/*.test.js",
+			"**/*.spec.ts",
+			"**/*.spec.js",
+			"**/test/**",
+			"**/tests/**",
+			"**/__tests__/**",
+			"**/*_test.py",
+			"**/test_*.py",
+		},
+		RiskPatterns: []RiskPattern{
+			{ID: "eval-usage", Regex: `\beval\s*\(`, Message: "Dynamic code evaluation via eval()", Weight: 8},
