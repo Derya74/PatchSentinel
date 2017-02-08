@@ -113,3 +113,13 @@ func Default() Policy {
 		},
 		RiskPatterns: []RiskPattern{
 			{ID: "eval-usage", Regex: `\beval\s*\(`, Message: "Dynamic code evaluation via eval()", Weight: 8},
+			{ID: "shell-exec", Regex: `\b(exec\.Command|child_process|os\.system|subprocess\.)`, Message: "Executes external processes", Weight: 6},
+			{ID: "hardcoded-secret", Regex: `(?i)(api[_-]?key|secret|password|token)\s*[:=]\s*["'][^"']{8,}["']`, Message: "Possible hardcoded secret", Weight: 10},
+			{ID: "sql-format", Regex: `(?i)(SELECT|INSERT|UPDATE|DELETE)\b.*(\+|%s|\$\{|format\()`, Message: "Possible SQL built via string concatenation", Weight: 7},
+			{ID: "disable-tls", Regex: `(?i)(InsecureSkipVerify\s*:\s*true|rejectUnauthorized\s*:\s*false|verify\s*=\s*False)`, Message: "TLS verification disabled", Weight: 9},
+			{ID: "broad-except", Regex: `except\s*:\s*$|catch\s*\(\s*\)\s*\{`, Message: "Overly broad exception handling", Weight: 3},
+			{ID: "debug-print", Regex: `\b(console\.log|fmt\.Println|print\()`, Message: "Debug print left in code", Weight: 1},
+			{ID: "todo-marker", Regex: `(?i)\b(TODO|FIXME|XXX|HACK)\b`, Message: "Unfinished work marker", Weight: 2},
+			{ID: "wildcard-cors", Regex: `Access-Control-Allow-Origin["']?\s*[:,]\s*["']\*`, Message: "Wildcard CORS origin", Weight: 5},
+			{ID: "unsafe-yaml", Regex: `yaml\.Unmarshal|yaml\.load\s*\(`, Message: "Potentially unsafe deserialization", Weight: 4},
+		},
