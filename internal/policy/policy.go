@@ -132,3 +132,13 @@ func Default() Policy {
 			MaxReviewMinutes:               90,
 			SensitivePathIsWarning:         false,
 		},
+		ReviewCost: ReviewCost{
+			MinutesPerAddedLine:   0.30,
+			MinutesPerRemovedLine: 0.10,
+			MinutesPerFile:        2.0,
+			SensitiveMultiplier:   1.5,
+		},
+	}
+}
+
+// Load reads a JSON policy from r, overlaying it on top of the defaults so
