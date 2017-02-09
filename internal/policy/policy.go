@@ -123,3 +123,12 @@ func Default() Policy {
 			{ID: "wildcard-cors", Regex: `Access-Control-Allow-Origin["']?\s*[:,]\s*["']\*`, Message: "Wildcard CORS origin", Weight: 5},
 			{ID: "unsafe-yaml", Regex: `yaml\.Unmarshal|yaml\.load\s*\(`, Message: "Potentially unsafe deserialization", Weight: 4},
 		},
+		Thresholds: Thresholds{
+			MaxRiskScore:                   25,
+			WarnRiskScore:                  10,
+			MinTestRatio:                   0.25,
+			MinProductionLinesForTestCheck: 40,
+			MaxRepetitionRatio:             0.60,
+			MaxReviewMinutes:               90,
+			SensitivePathIsWarning:         false,
+		},
