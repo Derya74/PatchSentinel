@@ -83,3 +83,23 @@ type RiskHit struct {
 	PatternID string `json:"patternId"`
 	Message   string `json:"message"`
 	Weight    int    `json:"weight"`
+	Path      string `json:"path"`
+	Snippet   string `json:"snippet"`
+	Count     int    `json:"count"`
+}
+
+// Severity classifies a finding.
+type Severity string
+
+const (
+	SeverityInfo  Severity = "info"
+	SeverityWarn  Severity = "warn"
+	SeverityError Severity = "error"
+)
+
+// Finding is a human-facing gate result explaining why the verdict is what it
+// is. Findings are the primary evidence surfaced to reviewers.
+type Finding struct {
+	ID       string   `json:"id"`
+	Severity Severity `json:"severity"`
+	Title    string   `json:"title"`
