@@ -63,3 +63,23 @@ type Summary struct {
 	RepetitionRatio float64 `json:"repetitionRatio"`
 	SensitiveFiles  int     `json:"sensitiveFiles"`
 	ReviewMinutes   float64 `json:"reviewMinutes"`
+	ContentHash     string  `json:"contentHash"`
+}
+
+// FileStat is the per-file breakdown.
+type FileStat struct {
+	Path        string `json:"path"`
+	OldPath     string `json:"oldPath,omitempty"`
+	Added       int    `json:"added"`
+	Removed     int    `json:"removed"`
+	IsTest      bool   `json:"isTest"`
+	IsSensitive bool   `json:"isSensitive"`
+	IsBinary    bool   `json:"isBinary"`
+	Status      string `json:"status"` // added | deleted | renamed | modified
+}
+
+// RiskHit is a single risk-pattern match with location context.
+type RiskHit struct {
+	PatternID string `json:"patternId"`
+	Message   string `json:"message"`
+	Weight    int    `json:"weight"`
