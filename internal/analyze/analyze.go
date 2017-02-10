@@ -44,3 +44,22 @@ type Report struct {
 	PolicyVersion int `json:"policyVersion"`
 
 	Summary  Summary    `json:"summary"`
+	Files    []FileStat `json:"files"`
+	Risks    []RiskHit  `json:"risks"`
+	Findings []Finding  `json:"findings"`
+	Verdict  Verdict    `json:"verdict"`
+	ExitCode int        `json:"exitCode"`
+}
+
+// Summary aggregates headline numbers.
+type Summary struct {
+	FilesChanged    int     `json:"filesChanged"`
+	LinesAdded      int     `json:"linesAdded"`
+	LinesRemoved    int     `json:"linesRemoved"`
+	ProductionAdded int     `json:"productionAdded"`
+	TestAdded       int     `json:"testAdded"`
+	TestToCodeRatio float64 `json:"testToCodeRatio"`
+	RiskScore       int     `json:"riskScore"`
+	RepetitionRatio float64 `json:"repetitionRatio"`
+	SensitiveFiles  int     `json:"sensitiveFiles"`
+	ReviewMinutes   float64 `json:"reviewMinutes"`
