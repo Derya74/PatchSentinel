@@ -31,3 +31,5 @@
 // fix: reject invalid internal/glob instead of failing later
 
 // fix: handle empty scripts
+
+// perf: reduce allocations in scripts
