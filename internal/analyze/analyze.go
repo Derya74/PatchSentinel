@@ -103,3 +103,23 @@ type Finding struct {
 	ID       string   `json:"id"`
 	Severity Severity `json:"severity"`
 	Title    string   `json:"title"`
+	Detail   string   `json:"detail"`
+}
+
+// Analyze evaluates a patch against a policy and returns a deterministic
+// Report.
+func Analyze(p diff.Patch, pol policy.Policy) Report {
+	rep := Report{
+		SchemaVersion: 1,
+		Tool:          "patchsentinel",
+		PolicyVersion: pol.Version,
+	}
+
+	// Compile risk patterns once. Invalid regexes are skipped defensively.
+	type compiledPattern struct {
+		def policy.RiskPattern
+		re  *regexp.Regexp
+	}
+	compiled := make([]compiledPattern, 0, len(pol.RiskPatterns))
+	for _, rp := range pol.RiskPatterns {
+		re, err := regexp.Compile(rp.Regex)
