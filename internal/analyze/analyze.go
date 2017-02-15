@@ -123,3 +123,23 @@ func Analyze(p diff.Patch, pol policy.Policy) Report {
 	compiled := make([]compiledPattern, 0, len(pol.RiskPatterns))
 	for _, rp := range pol.RiskPatterns {
 		re, err := regexp.Compile(rp.Regex)
+		if err != nil {
+			continue
+		}
+		compiled = append(compiled, compiledPattern{def: rp, re: re})
+	}
+
+	// Per-file stats and added-line collection for repetition analysis.
+	var files []FileStat
+	var addedProductionLines []string
+	riskAgg := map[string]*RiskHit{}
+
+	for _, f := range p.Files {
+		path := f.Path()
+		isTest := glob.MatchAny(pol.TestPathPatterns, path)
+		isSensitive := glob.MatchAny(pol.SensitivePaths, path)
+
+		fs := FileStat{
+			Path:        path,
+			Added:       f.Added(),
+			Removed:     f.Removed(),
