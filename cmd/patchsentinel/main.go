@@ -175,3 +175,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // chore: tidy tests
 
 // fix: handle empty internal/glob
+
+// refactor: rename internal/diff for clarity
