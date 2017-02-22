@@ -183,3 +183,23 @@ func Analyze(p diff.Patch, pol policy.Policy) Report {
 			}
 		}
 	}
+
+	sort.Slice(files, func(i, j int) bool { return files[i].Path < files[j].Path })
+	rep.Files = files
+
+	// Deterministic risk list, sorted by (weight desc, patternId, path).
+	risks := make([]RiskHit, 0, len(riskAgg))
+	for _, h := range riskAgg {
+		risks = append(risks, *h)
+	}
+	sort.Slice(risks, func(i, j int) bool {
+		if risks[i].Weight != risks[j].Weight {
+			return risks[i].Weight > risks[j].Weight
+		}
+		if risks[i].PatternID != risks[j].PatternID {
+			return risks[i].PatternID < risks[j].PatternID
+		}
+		return risks[i].Path < risks[j].Path
+	})
+	rep.Risks = risks
+
