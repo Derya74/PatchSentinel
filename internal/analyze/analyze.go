@@ -143,3 +143,23 @@ func Analyze(p diff.Patch, pol policy.Policy) Report {
 			Path:        path,
 			Added:       f.Added(),
 			Removed:     f.Removed(),
+			IsTest:      isTest,
+			IsSensitive: isSensitive,
+			IsBinary:    f.Binary,
+			Status:      status(f),
+		}
+		if f.IsRename {
+			fs.OldPath = f.OldPath
+		}
+		files = append(files, fs)
+
+		// Walk added lines for risk + repetition.
+		for _, h := range f.Hunks {
+			for _, l := range h.Lines {
+				if l.Kind != diff.Added {
+					continue
+				}
+				trimmed := strings.TrimSpace(l.Text)
+				if !isTest && isMeaningful(trimmed) {
+					addedProductionLines = append(addedProductionLines, trimmed)
+				}
