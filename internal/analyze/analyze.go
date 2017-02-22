@@ -163,3 +163,23 @@ func Analyze(p diff.Patch, pol policy.Policy) Report {
 				if !isTest && isMeaningful(trimmed) {
 					addedProductionLines = append(addedProductionLines, trimmed)
 				}
+				for _, cp := range compiled {
+					if cp.re.MatchString(l.Text) {
+						key := cp.def.ID + "\x00" + path
+						hit := riskAgg[key]
+						if hit == nil {
+							hit = &RiskHit{
+								PatternID: cp.def.ID,
+								Message:   cp.def.Message,
+								Weight:    cp.def.Weight,
+								Path:      path,
+								Snippet:   snippet(trimmed),
+							}
+							riskAgg[key] = hit
+						}
+						hit.Count++
+					}
+				}
+			}
+		}
+	}
