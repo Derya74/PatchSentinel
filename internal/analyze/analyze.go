@@ -262,3 +262,23 @@ func isMeaningful(s string) bool {
 	case "{", "}", "(", ")", "[", "]", "*/", "/*":
 		return false
 	}
+	return true
+}
+
+func snippet(s string) string {
+	const max = 120
+	s = strings.TrimSpace(s)
+	if len(s) > max {
+		return s[:max] + "…"
+	}
+	return s
+}
+
+// repetitionRatio estimates how much of the added production code is
+// duplicated. It is a strong proxy for boilerplate / machine-generated code:
+// the fraction of added meaningful lines that are not unique.
+func repetitionRatio(lines []string) float64 {
+	if len(lines) == 0 {
+		return 0
+	}
+	seen := map[string]int{}
