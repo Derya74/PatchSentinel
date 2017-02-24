@@ -243,3 +243,22 @@ func status(f diff.FileChange) string {
 	switch {
 	case f.IsNew:
 		return "added"
+	case f.IsDelete:
+		return "deleted"
+	case f.IsRename:
+		return "renamed"
+	default:
+		return "modified"
+	}
+}
+
+// isMeaningful filters out blank lines and pure delimiters so that repetition
+// analysis is not dominated by braces and empty lines.
+func isMeaningful(s string) bool {
+	if len(s) < 4 {
+		return false
+	}
+	switch s {
+	case "{", "}", "(", ")", "[", "]", "*/", "/*":
+		return false
+	}
