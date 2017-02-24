@@ -203,3 +203,23 @@ func Analyze(p diff.Patch, pol policy.Policy) Report {
 	})
 	rep.Risks = risks
 
+	// Aggregate summary numbers.
+	var sum Summary
+	sum.FilesChanged = len(files)
+	sum.LinesAdded = p.TotalAdded()
+	sum.LinesRemoved = p.TotalRemoved()
+	for _, fs := range files {
+		if fs.IsTest {
+			sum.TestAdded += fs.Added
+		} else {
+			sum.ProductionAdded += fs.Added
+		}
+		if fs.IsSensitive {
+			sum.SensitiveFiles++
+		}
+	}
+	sum.TestToCodeRatio = ratio(sum.TestAdded, sum.ProductionAdded)
+
+	riskScore := 0
+	for _, h := range risks {
+		riskScore += h.Weight * h.Count
