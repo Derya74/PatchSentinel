@@ -223,3 +223,23 @@ func Analyze(p diff.Patch, pol policy.Policy) Report {
 	riskScore := 0
 	for _, h := range risks {
 		riskScore += h.Weight * h.Count
+	}
+	sum.RiskScore = riskScore
+
+	sum.RepetitionRatio = repetitionRatio(addedProductionLines)
+	sum.ReviewMinutes = reviewMinutes(files, pol.ReviewCost)
+	sum.ContentHash = contentHash(p)
+	rep.Summary = sum
+
+	// Evaluate gates into findings + verdict.
+	findings, verdict := evaluate(sum, risks, pol)
+	rep.Findings = findings
+	rep.Verdict = verdict
+	rep.ExitCode = exitCode(verdict)
+	return rep
+}
+
+func status(f diff.FileChange) string {
+	switch {
+	case f.IsNew:
+		return "added"
