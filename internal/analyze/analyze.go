@@ -282,3 +282,23 @@ func repetitionRatio(lines []string) float64 {
 		return 0
 	}
 	seen := map[string]int{}
+	for _, l := range lines {
+		seen[l]++
+	}
+	duplicated := 0
+	for _, c := range seen {
+		if c > 1 {
+			duplicated += c - 1 // count every repeat beyond the first
+		}
+	}
+	return round(float64(duplicated) / float64(len(lines)))
+}
+
+func ratio(test, prod int) float64 {
+	if prod == 0 {
+		if test > 0 {
+			return 1
+		}
+		return 0
+	}
+	return round(float64(test) / float64(prod))
