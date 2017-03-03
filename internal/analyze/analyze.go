@@ -322,3 +322,23 @@ func reviewMinutes(files []FileStat, rc policy.ReviewCost) float64 {
 // contentHash produces a stable fingerprint of the change content, useful for
 // caching and for asserting determinism in tests.
 func contentHash(p diff.Patch) string {
+	h := sha256.New()
+	// Iterate over a sorted copy of paths for stability.
+	type entry struct {
+		path  string
+		lines []string
+	}
+	entries := make([]entry, 0, len(p.Files))
+	for _, f := range p.Files {
+		var ls []string
+		for _, hunk := range f.Hunks {
+			for _, l := range hunk.Lines {
+				prefix := " "
+				switch l.Kind {
+				case diff.Added:
+					prefix = "+"
+				case diff.Removed:
+					prefix = "-"
+				}
+				ls = append(ls, prefix+l.Text)
+			}
