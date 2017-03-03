@@ -227,3 +227,35 @@ func Parse(r io.Reader) (Patch, error) {
 	}
 	flushFile()
 
+	if err := sc.Err(); err != nil {
+		return patch, err
+	}
+	return patch, nil
+}
+
+// parseDiffGitPaths extracts a/<old> b/<new> from a "diff --git" header.
+func parseDiffGitPaths(line string) (old, new string) {
+	rest := strings.TrimPrefix(line, "diff --git ")
+	fields := strings.Fields(rest)
+	if len(fields) < 2 {
+		return "", ""
+	}
+	return normalizePath(fields[0]), normalizePath(fields[len(fields)-1])
+}
+
+// normalizePath strips the a/ and b/ prefixes git prepends, any surrounding
+// quotes, and trailing tab-delimited metadata (timestamps).
+func normalizePath(p string) string {
+	p = strings.TrimSpace(p)
+	if idx := strings.IndexByte(p, '\t'); idx >= 0 {
+		p = p[:idx]
+	}
+	p = strings.Trim(p, "\"")
+	switch {
+	case p == "/dev/null":
+		return p
+	case strings.HasPrefix(p, "a/"):
+		return p[2:]
+	case strings.HasPrefix(p, "b/"):
+		return p[2:]
+	}
