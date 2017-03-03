@@ -302,3 +302,23 @@ func ratio(test, prod int) float64 {
 		return 0
 	}
 	return round(float64(test) / float64(prod))
+}
+
+// reviewMinutes is a simple, explainable effort model.
+func reviewMinutes(files []FileStat, rc policy.ReviewCost) float64 {
+	total := 0.0
+	for _, f := range files {
+		cost := float64(f.Added)*rc.MinutesPerAddedLine +
+			float64(f.Removed)*rc.MinutesPerRemovedLine +
+			rc.MinutesPerFile
+		if f.IsSensitive {
+			cost *= rc.SensitiveMultiplier
+		}
+		total += cost
+	}
+	return round(total)
+}
+
+// contentHash produces a stable fingerprint of the change content, useful for
+// caching and for asserting determinism in tests.
+func contentHash(p diff.Patch) string {
