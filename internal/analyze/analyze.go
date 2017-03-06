@@ -382,3 +382,23 @@ func evaluate(sum Summary, risks []RiskHit, pol policy.Policy) ([]Finding, Verdi
 	// Risk score gate.
 	switch {
 	case sum.RiskScore >= pol.Thresholds.MaxRiskScore:
+		add("risk-score", SeverityError, "Risk score exceeds maximum",
+			fmt.Sprintf("Cumulative risk score %d ≥ max %d.", sum.RiskScore, pol.Thresholds.MaxRiskScore))
+	case sum.RiskScore >= pol.Thresholds.WarnRiskScore:
+		add("risk-score", SeverityWarn, "Elevated risk score",
+			fmt.Sprintf("Cumulative risk score %d ≥ warn threshold %d.", sum.RiskScore, pol.Thresholds.WarnRiskScore))
+	}
+
+	// Test-to-code ratio gate (only for non-trivial production changes).
+	if sum.ProductionAdded >= pol.Thresholds.MinProductionLinesForTestCheck {
+		if sum.TestToCodeRatio < pol.Thresholds.MinTestRatio {
+			add("test-ratio", SeverityWarn, "Insufficient test coverage for change size",
+				fmt.Sprintf("Test-to-code ratio %.2f < required %.2f for %d added production lines.",
+					sum.TestToCodeRatio, pol.Thresholds.MinTestRatio, sum.ProductionAdded))
+		}
+	}
+
+	// Repetition / generated-code gate.
+	if sum.RepetitionRatio >= pol.Thresholds.MaxRepetitionRatio {
+		add("repetition", SeverityWarn, "High repetition in added code",
+			fmt.Sprintf("Repetition ratio %.2f ≥ %.2f suggests boilerplate or generated code that needs closer review.",
