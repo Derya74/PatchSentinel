@@ -362,3 +362,23 @@ func contentHash(p diff.Patch) string {
 func evaluate(sum Summary, risks []RiskHit, pol policy.Policy) ([]Finding, Verdict) {
 	var findings []Finding
 	worst := Pass
+
+	escalate := func(sev Severity) {
+		switch sev {
+		case SeverityError:
+			worst = Fail
+		case SeverityWarn:
+			if worst != Fail {
+				worst = Warn
+			}
+		}
+	}
+
+	add := func(id string, sev Severity, title, detail string) {
+		findings = append(findings, Finding{ID: id, Severity: sev, Title: title, Detail: detail})
+		escalate(sev)
+	}
+
+	// Risk score gate.
+	switch {
+	case sum.RiskScore >= pol.Thresholds.MaxRiskScore:
