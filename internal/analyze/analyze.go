@@ -342,3 +342,23 @@ func contentHash(p diff.Patch) string {
 				}
 				ls = append(ls, prefix+l.Text)
 			}
+		}
+		entries = append(entries, entry{path: f.Path(), lines: ls})
+	}
+	sort.Slice(entries, func(i, j int) bool { return entries[i].path < entries[j].path })
+	for _, e := range entries {
+		h.Write([]byte(e.path))
+		h.Write([]byte{0})
+		for _, l := range e.lines {
+			h.Write([]byte(l))
+			h.Write([]byte{0})
+		}
+	}
+	return hex.EncodeToString(h.Sum(nil))
+}
+
+// evaluate applies the policy thresholds, producing sorted findings and the
+// final verdict. Verdict escalation: any error → Fail; else any warn → Warn.
+func evaluate(sum Summary, risks []RiskHit, pol policy.Policy) ([]Finding, Verdict) {
+	var findings []Finding
+	worst := Pass
