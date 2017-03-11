@@ -31,3 +31,5 @@ SOFTWARE.
 // chore: tidy tests
 
 // docs: document docs
+
+// feat: cache parsed scripts
