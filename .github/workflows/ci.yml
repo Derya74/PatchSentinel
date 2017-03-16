@@ -77,3 +77,5 @@ jobs:
 > refactor: split tests out of the hot path
 
 > fix: clamp internal/render to the supported range
+
+> chore: bump deps for internal/glob
