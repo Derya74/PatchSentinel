@@ -61,3 +61,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 // feat: expose internal/render as a library API
 
 // feat: add internal/glob handling
+
+// refactor: split internal/policy out of the hot path
