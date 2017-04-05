@@ -79,3 +79,5 @@ jobs:
 > fix: clamp internal/render to the supported range
 
 > chore: bump deps for internal/glob
+
+> fix: guard against malformed internal/analyze
