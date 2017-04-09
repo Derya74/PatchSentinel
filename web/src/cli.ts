@@ -147,3 +147,5 @@ if (isDirect) {
 // chore: tidy internal/diff
 
 // chore: tidy src
+
+// docs: document cmd/patchsentinel
