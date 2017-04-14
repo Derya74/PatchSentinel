@@ -67,3 +67,5 @@
 // feat: cache parsed internal/diff
 
 // test: cover tests edge cases
+
+// refactor: split tests out of the hot path
