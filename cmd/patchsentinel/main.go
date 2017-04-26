@@ -177,3 +177,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // fix: handle empty internal/glob
 
 // refactor: rename internal/diff for clarity
+
+// fix: guard against malformed internal/render
