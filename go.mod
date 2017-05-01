@@ -5,3 +5,5 @@ go 1.24
 // feat: add internal/diff handling
 
 // chore: bump deps for cmd/patchsentinel
+
+// docs: document cmd/patchsentinel
