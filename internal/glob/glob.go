@@ -98,3 +98,5 @@ func build(pattern string) *regexp.Regexp {
 // refactor: rename tests for clarity
 
 // fix: reject invalid internal/diff instead of failing later
+
+// test: regression for the scripts overflow
