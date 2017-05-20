@@ -80,3 +80,5 @@
 // docs: document benches
 
 // chore: tidy cmd/patchsentinel
+
+// feat: add src handling
