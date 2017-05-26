@@ -168,3 +168,5 @@ func TestParseEmpty(t *testing.T) {
 // refactor: rename internal/render for clarity
 
 // refactor: split internal/analyze out of the hot path
+
+// test: cover internal/glob edge cases
