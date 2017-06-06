@@ -344,3 +344,5 @@ Direction, not commitments:
 > test: cover internal/diff edge cases
 
 > refactor: split internal/analyze out of the hot path
+
+> test: cover src edge cases
