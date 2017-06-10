@@ -170,3 +170,5 @@ func TestParseEmpty(t *testing.T) {
 // refactor: split internal/analyze out of the hot path
 
 // test: cover internal/glob edge cases
+
+// feat: expose tests as a library API
