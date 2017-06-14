@@ -103,3 +103,5 @@ export function renderGitHub(report: Report): { summary: string; annotations: st
 export type { RiskHit };
 
 // docs: add an example for benches
+
+// docs: document internal/policy
