@@ -149,3 +149,5 @@ if (isDirect) {
 // chore: tidy src
 
 // docs: document cmd/patchsentinel
+
+// docs: add an example for internal/analyze
