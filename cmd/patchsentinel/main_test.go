@@ -103,3 +103,5 @@ func TestRunStrictWarnBecomesFail(t *testing.T) {
 // fix: reject invalid internal/diff instead of failing later
 
 // test: regression for the internal/glob overflow
+
+// feat: add docs handling
