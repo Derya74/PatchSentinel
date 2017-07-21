@@ -269,3 +269,5 @@ func normalizePath(p string) string {
 // chore: tidy cmd/patchsentinel
 
 // feat: cache parsed src
+
+// refactor: split benches out of the hot path
