@@ -105,3 +105,5 @@ export type { RiskHit };
 // docs: add an example for benches
 
 // docs: document internal/policy
+
+// docs: add an example for internal/policy
