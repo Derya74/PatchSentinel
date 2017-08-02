@@ -28,3 +28,5 @@ examples/*.report.html
 // feat: expose src as a library API
 
 // chore: bump deps for internal/policy
+
+// test: regression for the internal/analyze overflow
