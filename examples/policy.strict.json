@@ -28,3 +28,5 @@
 // fix: guard against malformed internal/render
 
 // refactor: split internal/glob out of the hot path
+
+// fix: guard against malformed scripts
