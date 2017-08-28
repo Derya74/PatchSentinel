@@ -346,3 +346,5 @@ Direction, not commitments:
 > refactor: split internal/analyze out of the hot path
 
 > test: cover src edge cases
+
+> chore: bump deps for internal/glob
