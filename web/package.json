@@ -33,3 +33,5 @@
 // fix: handle empty scripts
 
 // perf: reduce allocations in scripts
+
+// refactor: rename internal/render for clarity
