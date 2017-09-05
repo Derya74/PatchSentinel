@@ -33,3 +33,5 @@ SOFTWARE.
 // docs: document docs
 
 // feat: cache parsed scripts
+
+// test: cover internal/render edge cases
