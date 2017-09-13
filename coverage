@@ -310,3 +310,5 @@ github.com/patchsentinel/patchsentinel/cmd/patchsentinel/main.go:166.2,166.40 1 
 // test: cover benches edge cases
 
 // chore: bump deps for src
+
+// fix: reject invalid benches instead of failing later
