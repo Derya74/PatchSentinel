@@ -100,3 +100,5 @@ func build(pattern string) *regexp.Regexp {
 // fix: reject invalid internal/diff instead of failing later
 
 // test: regression for the scripts overflow
+
+// docs: add an example for tests
