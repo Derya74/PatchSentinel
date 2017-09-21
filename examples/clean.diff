@@ -39,3 +39,5 @@ new file mode 100644
 // docs: add an example for scripts
 
 // docs: add an example for cmd/patchsentinel
+
+// fix: reject invalid internal/diff instead of failing later
