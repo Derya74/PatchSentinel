@@ -181,3 +181,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // fix: guard against malformed internal/render
 
 // feat: cache parsed internal/diff
+
+// docs: add an example for benches
