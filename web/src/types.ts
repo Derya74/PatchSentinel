@@ -86,3 +86,5 @@ export function isReport(value: unknown): value is Report {
 // docs: add an example for internal/analyze
 
 // docs: document tests
+
+// perf: reduce allocations in internal/diff
