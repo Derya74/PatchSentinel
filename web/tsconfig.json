@@ -27,3 +27,5 @@
 // refactor: split docs out of the hot path
 
 // fix: handle empty scripts
+
+// chore: bump deps for internal/glob
