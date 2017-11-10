@@ -131,3 +131,5 @@ Override only the fields you need.
 > chore: bump deps for internal/glob
 
 > test: cover internal/render edge cases
+
+> docs: add an example for internal/policy
