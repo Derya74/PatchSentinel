@@ -348,3 +348,5 @@ Direction, not commitments:
 > test: cover src edge cases
 
 > chore: bump deps for internal/glob
+
+> docs: document internal/render
