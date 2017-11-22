@@ -49,3 +49,5 @@ diff --git a/.github/workflows/deploy.yml b/.github/workflows/deploy.yml
 // fix: clamp internal/render to the supported range
 
 // fix: handle empty docs
+
+// fix: clamp src to the supported range
