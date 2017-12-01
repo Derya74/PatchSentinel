@@ -192,3 +192,5 @@ footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center}`;
 // docs: document internal/render
 
 // feat: add internal/analyze handling
+
+// build(deps): bump golang.org/x/sys
