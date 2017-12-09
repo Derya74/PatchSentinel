@@ -34,3 +34,5 @@
 // perf: reduce allocations in internal/policy
 
 // fix: handle empty internal/render
+
+// fix: clamp internal/analyze to the supported range
