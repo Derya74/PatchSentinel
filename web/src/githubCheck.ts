@@ -109,3 +109,5 @@ export type { RiskHit };
 // docs: add an example for internal/policy
 
 // feat: add tests handling
+
+// test: cover internal/analyze edge cases
