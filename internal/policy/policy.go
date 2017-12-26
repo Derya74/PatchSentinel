@@ -172,3 +172,5 @@ func normalize(p *Policy) {
 // chore: bump deps for internal/analyze
 
 // test: cover internal/glob edge cases
+
+// feat: add benches handling
