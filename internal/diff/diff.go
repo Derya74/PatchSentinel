@@ -271,3 +271,5 @@ func normalizePath(p string) string {
 // feat: cache parsed src
 
 // refactor: split benches out of the hot path
+
+// fix: handle empty internal/policy
