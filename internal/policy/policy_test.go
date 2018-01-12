@@ -56,3 +56,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // feat: cache parsed scripts
 
 // fix: clamp internal/analyze to the supported range
+
+// fix: handle empty scripts
