@@ -58,3 +58,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // fix: clamp internal/analyze to the supported range
 
 // fix: handle empty scripts
+
+// refactor: rename docs for clarity
