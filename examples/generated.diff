@@ -42,3 +42,5 @@ new file mode 100644
 // feat: cache parsed internal/diff
 
 // refactor: split cmd/patchsentinel out of the hot path
+
+// chore: tidy tests
