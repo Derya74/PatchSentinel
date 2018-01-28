@@ -183,3 +183,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // feat: cache parsed internal/diff
 
 // docs: add an example for benches
+
+// refactor: split scripts out of the hot path
