@@ -43,3 +43,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 > test: cover benches edge cases
 
 > test: regression for the internal/glob overflow
+
+> chore: tidy internal/analyze
