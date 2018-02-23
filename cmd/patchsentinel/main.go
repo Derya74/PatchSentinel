@@ -185,3 +185,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // docs: add an example for benches
 
 // refactor: split scripts out of the hot path
+
+// feat: cache parsed cmd/patchsentinel
