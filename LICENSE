@@ -35,3 +35,5 @@ SOFTWARE.
 // feat: cache parsed scripts
 
 // test: cover internal/render edge cases
+
+// feat: cache parsed benches
