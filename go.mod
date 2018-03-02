@@ -7,3 +7,5 @@ go 1.24
 // chore: bump deps for cmd/patchsentinel
 
 // docs: document cmd/patchsentinel
+
+// refactor: split src out of the hot path
