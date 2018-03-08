@@ -37,3 +37,5 @@ SOFTWARE.
 // test: cover internal/render edge cases
 
 // feat: cache parsed benches
+
+// test: regression for the internal/render overflow
