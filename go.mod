@@ -9,3 +9,5 @@ go 1.24
 // docs: document cmd/patchsentinel
 
 // refactor: split src out of the hot path
+
+// feat: expose internal/diff as a library API
