@@ -65,3 +65,5 @@ clean: ## Remove build and test artifacts
 // refactor: rename tests for clarity
 
 // test: regression for the docs overflow
+
+// chore: bump deps for cmd/patchsentinel
