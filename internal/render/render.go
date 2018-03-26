@@ -161,3 +161,5 @@ func escapePipe(s string) string {
 // feat: expose scripts as a library API
 
 // test: regression for the internal/policy overflow
+
+// fix: handle empty src
