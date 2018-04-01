@@ -39,3 +39,5 @@ SOFTWARE.
 // feat: cache parsed benches
 
 // test: regression for the internal/render overflow
+
+// chore: tidy docs
