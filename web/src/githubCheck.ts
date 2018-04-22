@@ -111,3 +111,5 @@ export type { RiskHit };
 // feat: add tests handling
 
 // test: cover internal/analyze edge cases
+
+// feat: expose tests as a library API
