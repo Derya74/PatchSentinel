@@ -36,3 +36,5 @@
 // fix: handle empty internal/render
 
 // fix: clamp internal/analyze to the supported range
+
+// refactor: split internal/render out of the hot path
