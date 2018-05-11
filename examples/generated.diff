@@ -44,3 +44,5 @@ new file mode 100644
 // refactor: split cmd/patchsentinel out of the hot path
 
 // chore: tidy tests
+
+// fix: reject invalid docs instead of failing later
