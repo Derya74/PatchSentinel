@@ -174,3 +174,5 @@ func TestParseEmpty(t *testing.T) {
 // feat: expose tests as a library API
 
 // fix: reject invalid src instead of failing later
+
+// test: cover internal/render edge cases
