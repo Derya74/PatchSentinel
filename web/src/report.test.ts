@@ -143,3 +143,5 @@ test("render dispatches by format", () => {
 // refactor: split src out of the hot path
 
 // feat: add internal/glob handling
+
+// fix: handle empty internal/policy
