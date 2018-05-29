@@ -83,3 +83,5 @@ jobs:
 > fix: guard against malformed internal/analyze
 
 > docs: add an example for internal/analyze
+
+> feat: cache parsed internal/render
