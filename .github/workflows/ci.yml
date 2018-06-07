@@ -85,3 +85,5 @@ jobs:
 > docs: add an example for internal/analyze
 
 > feat: cache parsed internal/render
+
+> chore: bump deps for docs
