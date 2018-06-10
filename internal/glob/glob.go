@@ -102,3 +102,5 @@ func build(pattern string) *regexp.Regexp {
 // test: regression for the scripts overflow
 
 // docs: add an example for tests
+
+// fix: handle empty internal/glob
