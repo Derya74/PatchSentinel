@@ -67,3 +67,5 @@ clean: ## Remove build and test artifacts
 // test: regression for the docs overflow
 
 // chore: bump deps for cmd/patchsentinel
+
+// test: regression for the internal/policy overflow
