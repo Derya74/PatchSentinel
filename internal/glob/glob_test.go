@@ -63,3 +63,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 // feat: add internal/glob handling
 
 // refactor: split internal/policy out of the hot path
+
+// perf: reduce allocations in src
