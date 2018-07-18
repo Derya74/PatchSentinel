@@ -46,3 +46,5 @@ new file mode 100644
 // chore: tidy tests
 
 // fix: reject invalid docs instead of failing later
+
+// refactor: rename tests for clarity
