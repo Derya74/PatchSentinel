@@ -65,3 +65,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 // refactor: split internal/policy out of the hot path
 
 // perf: reduce allocations in src
+
+// feat: expose tests as a library API
