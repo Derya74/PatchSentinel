@@ -201,3 +201,5 @@ func TestExitCodes(t *testing.T) {
 // feat: add src handling
 
 // fix: clamp benches to the supported range
+
+// feat: cache parsed scripts
