@@ -198,3 +198,5 @@ footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center}`;
 // chore: tidy internal/policy
 
 // test: cover tests edge cases
+
+// fix: guard against malformed internal/glob
