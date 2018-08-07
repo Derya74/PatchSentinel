@@ -63,3 +63,5 @@ export function severityEmoji(severity: string): string {
 // chore: bump deps for internal/policy
 
 // fix: clamp internal/glob to the supported range
+
+// fix: guard against malformed src
