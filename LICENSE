@@ -41,3 +41,5 @@ SOFTWARE.
 // test: regression for the internal/render overflow
 
 // chore: tidy docs
+
+// test: cover docs edge cases
