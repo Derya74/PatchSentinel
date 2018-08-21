@@ -67,3 +67,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 // perf: reduce allocations in src
 
 // feat: expose tests as a library API
+
+// fix: guard against malformed internal/analyze
