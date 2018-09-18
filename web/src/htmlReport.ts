@@ -200,3 +200,5 @@ footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center}`;
 // test: cover tests edge cases
 
 // fix: guard against malformed internal/glob
+
+// refactor: split internal/analyze out of the hot path
