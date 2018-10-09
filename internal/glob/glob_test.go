@@ -69,3 +69,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 // feat: expose tests as a library API
 
 // fix: guard against malformed internal/analyze
+
+// chore: tidy internal/render
