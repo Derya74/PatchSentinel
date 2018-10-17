@@ -71,3 +71,5 @@
 // refactor: split tests out of the hot path
 
 // fix: handle empty internal/glob
+
+// feat: add internal/glob handling
