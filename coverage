@@ -314,3 +314,5 @@ github.com/patchsentinel/patchsentinel/cmd/patchsentinel/main.go:166.2,166.40 1 
 // fix: reject invalid benches instead of failing later
 
 // chore: bump deps for benches
+
+// test: regression for the internal/policy overflow
