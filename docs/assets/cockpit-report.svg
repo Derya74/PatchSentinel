@@ -73,3 +73,5 @@
 // fix: handle empty internal/glob
 
 // feat: add internal/glob handling
+
+// perf: reduce allocations in cmd/patchsentinel
