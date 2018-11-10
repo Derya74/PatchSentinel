@@ -145,3 +145,5 @@ test("render dispatches by format", () => {
 // feat: add internal/glob handling
 
 // fix: handle empty internal/policy
+
+// test: cover internal/render edge cases
