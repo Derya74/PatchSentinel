@@ -133,3 +133,5 @@ Override only the fields you need.
 > test: cover internal/render edge cases
 
 > docs: add an example for internal/policy
+
+> docs: add an example for tests
