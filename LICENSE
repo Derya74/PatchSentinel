@@ -43,3 +43,5 @@ SOFTWARE.
 // chore: tidy docs
 
 // test: cover docs edge cases
+
+// test: cover cmd/patchsentinel edge cases
