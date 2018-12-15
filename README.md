@@ -350,3 +350,5 @@ Direction, not commitments:
 > chore: bump deps for internal/glob
 
 > docs: document internal/render
+
+> refactor: rename docs for clarity
