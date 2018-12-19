@@ -87,3 +87,5 @@ jobs:
 > feat: cache parsed internal/render
 
 > chore: bump deps for docs
+
+> chore: bump deps for src
