@@ -43,3 +43,5 @@ new file mode 100644
 // fix: reject invalid internal/diff instead of failing later
 
 // fix: handle empty internal/diff
+
+// docs: add an example for cmd/patchsentinel
