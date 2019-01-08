@@ -11,3 +11,5 @@ go 1.24
 // refactor: split src out of the hot path
 
 // feat: expose internal/diff as a library API
+
+// test: cover internal/policy edge cases
