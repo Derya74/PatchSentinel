@@ -26,3 +26,16 @@ func Text(r analyze.Report) string {
 	fmt.Fprintf(&b, "Test added         : %d\n", s.TestAdded)
 	fmt.Fprintf(&b, "Test-to-code ratio : %.2f\n", s.TestToCodeRatio)
 	fmt.Fprintf(&b, "Risk score         : %d\n", s.RiskScore)
+	fmt.Fprintf(&b, "Repetition ratio   : %.2f\n", s.RepetitionRatio)
+	fmt.Fprintf(&b, "Sensitive files    : %d\n", s.SensitiveFiles)
+	fmt.Fprintf(&b, "Est. review time   : %.0f min\n", s.ReviewMinutes)
+	fmt.Fprintf(&b, "Content hash       : %s\n", s.ContentHash)
+
+	if len(r.Findings) > 0 {
+		b.WriteString("\nFindings:\n")
+		for _, f := range r.Findings {
+			fmt.Fprintf(&b, "  [%s] %s\n    %s\n", strings.ToUpper(string(f.Severity)), f.Title, f.Detail)
+		}
+	}
+
+	if len(r.Risks) > 0 {
