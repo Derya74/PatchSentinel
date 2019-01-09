@@ -39,3 +39,17 @@ func Text(r analyze.Report) string {
 	}
 
 	if len(r.Risks) > 0 {
+		b.WriteString("\nRisk signals:\n")
+		for _, h := range r.Risks {
+			fmt.Fprintf(&b, "  (w%d x%d) %s [%s] %s\n    %s\n",
+				h.Weight, h.Count, h.PatternID, h.Path, h.Message, h.Snippet)
+		}
+	}
+
+	if len(r.Files) > 0 {
+		b.WriteString("\nFiles:\n")
+		for _, f := range r.Files {
+			tags := fileTags(f)
+			fmt.Fprintf(&b, "  %-9s +%-4d -%-4d %s%s\n", f.Status, f.Added, f.Removed, f.Path, tags)
+		}
+	}
