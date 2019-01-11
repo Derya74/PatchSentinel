@@ -48,3 +48,5 @@ new file mode 100644
 // fix: reject invalid docs instead of failing later
 
 // refactor: rename tests for clarity
+
+// refactor: rename benches for clarity
