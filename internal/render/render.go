@@ -79,3 +79,16 @@ func Markdown(r analyze.Report) string {
 	var b strings.Builder
 	fmt.Fprintf(&b, "## PatchSentinel — %s %s\n\n", verdictEmoji(r.Verdict), strings.ToUpper(string(r.Verdict)))
 
+	s := r.Summary
+	b.WriteString("| Metric | Value |\n|---|---|\n")
+	fmt.Fprintf(&b, "| Files changed | %d |\n", s.FilesChanged)
+	fmt.Fprintf(&b, "| Lines added / removed | +%d / -%d |\n", s.LinesAdded, s.LinesRemoved)
+	fmt.Fprintf(&b, "| Test-to-code ratio | %.2f |\n", s.TestToCodeRatio)
+	fmt.Fprintf(&b, "| Risk score | %d |\n", s.RiskScore)
+	fmt.Fprintf(&b, "| Repetition ratio | %.2f |\n", s.RepetitionRatio)
+	fmt.Fprintf(&b, "| Sensitive files | %d |\n", s.SensitiveFiles)
+	fmt.Fprintf(&b, "| Est. review time | %.0f min |\n", s.ReviewMinutes)
+
+	if len(r.Findings) > 0 {
+		b.WriteString("\n### Findings\n\n")
+		for _, f := range r.Findings {
