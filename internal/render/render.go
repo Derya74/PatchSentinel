@@ -66,3 +66,16 @@ func fileTags(f analyze.FileStat) string {
 	}
 	if f.IsBinary {
 		tags = append(tags, "binary")
+	}
+	if len(tags) == 0 {
+		return ""
+	}
+	return "  (" + strings.Join(tags, ",") + ")"
+}
+
+// Markdown renders a GitHub-style check summary using GFM. It is deterministic
+// and safe to post as a PR comment or a checks-API summary body.
+func Markdown(r analyze.Report) string {
+	var b strings.Builder
+	fmt.Fprintf(&b, "## PatchSentinel — %s %s\n\n", verdictEmoji(r.Verdict), strings.ToUpper(string(r.Verdict)))
+
