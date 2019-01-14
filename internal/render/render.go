@@ -53,3 +53,16 @@ func Text(r analyze.Report) string {
 			fmt.Fprintf(&b, "  %-9s +%-4d -%-4d %s%s\n", f.Status, f.Added, f.Removed, f.Path, tags)
 		}
 	}
+	return b.String()
+}
+
+func fileTags(f analyze.FileStat) string {
+	var tags []string
+	if f.IsTest {
+		tags = append(tags, "test")
+	}
+	if f.IsSensitive {
+		tags = append(tags, "sensitive")
+	}
+	if f.IsBinary {
+		tags = append(tags, "binary")
