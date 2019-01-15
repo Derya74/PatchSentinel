@@ -92,3 +92,16 @@ func Markdown(r analyze.Report) string {
 	if len(r.Findings) > 0 {
 		b.WriteString("\n### Findings\n\n")
 		for _, f := range r.Findings {
+			fmt.Fprintf(&b, "- %s **%s** — %s\n", severityEmoji(f.Severity), f.Title, f.Detail)
+		}
+	}
+
+	if len(r.Risks) > 0 {
+		b.WriteString("\n### Risk signals\n\n")
+		b.WriteString("| Pattern | Weight | Count | Path | Detail |\n|---|---|---|---|---|\n")
+		for _, h := range r.Risks {
+			fmt.Fprintf(&b, "| `%s` | %d | %d | `%s` | %s |\n",
+				h.PatternID, h.Weight, h.Count, h.Path, escapePipe(h.Message))
+		}
+	}
+
