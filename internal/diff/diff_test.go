@@ -176,3 +176,5 @@ func TestParseEmpty(t *testing.T) {
 // fix: reject invalid src instead of failing later
 
 // test: cover internal/render edge cases
+
+// fix: handle empty internal/render
