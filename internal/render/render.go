@@ -118,3 +118,16 @@ func AnnotationsText(r analyze.Report) string {
 	copy(files, r.Files)
 	sort.Slice(files, func(i, j int) bool { return files[i].Path < files[j].Path })
 
+	var b strings.Builder
+	for _, f := range r.Findings {
+		level := "notice"
+		switch f.Severity {
+		case analyze.SeverityError:
+			level = "error"
+		case analyze.SeverityWarn:
+			level = "warning"
+		}
+		fmt.Fprintf(&b, "::%s title=%s::%s\n", level, f.Title, f.Detail)
+	}
+	return b.String()
+}
