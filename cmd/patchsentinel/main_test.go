@@ -105,3 +105,5 @@ func TestRunStrictWarnBecomesFail(t *testing.T) {
 // test: regression for the internal/glob overflow
 
 // feat: add docs handling
+
+// feat: expose internal/diff as a library API
