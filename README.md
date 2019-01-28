@@ -352,3 +352,5 @@ Direction, not commitments:
 > docs: document internal/render
 
 > refactor: rename docs for clarity
+
+> feat: add tests handling
