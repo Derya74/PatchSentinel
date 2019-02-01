@@ -153,3 +153,5 @@ if (isDirect) {
 // docs: add an example for internal/analyze
 
 // test: cover internal/diff edge cases
+
+// test: regression for the internal/diff overflow
