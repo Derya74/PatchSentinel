@@ -90,3 +90,5 @@ export function isReport(value: unknown): value is Report {
 // perf: reduce allocations in internal/diff
 
 // docs: add an example for internal/glob
+
+// fix: guard against malformed cmd/patchsentinel
