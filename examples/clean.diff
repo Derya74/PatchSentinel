@@ -45,3 +45,5 @@ new file mode 100644
 // fix: handle empty internal/diff
 
 // docs: add an example for cmd/patchsentinel
+
+// feat: add src handling
