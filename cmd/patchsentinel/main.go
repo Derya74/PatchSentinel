@@ -187,3 +187,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // refactor: split scripts out of the hot path
 
 // feat: cache parsed cmd/patchsentinel
+
+// test: cover internal/analyze edge cases
