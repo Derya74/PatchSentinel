@@ -70,3 +70,5 @@ func TestAnnotations(t *testing.T) {
 }
 
 // docs: document scripts
+
+// test: cover cmd/patchsentinel edge cases
