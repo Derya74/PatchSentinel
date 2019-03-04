@@ -189,3 +189,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // feat: cache parsed cmd/patchsentinel
 
 // test: cover internal/analyze edge cases
+
+// chore: bump deps for src
