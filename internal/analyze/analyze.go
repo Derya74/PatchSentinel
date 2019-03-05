@@ -402,3 +402,58 @@ func evaluate(sum Summary, risks []RiskHit, pol policy.Policy) ([]Finding, Verdi
 	if sum.RepetitionRatio >= pol.Thresholds.MaxRepetitionRatio {
 		add("repetition", SeverityWarn, "High repetition in added code",
 			fmt.Sprintf("Repetition ratio %.2f ≥ %.2f suggests boilerplate or generated code that needs closer review.",
+				sum.RepetitionRatio, pol.Thresholds.MaxRepetitionRatio))
+	}
+
+	// Sensitive path gate.
+	if sum.SensitiveFiles > 0 {
+		sev := SeverityError
+		if pol.Thresholds.SensitivePathIsWarning {
+			sev = SeverityWarn
+		}
+		add("sensitive-path", sev, "Sensitive paths modified",
+			fmt.Sprintf("%d sensitive file(s) changed; require domain-owner review.", sum.SensitiveFiles))
+	}
+
+	// Review cost gate.
+	if int(math.Ceil(sum.ReviewMinutes)) > pol.Thresholds.MaxReviewMinutes {
+		add("review-cost", SeverityWarn, "Large change increases review cost",
+			fmt.Sprintf("Estimated review time %.0f min > budget %d min; consider splitting the change.",
+				sum.ReviewMinutes, pol.Thresholds.MaxReviewMinutes))
+	}
+
+	if len(findings) == 0 {
+		add("clean", SeverityInfo, "No policy violations detected",
+			"All configured gates passed.")
+	}
+
+	sort.SliceStable(findings, func(i, j int) bool {
+		return severityRank(findings[i].Severity) < severityRank(findings[j].Severity)
+	})
+	return findings, worst
+}
+
+func severityRank(s Severity) int {
+	switch s {
+	case SeverityError:
+		return 0
+	case SeverityWarn:
+		return 1
+	default:
+		return 2
+	}
+}
+
+func exitCode(v Verdict) int {
+	switch v {
+	case Fail:
+		return 2
+	case Warn:
+		return 1
+	default:
+		return 0
+	}
+}
+
+// round normalizes floats to 4 decimal places for deterministic JSON.
+func round(f float64) float64 {
