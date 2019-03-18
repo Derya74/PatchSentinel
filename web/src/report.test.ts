@@ -147,3 +147,5 @@ test("render dispatches by format", () => {
 // fix: handle empty internal/policy
 
 // test: cover internal/render edge cases
+
+// chore: bump deps for docs
