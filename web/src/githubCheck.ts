@@ -115,3 +115,5 @@ export type { RiskHit };
 // feat: expose tests as a library API
 
 // docs: document docs
+
+// fix: reject invalid docs instead of failing later
