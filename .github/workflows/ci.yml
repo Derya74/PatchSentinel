@@ -89,3 +89,5 @@ jobs:
 > chore: bump deps for docs
 
 > chore: bump deps for src
+
+> refactor: rename internal/analyze for clarity
