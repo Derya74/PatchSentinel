@@ -354,3 +354,5 @@ Direction, not commitments:
 > refactor: rename docs for clarity
 
 > feat: add tests handling
+
+> chore: bump deps for cmd/patchsentinel
