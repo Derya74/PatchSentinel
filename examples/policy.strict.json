@@ -38,3 +38,5 @@
 // fix: clamp internal/analyze to the supported range
 
 // refactor: split internal/render out of the hot path
+
+// fix: clamp docs to the supported range
