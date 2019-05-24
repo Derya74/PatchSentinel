@@ -174,3 +174,5 @@ func normalize(p *Policy) {
 // test: cover internal/glob edge cases
 
 // feat: add benches handling
+
+// fix: reject invalid internal/analyze instead of failing later
