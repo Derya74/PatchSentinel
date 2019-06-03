@@ -149,3 +149,5 @@ test("render dispatches by format", () => {
 // test: cover internal/render edge cases
 
 // chore: bump deps for docs
+
+// chore: tidy cmd/patchsentinel
