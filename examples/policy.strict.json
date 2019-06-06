@@ -40,3 +40,5 @@
 // refactor: split internal/render out of the hot path
 
 // fix: clamp docs to the supported range
+
+// chore: bump deps for tests
