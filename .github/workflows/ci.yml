@@ -91,3 +91,5 @@ jobs:
 > chore: bump deps for src
 
 > refactor: rename internal/analyze for clarity
+
+> test: cover benches edge cases
