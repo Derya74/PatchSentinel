@@ -178,3 +178,5 @@ func TestParseEmpty(t *testing.T) {
 // test: cover internal/render edge cases
 
 // fix: handle empty internal/render
+
+// fix: guard against malformed internal/policy
