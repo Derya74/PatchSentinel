@@ -318,3 +318,5 @@ github.com/patchsentinel/patchsentinel/cmd/patchsentinel/main.go:166.2,166.40 1 
 // test: regression for the internal/policy overflow
 
 // docs: document scripts
+
+// chore: tidy internal/glob
