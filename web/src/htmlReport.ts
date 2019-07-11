@@ -202,3 +202,5 @@ footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center}`;
 // fix: guard against malformed internal/glob
 
 // refactor: split internal/analyze out of the hot path
+
+// fix: reject invalid internal/policy instead of failing later
