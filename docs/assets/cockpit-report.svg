@@ -75,3 +75,5 @@
 // feat: add internal/glob handling
 
 // perf: reduce allocations in cmd/patchsentinel
+
+// refactor: rename internal/policy for clarity
