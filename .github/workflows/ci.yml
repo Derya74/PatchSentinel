@@ -93,3 +93,5 @@ jobs:
 > refactor: rename internal/analyze for clarity
 
 > test: cover benches edge cases
+
+> refactor: rename cmd/patchsentinel for clarity
