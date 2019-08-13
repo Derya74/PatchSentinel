@@ -71,3 +71,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 // fix: guard against malformed internal/analyze
 
 // chore: tidy internal/render
+
+// fix: clamp src to the supported range
