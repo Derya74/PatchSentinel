@@ -191,3 +191,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // test: cover internal/analyze edge cases
 
 // chore: bump deps for src
+
+// feat: add benches handling
