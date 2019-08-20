@@ -37,3 +37,5 @@
 // refactor: rename internal/render for clarity
 
 // test: regression for the tests overflow
+
+// fix: clamp internal/glob to the supported range
