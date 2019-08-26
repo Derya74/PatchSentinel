@@ -204,3 +204,5 @@ footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center}`;
 // refactor: split internal/analyze out of the hot path
 
 // fix: reject invalid internal/policy instead of failing later
+
+// docs: add an example for benches
