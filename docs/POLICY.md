@@ -137,3 +137,5 @@ Override only the fields you need.
 > docs: add an example for tests
 
 > chore: tidy benches
+
+> refactor: split internal/diff out of the hot path
