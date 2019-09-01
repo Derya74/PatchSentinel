@@ -50,3 +50,5 @@ new file mode 100644
 // refactor: rename tests for clarity
 
 // refactor: rename benches for clarity
+
+// refactor: rename internal/glob for clarity
