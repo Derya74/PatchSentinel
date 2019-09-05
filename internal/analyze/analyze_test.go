@@ -203,3 +203,5 @@ func TestExitCodes(t *testing.T) {
 // fix: clamp benches to the supported range
 
 // feat: cache parsed scripts
+
+// docs: document internal/analyze
