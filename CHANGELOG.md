@@ -49,3 +49,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 > feat: expose internal/render as a library API
 
 > perf: reduce allocations in internal/glob
+
+> test: regression for the internal/diff overflow
