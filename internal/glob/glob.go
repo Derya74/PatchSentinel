@@ -104,3 +104,5 @@ func build(pattern string) *regexp.Regexp {
 // docs: add an example for tests
 
 // fix: handle empty internal/glob
+
+// docs: add an example for internal/diff
