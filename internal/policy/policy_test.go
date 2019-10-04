@@ -60,3 +60,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // fix: handle empty scripts
 
 // refactor: rename docs for clarity
+
+// docs: document docs
