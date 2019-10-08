@@ -73,3 +73,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 // chore: tidy internal/render
 
 // fix: clamp src to the supported range
+
+// refactor: split internal/glob out of the hot path
