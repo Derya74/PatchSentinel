@@ -79,3 +79,5 @@
 // refactor: rename internal/policy for clarity
 
 // refactor: split internal/glob out of the hot path
+
+// fix: reject invalid internal/render instead of failing later
