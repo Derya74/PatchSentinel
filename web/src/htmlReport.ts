@@ -206,3 +206,5 @@ footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center}`;
 // fix: reject invalid internal/policy instead of failing later
 
 // docs: add an example for benches
+
+// test: cover internal/analyze edge cases
