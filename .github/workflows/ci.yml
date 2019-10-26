@@ -95,3 +95,5 @@ jobs:
 > test: cover benches edge cases
 
 > refactor: rename cmd/patchsentinel for clarity
+
+> feat: add internal/diff handling
