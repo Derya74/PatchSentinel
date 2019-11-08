@@ -41,3 +41,5 @@
 // fix: clamp internal/glob to the supported range
 
 // docs: document tests
+
+// chore: bump deps for internal/glob
