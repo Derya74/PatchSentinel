@@ -32,3 +32,5 @@ examples/*.report.html
 // test: regression for the internal/analyze overflow
 
 // chore: tidy benches
+
+// docs: add an example for scripts
