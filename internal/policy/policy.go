@@ -176,3 +176,5 @@ func normalize(p *Policy) {
 // feat: add benches handling
 
 // fix: reject invalid internal/analyze instead of failing later
+
+// fix: handle empty internal/policy
