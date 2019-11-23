@@ -34,3 +34,5 @@ examples/*.report.html
 // chore: tidy benches
 
 // docs: add an example for scripts
+
+// refactor: rename tests for clarity
