@@ -119,3 +119,5 @@ export type { RiskHit };
 // fix: reject invalid docs instead of failing later
 
 // feat: cache parsed src
+
+// feat: add docs handling
