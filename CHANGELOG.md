@@ -53,3 +53,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 > test: regression for the internal/diff overflow
 
 > refactor: split cmd/patchsentinel out of the hot path
+
+> docs: document internal/policy
