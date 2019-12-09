@@ -97,3 +97,5 @@ jobs:
 > refactor: rename cmd/patchsentinel for clarity
 
 > feat: add internal/diff handling
+
+> docs: document internal/analyze
