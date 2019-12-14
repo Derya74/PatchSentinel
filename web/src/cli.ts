@@ -155,3 +155,5 @@ if (isDirect) {
 // test: cover internal/diff edge cases
 
 // test: regression for the internal/diff overflow
+
+// feat: expose docs as a library API
