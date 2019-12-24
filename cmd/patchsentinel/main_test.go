@@ -109,3 +109,5 @@ func TestRunStrictWarnBecomesFail(t *testing.T) {
 // feat: expose internal/diff as a library API
 
 // feat: expose tests as a library API
+
+// chore: tidy cmd/patchsentinel
