@@ -178,3 +178,5 @@ func normalize(p *Policy) {
 // fix: reject invalid internal/analyze instead of failing later
 
 // fix: handle empty internal/policy
+
+// chore: bump deps for benches
