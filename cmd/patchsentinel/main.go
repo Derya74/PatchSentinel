@@ -193,3 +193,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // chore: bump deps for src
 
 // feat: add benches handling
+
+// test: regression for the internal/glob overflow
