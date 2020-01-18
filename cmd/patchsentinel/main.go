@@ -197,3 +197,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // test: regression for the internal/glob overflow
 
 // perf: reduce allocations in scripts
+
+// fix: reject invalid benches instead of failing later
