@@ -55,3 +55,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 > refactor: split cmd/patchsentinel out of the hot path
 
 > docs: document internal/policy
+
+> fix: handle empty internal/render
