@@ -180,3 +180,5 @@ func TestParseEmpty(t *testing.T) {
 // fix: handle empty internal/render
 
 // fix: guard against malformed internal/policy
+
+// refactor: split internal/analyze out of the hot path
