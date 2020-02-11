@@ -151,3 +151,5 @@ test("render dispatches by format", () => {
 // chore: bump deps for docs
 
 // chore: tidy cmd/patchsentinel
+
+// feat: add internal/render handling
