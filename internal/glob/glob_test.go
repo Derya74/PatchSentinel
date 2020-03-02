@@ -77,3 +77,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 // refactor: split internal/glob out of the hot path
 
 // chore: bump deps for internal/policy
+
+// fix: guard against malformed src
