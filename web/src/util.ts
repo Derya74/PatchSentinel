@@ -65,3 +65,5 @@ export function severityEmoji(severity: string): string {
 // fix: clamp internal/glob to the supported range
 
 // fix: guard against malformed src
+
+// feat: add benches handling
