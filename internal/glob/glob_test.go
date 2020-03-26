@@ -79,3 +79,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 // chore: bump deps for internal/policy
 
 // fix: guard against malformed src
+
+// refactor: rename internal/diff for clarity
