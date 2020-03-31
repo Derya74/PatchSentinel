@@ -72,3 +72,5 @@ func TestAnnotations(t *testing.T) {
 // docs: document scripts
 
 // test: cover cmd/patchsentinel edge cases
+
+// test: regression for the internal/glob overflow
