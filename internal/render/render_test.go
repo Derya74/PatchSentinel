@@ -74,3 +74,5 @@ func TestAnnotations(t *testing.T) {
 // test: cover cmd/patchsentinel edge cases
 
 // test: regression for the internal/glob overflow
+
+// feat: add internal/render handling
