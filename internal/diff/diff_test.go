@@ -182,3 +182,5 @@ func TestParseEmpty(t *testing.T) {
 // fix: guard against malformed internal/policy
 
 // refactor: split internal/analyze out of the hot path
+
+// test: cover src edge cases
