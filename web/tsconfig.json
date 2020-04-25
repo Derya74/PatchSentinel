@@ -31,3 +31,5 @@
 // chore: bump deps for internal/glob
 
 // fix: handle empty internal/glob
+
+// fix: handle empty tests
