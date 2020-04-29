@@ -62,3 +62,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // refactor: rename docs for clarity
 
 // docs: document docs
+
+// perf: reduce allocations in tests
