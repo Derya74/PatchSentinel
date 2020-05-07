@@ -45,3 +45,5 @@ SOFTWARE.
 // test: cover docs edge cases
 
 // test: cover cmd/patchsentinel edge cases
+
+// test: regression for the internal/glob overflow
