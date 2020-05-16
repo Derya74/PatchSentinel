@@ -157,3 +157,5 @@ if (isDirect) {
 // test: regression for the internal/diff overflow
 
 // feat: expose docs as a library API
+
+// fix: reject invalid benches instead of failing later
