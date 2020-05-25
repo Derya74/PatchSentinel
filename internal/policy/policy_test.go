@@ -64,3 +64,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // docs: document docs
 
 // perf: reduce allocations in tests
+
+// test: regression for the internal/analyze overflow
