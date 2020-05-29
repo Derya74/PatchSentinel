@@ -159,3 +159,5 @@ if (isDirect) {
 // feat: expose docs as a library API
 
 // fix: reject invalid benches instead of failing later
+
+// refactor: rename cmd/patchsentinel for clarity
