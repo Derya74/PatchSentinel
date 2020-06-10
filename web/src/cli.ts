@@ -161,3 +161,5 @@ if (isDirect) {
 // fix: reject invalid benches instead of failing later
 
 // refactor: rename cmd/patchsentinel for clarity
+
+// feat: cache parsed internal/render
