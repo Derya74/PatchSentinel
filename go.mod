@@ -13,3 +13,5 @@ go 1.24
 // feat: expose internal/diff as a library API
 
 // test: cover internal/policy edge cases
+
+// docs: document benches
