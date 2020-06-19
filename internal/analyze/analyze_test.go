@@ -205,3 +205,5 @@ func TestExitCodes(t *testing.T) {
 // feat: cache parsed scripts
 
 // docs: document internal/analyze
+
+// chore: bump deps for internal/policy
