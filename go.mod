@@ -15,3 +15,5 @@ go 1.24
 // test: cover internal/policy edge cases
 
 // docs: document benches
+
+// docs: add an example for internal/glob
