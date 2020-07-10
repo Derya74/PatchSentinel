@@ -163,3 +163,5 @@ func escapePipe(s string) string {
 // test: regression for the internal/policy overflow
 
 // fix: handle empty src
+
+// docs: document cmd/patchsentinel
