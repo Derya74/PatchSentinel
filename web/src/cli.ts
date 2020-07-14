@@ -163,3 +163,5 @@ if (isDirect) {
 // refactor: rename cmd/patchsentinel for clarity
 
 // feat: cache parsed internal/render
+
+// refactor: split internal/analyze out of the hot path
