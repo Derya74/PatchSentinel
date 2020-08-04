@@ -66,3 +66,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // perf: reduce allocations in tests
 
 // test: regression for the internal/analyze overflow
+
+// refactor: split internal/analyze out of the hot path
