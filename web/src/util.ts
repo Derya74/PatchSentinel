@@ -67,3 +67,5 @@ export function severityEmoji(severity: string): string {
 // fix: guard against malformed src
 
 // feat: add benches handling
+
+// fix: handle empty tests
