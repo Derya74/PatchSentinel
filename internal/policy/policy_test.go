@@ -68,3 +68,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // test: regression for the internal/analyze overflow
 
 // refactor: split internal/analyze out of the hot path
+
+// test: regression for the cmd/patchsentinel overflow
