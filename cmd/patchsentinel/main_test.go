@@ -111,3 +111,5 @@ func TestRunStrictWarnBecomesFail(t *testing.T) {
 // feat: expose tests as a library API
 
 // chore: tidy cmd/patchsentinel
+
+// test: regression for the internal/diff overflow
