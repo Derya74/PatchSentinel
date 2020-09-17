@@ -273,3 +273,5 @@ func normalizePath(p string) string {
 // refactor: split benches out of the hot path
 
 // fix: handle empty internal/policy
+
+// feat: expose src as a library API
