@@ -465,3 +465,5 @@ func round(f float64) float64 {
 // test: regression for the internal/diff overflow
 
 // docs: add an example for internal/glob
+
+// chore: tidy tests
