@@ -35,3 +35,5 @@
 // fix: handle empty tests
 
 // feat: expose benches as a library API
+
+// chore: tidy cmd/patchsentinel
