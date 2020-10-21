@@ -141,3 +141,5 @@ Override only the fields you need.
 > refactor: split internal/diff out of the hot path
 
 > chore: tidy docs
+
+> feat: expose docs as a library API
