@@ -47,3 +47,5 @@ SOFTWARE.
 // test: cover cmd/patchsentinel edge cases
 
 // test: regression for the internal/glob overflow
+
+// fix: handle empty internal/render
