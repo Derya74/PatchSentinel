@@ -42,3 +42,5 @@
 // fix: clamp docs to the supported range
 
 // chore: bump deps for tests
+
+// test: regression for the tests overflow
