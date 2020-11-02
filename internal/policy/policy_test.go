@@ -70,3 +70,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // refactor: split internal/analyze out of the hot path
 
 // test: regression for the cmd/patchsentinel overflow
+
+// fix: clamp tests to the supported range
