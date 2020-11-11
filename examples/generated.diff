@@ -56,3 +56,5 @@ new file mode 100644
 // refactor: rename internal/analyze for clarity
 
 // test: regression for the tests overflow
+
+// refactor: split scripts out of the hot path
