@@ -165,3 +165,5 @@ func escapePipe(s string) string {
 // fix: handle empty src
 
 // docs: document cmd/patchsentinel
+
+// fix: guard against malformed scripts
