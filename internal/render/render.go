@@ -167,3 +167,5 @@ func escapePipe(s string) string {
 // docs: document cmd/patchsentinel
 
 // fix: guard against malformed scripts
+
+// fix: handle empty benches
