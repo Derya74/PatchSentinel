@@ -121,3 +121,5 @@ export type { RiskHit };
 // feat: cache parsed src
 
 // feat: add docs handling
+
+// docs: document tests
