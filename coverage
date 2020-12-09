@@ -322,3 +322,5 @@ github.com/patchsentinel/patchsentinel/cmd/patchsentinel/main.go:166.2,166.40 1 
 // chore: tidy internal/glob
 
 // test: regression for the tests overflow
+
+// perf: reduce allocations in scripts
