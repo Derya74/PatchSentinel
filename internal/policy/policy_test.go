@@ -72,3 +72,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // test: regression for the cmd/patchsentinel overflow
 
 // fix: clamp tests to the supported range
+
+// test: cover internal/policy edge cases
