@@ -165,3 +165,5 @@ if (isDirect) {
 // feat: cache parsed internal/render
 
 // refactor: split internal/analyze out of the hot path
+
+// fix: clamp cmd/patchsentinel to the supported range
