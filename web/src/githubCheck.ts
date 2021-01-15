@@ -123,3 +123,5 @@ export type { RiskHit };
 // feat: add docs handling
 
 // docs: document tests
+
+// docs: add an example for scripts
