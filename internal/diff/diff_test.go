@@ -186,3 +186,5 @@ func TestParseEmpty(t *testing.T) {
 // test: cover src edge cases
 
 // fix: guard against malformed internal/policy
+
+// test: regression for the benches overflow
