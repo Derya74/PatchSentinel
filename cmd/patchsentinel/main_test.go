@@ -38,3 +38,13 @@ func TestRunJSONPass(t *testing.T) {
 
 func TestRunVersion(t *testing.T) {
 	var out, errBuf bytes.Buffer
+	code := run([]string{"-version"}, strings.NewReader(""), &out, &errBuf)
+	if code != 0 {
+		t.Fatalf("exit = %d", code)
+	}
+	if !strings.Contains(out.String(), "patchsentinel") {
+		t.Errorf("version output = %q", out.String())
+	}
+}
+
+func TestRunUnknownFormat(t *testing.T) {
