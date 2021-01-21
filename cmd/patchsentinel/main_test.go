@@ -28,3 +28,13 @@ func TestRunJSONPass(t *testing.T) {
 		t.Fatalf("exit = %d, stderr=%s", code, errBuf.String())
 	}
 	var parsed map[string]any
+	if err := json.Unmarshal(out.Bytes(), &parsed); err != nil {
+		t.Fatalf("output not valid json: %v\n%s", err, out.String())
+	}
+	if parsed["verdict"] != "pass" {
+		t.Errorf("verdict = %v, want pass", parsed["verdict"])
+	}
+}
+
+func TestRunVersion(t *testing.T) {
+	var out, errBuf bytes.Buffer
