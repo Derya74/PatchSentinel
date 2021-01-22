@@ -58,3 +58,13 @@ func TestRunUnknownFormat(t *testing.T) {
 const failDiff = `diff --git a/c.go b/c.go
 --- a/c.go
 +++ b/c.go
+@@ -1,1 +1,5 @@
+ package c
++var password = "supersecretvalue123"
++var apiKey = "sk_live_0987654321abcd"
++func x() { eval("y") }
++func z() { eval("w") }
+`
+
+func TestRunFailExit(t *testing.T) {
+	var out, errBuf bytes.Buffer
