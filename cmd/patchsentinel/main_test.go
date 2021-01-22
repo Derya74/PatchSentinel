@@ -48,3 +48,13 @@ func TestRunVersion(t *testing.T) {
 }
 
 func TestRunUnknownFormat(t *testing.T) {
+	var out, errBuf bytes.Buffer
+	code := run([]string{"-format", "xml"}, strings.NewReader(passDiff), &out, &errBuf)
+	if code != 2 {
+		t.Errorf("exit = %d, want 2 for unknown format", code)
+	}
+}
+
+const failDiff = `diff --git a/c.go b/c.go
+--- a/c.go
++++ b/c.go
