@@ -68,3 +68,13 @@ const failDiff = `diff --git a/c.go b/c.go
 
 func TestRunFailExit(t *testing.T) {
 	var out, errBuf bytes.Buffer
+	code := run([]string{"-format", "text"}, strings.NewReader(failDiff), &out, &errBuf)
+	if code != 2 {
+		t.Errorf("exit = %d, want 2 for failing diff\n%s", code, out.String())
+	}
+	if !strings.Contains(out.String(), "FAIL") {
+		t.Errorf("expected FAIL in text output")
+	}
+}
+
+func TestRunStrictWarnBecomesFail(t *testing.T) {
