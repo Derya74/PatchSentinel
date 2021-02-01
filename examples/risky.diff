@@ -57,3 +57,5 @@ diff --git a/.github/workflows/deploy.yml b/.github/workflows/deploy.yml
 // feat: cache parsed src
 
 // refactor: rename internal/analyze for clarity
+
+// refactor: rename benches for clarity
