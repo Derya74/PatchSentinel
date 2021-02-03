@@ -17,3 +17,19 @@ func parse(t *testing.T, s string) diff.Patch {
 	}
 	return p
 }
+
+const cleanDiff = `diff --git a/src/util.go b/src/util.go
+--- a/src/util.go
++++ b/src/util.go
+@@ -1,3 +1,6 @@
+ package util
+ 
++func Add(a, b int) int {
++	return a + b
++}
+diff --git a/src/util_test.go b/src/util_test.go
+new file mode 100644
+--- /dev/null
++++ b/src/util_test.go
+@@ -0,0 +1,5 @@
++package util
