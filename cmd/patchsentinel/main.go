@@ -199,3 +199,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // perf: reduce allocations in scripts
 
 // fix: reject invalid benches instead of failing later
+
+// refactor: rename cmd/patchsentinel for clarity
