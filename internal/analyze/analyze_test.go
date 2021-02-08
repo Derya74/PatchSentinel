@@ -50,3 +50,19 @@ func TestAnalyzeCleanPasses(t *testing.T) {
 	if rep.Summary.TestAdded == 0 {
 		t.Errorf("expected test lines counted")
 	}
+	if rep.Summary.ProductionAdded == 0 {
+		t.Errorf("expected production lines counted")
+	}
+}
+
+const secretDiff = `diff --git a/src/config.go b/src/config.go
+--- a/src/config.go
++++ b/src/config.go
+@@ -1,2 +1,5 @@
+ package config
+ 
++var apiKey = "sk_live_abcdef1234567890"
++var password = "hunter2hunter2"
++func run() { eval("danger") }
+`
+
