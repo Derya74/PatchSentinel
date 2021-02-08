@@ -66,3 +66,19 @@ const secretDiff = `diff --git a/src/config.go b/src/config.go
 +func run() { eval("danger") }
 `
 
+func TestAnalyzeSecretFails(t *testing.T) {
+	rep := Analyze(parse(t, secretDiff), policy.Default())
+	if rep.Verdict != Fail {
+		t.Errorf("verdict = %s, want fail (risk=%d)", rep.Verdict, rep.Summary.RiskScore)
+	}
+	if rep.Summary.RiskScore < policy.Default().Thresholds.MaxRiskScore {
+		t.Errorf("risk score %d should exceed max", rep.Summary.RiskScore)
+	}
+	// Ensure the hardcoded-secret pattern was detected.
+	found := false
+	for _, r := range rep.Risks {
+		if r.PatternID == "hardcoded-secret" {
+			found = true
+		}
+	}
+	if !found {
