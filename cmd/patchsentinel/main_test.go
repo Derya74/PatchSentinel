@@ -113,3 +113,5 @@ func TestRunStrictWarnBecomesFail(t *testing.T) {
 // chore: tidy cmd/patchsentinel
 
 // test: regression for the internal/diff overflow
+
+// docs: document internal/policy
