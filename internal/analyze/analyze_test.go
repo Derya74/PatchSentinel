@@ -98,3 +98,19 @@ func sensitiveDiff() string {
 }
 
 func TestAnalyzeSensitivePath(t *testing.T) {
+	rep := Analyze(parse(t, sensitiveDiff()), policy.Default())
+	if rep.Summary.SensitiveFiles != 1 {
+		t.Fatalf("sensitive files = %d, want 1", rep.Summary.SensitiveFiles)
+	}
+	if rep.Verdict != Fail {
+		t.Errorf("verdict = %s, want fail (default sensitive=error)", rep.Verdict)
+	}
+
+	// With SensitivePathIsWarning the same diff should warn, not fail.
+	pol := policy.Default()
+	pol.Thresholds.SensitivePathIsWarning = true
+	rep2 := Analyze(parse(t, sensitiveDiff()), pol)
+	if rep2.Verdict != Warn {
+		t.Errorf("verdict = %s, want warn when sensitive=warning", rep2.Verdict)
+	}
+}
