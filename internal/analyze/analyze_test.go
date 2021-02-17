@@ -82,3 +82,19 @@ func TestAnalyzeSecretFails(t *testing.T) {
 		}
 	}
 	if !found {
+		t.Errorf("hardcoded-secret not detected; risks=%+v", rep.Risks)
+	}
+}
+
+func sensitiveDiff() string {
+	return `diff --git a/.github/workflows/deploy.yml b/.github/workflows/deploy.yml
+--- a/.github/workflows/deploy.yml
++++ b/.github/workflows/deploy.yml
+@@ -1,2 +1,3 @@
+ name: deploy
+ on: push
++run: echo hi
+`
+}
+
+func TestAnalyzeSensitivePath(t *testing.T) {
