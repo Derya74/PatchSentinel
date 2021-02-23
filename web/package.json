@@ -49,3 +49,5 @@
 // test: regression for the internal/analyze overflow
 
 // chore: bump deps for internal/policy
+
+// test: cover src edge cases
