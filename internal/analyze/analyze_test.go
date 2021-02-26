@@ -146,3 +146,20 @@ func TestTestToCodeRatio(t *testing.T) {
 
 func TestReviewMinutes(t *testing.T) {
 	rc := policy.Default().ReviewCost
+	files := []FileStat{
+		{Added: 10, Removed: 0, IsSensitive: false},
+	}
+	// 10*0.30 + 2.0 = 5.0
+	if got := reviewMinutes(files, rc); got != 5.0 {
+		t.Errorf("reviewMinutes = %v, want 5.0", got)
+	}
+	sensitive := []FileStat{{Added: 10, Removed: 0, IsSensitive: true}}
+	// 5.0 * 1.5 = 7.5
+	if got := reviewMinutes(sensitive, rc); got != 7.5 {
+		t.Errorf("reviewMinutes sensitive = %v, want 7.5", got)
+	}
+}
+
+// TestDeterminism guarantees identical byte output across repeated runs.
+func TestDeterminism(t *testing.T) {
+	patch := parse(t, secretDiff)
