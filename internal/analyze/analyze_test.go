@@ -130,3 +130,19 @@ func TestRepetitionRatio(t *testing.T) {
 	if repetitionRatio(nil) != 0 {
 		t.Errorf("empty should be 0")
 	}
+}
+
+func TestTestToCodeRatio(t *testing.T) {
+	if ratio(10, 40) != 0.25 {
+		t.Errorf("ratio(10,40) = %v", ratio(10, 40))
+	}
+	if ratio(5, 0) != 1 {
+		t.Errorf("ratio with zero prod and tests = %v, want 1", ratio(5, 0))
+	}
+	if ratio(0, 0) != 0 {
+		t.Errorf("ratio(0,0) = %v, want 0", ratio(0, 0))
+	}
+}
+
+func TestReviewMinutes(t *testing.T) {
+	rc := policy.Default().ReviewCost
