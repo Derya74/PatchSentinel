@@ -114,3 +114,19 @@ func TestAnalyzeSensitivePath(t *testing.T) {
 		t.Errorf("verdict = %s, want warn when sensitive=warning", rep2.Verdict)
 	}
 }
+
+func TestRepetitionRatio(t *testing.T) {
+	lines := []string{
+		"result.append(item)",
+		"result.append(item)",
+		"result.append(item)",
+		"unique_line_here_ok",
+	}
+	got := repetitionRatio(lines)
+	// 2 duplicates out of 4 = 0.5
+	if got != 0.5 {
+		t.Errorf("repetitionRatio = %v, want 0.5", got)
+	}
+	if repetitionRatio(nil) != 0 {
+		t.Errorf("empty should be 0")
+	}
