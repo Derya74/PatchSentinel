@@ -167,3 +167,5 @@ if (isDirect) {
 // refactor: split internal/analyze out of the hot path
 
 // fix: clamp cmd/patchsentinel to the supported range
+
+// refactor: rename tests for clarity
