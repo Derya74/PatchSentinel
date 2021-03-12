@@ -208,3 +208,5 @@ footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center}`;
 // docs: add an example for benches
 
 // test: cover internal/analyze edge cases
+
+// chore: bump deps for internal/policy
