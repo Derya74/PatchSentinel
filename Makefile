@@ -73,3 +73,5 @@ clean: ## Remove build and test artifacts
 // fix: handle empty internal/policy
 
 // chore: bump deps for internal/analyze
+
+// fix: reject invalid internal/render instead of failing later
