@@ -95,3 +95,20 @@ rename to b.txt
 	}
 	if len(p.Files) != 2 {
 		t.Fatalf("want 2 files, got %d", len(p.Files))
+	}
+	if !p.Files[0].IsDelete {
+		t.Errorf("first file should be delete")
+	}
+	if p.Files[0].Path() != "old.txt" {
+		t.Errorf("delete path = %q", p.Files[0].Path())
+	}
+	ren := p.Files[1]
+	if !ren.IsRename {
+		t.Errorf("second file should be rename")
+	}
+	if ren.OldPath != "a.txt" || ren.NewPath != "b.txt" {
+		t.Errorf("rename paths = %q -> %q", ren.OldPath, ren.NewPath)
+	}
+}
+
+func TestParsePlainUnified(t *testing.T) {
