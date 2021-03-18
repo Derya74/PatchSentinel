@@ -46,3 +46,20 @@ func TestParseGitDiff(t *testing.T) {
 	}
 	if app.Removed() != 1 {
 		t.Errorf("removed = %d, want 1", app.Removed())
+	}
+	if app.IsNew {
+		t.Errorf("app should not be new")
+	}
+
+	readme := p.Files[1]
+	if !readme.IsNew {
+		t.Errorf("README should be new file")
+	}
+	if readme.Path() != "README.md" {
+		t.Errorf("readme path = %q", readme.Path())
+	}
+	if readme.Added() != 2 {
+		t.Errorf("readme added = %d, want 2", readme.Added())
+	}
+}
+
