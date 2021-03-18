@@ -30,3 +30,19 @@ index 0000000..1111111
 
 func TestParseGitDiff(t *testing.T) {
 	p, err := Parse(strings.NewReader(gitDiff))
+	if err != nil {
+		t.Fatalf("parse: %v", err)
+	}
+	if len(p.Files) != 2 {
+		t.Fatalf("want 2 files, got %d", len(p.Files))
+	}
+
+	app := p.Files[0]
+	if app.Path() != "src/app.go" {
+		t.Errorf("path = %q", app.Path())
+	}
+	if app.Added() != 3 {
+		t.Errorf("added = %d, want 3", app.Added())
+	}
+	if app.Removed() != 1 {
+		t.Errorf("removed = %d, want 1", app.Removed())
