@@ -63,3 +63,19 @@ func TestParseGitDiff(t *testing.T) {
 	}
 }
 
+func TestParseTotals(t *testing.T) {
+	p, _ := Parse(strings.NewReader(gitDiff))
+	if got := p.TotalAdded(); got != 5 {
+		t.Errorf("TotalAdded = %d, want 5", got)
+	}
+	if got := p.TotalRemoved(); got != 1 {
+		t.Errorf("TotalRemoved = %d, want 1", got)
+	}
+}
+
+func TestParseDeleteAndRename(t *testing.T) {
+	d := `diff --git a/old.txt b/old.txt
+deleted file mode 100644
+--- a/old.txt
++++ /dev/null
+@@ -1,2 +0,0 @@
