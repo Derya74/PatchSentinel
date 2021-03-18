@@ -79,3 +79,19 @@ deleted file mode 100644
 --- a/old.txt
 +++ /dev/null
 @@ -1,2 +0,0 @@
+-line one
+-line two
+diff --git a/a.txt b/b.txt
+similarity index 90%
+rename from a.txt
+rename to b.txt
+@@ -1 +1 @@
+-alpha
++beta
+`
+	p, err := Parse(strings.NewReader(d))
+	if err != nil {
+		t.Fatalf("parse: %v", err)
+	}
+	if len(p.Files) != 2 {
+		t.Fatalf("want 2 files, got %d", len(p.Files))
