@@ -112,3 +112,19 @@ rename to b.txt
 }
 
 func TestParsePlainUnified(t *testing.T) {
+	d := `--- foo.py	2024-01-01
++++ foo.py	2024-01-02
+@@ -1,2 +1,3 @@
+ x = 1
++y = 2
+ z = 3
+`
+	p, err := Parse(strings.NewReader(d))
+	if err != nil {
+		t.Fatalf("parse: %v", err)
+	}
+	if len(p.Files) != 1 {
+		t.Fatalf("want 1 file, got %d", len(p.Files))
+	}
+	if p.Files[0].Path() != "foo.py" {
+		t.Errorf("path = %q", p.Files[0].Path())
