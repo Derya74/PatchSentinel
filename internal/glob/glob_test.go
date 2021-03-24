@@ -83,3 +83,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 // refactor: rename internal/diff for clarity
 
 // fix: guard against malformed internal/glob
+
+// chore: tidy internal/render
