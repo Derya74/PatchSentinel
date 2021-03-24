@@ -23,3 +23,10 @@ func TestMatch(t *testing.T) {
 		{"**/*.env*", "config/.env.local", true},
 		{"a/b?c", "a/bxc", true},
 		{"a/b?c", "a/bxxc", false},
+		{"**/migrations/**", "db/migrations/001_init.sql", true},
+	}
+	for _, c := range cases {
+		if got := Match(c.pattern, c.name); got != c.want {
+			t.Errorf("Match(%q, %q) = %v, want %v", c.pattern, c.name, got, c.want)
+		}
+	}
