@@ -30,3 +30,10 @@ func TestMatch(t *testing.T) {
 			t.Errorf("Match(%q, %q) = %v, want %v", c.pattern, c.name, got, c.want)
 		}
 	}
+}
+
+func TestMatchWindowsSeparators(t *testing.T) {
+	if !Match("**/auth/**", "pkg\\auth\\login.go") {
+		t.Errorf("windows separators should be normalized")
+	}
+}
