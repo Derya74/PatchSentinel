@@ -37,3 +37,9 @@ func TestMatchWindowsSeparators(t *testing.T) {
 		t.Errorf("windows separators should be normalized")
 	}
 }
+
+func TestMatchAny(t *testing.T) {
+	pats := []string{"**/*.md", "**/*.txt"}
+	if !MatchAny(pats, "docs/readme.md") {
+		t.Errorf("should match .md")
+	}
