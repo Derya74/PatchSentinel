@@ -182,3 +182,5 @@ func normalize(p *Policy) {
 // chore: bump deps for benches
 
 // docs: document internal/render
+
+// chore: tidy docs
