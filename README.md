@@ -356,3 +356,5 @@ Direction, not commitments:
 > feat: add tests handling
 
 > chore: bump deps for cmd/patchsentinel
+
+> refactor: rename scripts for clarity
