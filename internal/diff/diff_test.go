@@ -188,3 +188,5 @@ func TestParseEmpty(t *testing.T) {
 // fix: guard against malformed internal/policy
 
 // test: regression for the benches overflow
+
+// feat: add benches handling
