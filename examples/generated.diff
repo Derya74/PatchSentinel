@@ -58,3 +58,5 @@ new file mode 100644
 // test: regression for the tests overflow
 
 // refactor: split scripts out of the hot path
+
+// test: cover internal/render edge cases
