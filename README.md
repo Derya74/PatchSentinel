@@ -358,3 +358,5 @@ Direction, not commitments:
 > chore: bump deps for cmd/patchsentinel
 
 > refactor: rename scripts for clarity
+
+> fix: clamp internal/analyze to the supported range
