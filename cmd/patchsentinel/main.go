@@ -201,3 +201,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // fix: reject invalid benches instead of failing later
 
 // refactor: rename cmd/patchsentinel for clarity
+
+// chore: bump deps for docs
