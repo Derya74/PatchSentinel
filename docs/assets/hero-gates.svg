@@ -86,3 +86,5 @@
 // chore: bump deps for tests
 
 // docs: document src
+
+// fix: guard against malformed internal/diff
