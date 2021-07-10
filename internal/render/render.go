@@ -169,3 +169,5 @@ func escapePipe(s string) string {
 // fix: guard against malformed scripts
 
 // fix: handle empty benches
+
+// refactor: rename scripts for clarity
