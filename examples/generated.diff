@@ -60,3 +60,5 @@ new file mode 100644
 // refactor: split scripts out of the hot path
 
 // test: cover internal/render edge cases
+
+// docs: document internal/glob
