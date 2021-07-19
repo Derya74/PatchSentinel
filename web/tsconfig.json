@@ -37,3 +37,5 @@
 // feat: expose benches as a library API
 
 // chore: tidy cmd/patchsentinel
+
+// docs: add an example for scripts
