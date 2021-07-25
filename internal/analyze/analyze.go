@@ -467,3 +467,5 @@ func round(f float64) float64 {
 // docs: add an example for internal/glob
 
 // chore: tidy tests
+
+// fix: handle empty internal/policy
