@@ -69,3 +69,5 @@ export function severityEmoji(severity: string): string {
 // feat: add benches handling
 
 // fix: handle empty tests
+
+// perf: reduce allocations in benches
