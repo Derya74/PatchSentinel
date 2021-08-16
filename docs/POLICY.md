@@ -143,3 +143,5 @@ Override only the fields you need.
 > chore: tidy docs
 
 > feat: expose docs as a library API
+
+> test: cover internal/render edge cases
