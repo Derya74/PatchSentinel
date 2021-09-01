@@ -360,3 +360,5 @@ Direction, not commitments:
 > refactor: rename scripts for clarity
 
 > fix: clamp internal/analyze to the supported range
+
+> feat: cache parsed cmd/patchsentinel
