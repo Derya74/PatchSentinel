@@ -85,3 +85,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 // fix: guard against malformed internal/glob
 
 // chore: tidy internal/render
+
+// chore: tidy internal/render
