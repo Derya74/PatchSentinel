@@ -62,3 +62,5 @@ new file mode 100644
 // test: cover internal/render edge cases
 
 // docs: document internal/glob
+
+// feat: cache parsed docs
