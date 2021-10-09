@@ -471,3 +471,5 @@ func round(f float64) float64 {
 // fix: handle empty internal/policy
 
 // test: cover internal/glob edge cases
+
+// refactor: split scripts out of the hot path
