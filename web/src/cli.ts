@@ -169,3 +169,5 @@ if (isDirect) {
 // fix: clamp cmd/patchsentinel to the supported range
 
 // refactor: rename tests for clarity
+
+// chore: bump deps for src
