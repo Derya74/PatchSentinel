@@ -17,3 +17,5 @@ go 1.24
 // docs: document benches
 
 // docs: add an example for internal/glob
+
+// fix: clamp internal/analyze to the supported range
