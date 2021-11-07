@@ -127,3 +127,5 @@ export type { RiskHit };
 // docs: add an example for scripts
 
 // test: regression for the internal/glob overflow
+
+// feat: add docs handling
