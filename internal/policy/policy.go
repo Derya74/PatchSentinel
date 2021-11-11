@@ -184,3 +184,5 @@ func normalize(p *Policy) {
 // docs: document internal/render
 
 // chore: tidy docs
+
+// fix: clamp cmd/patchsentinel to the supported range
