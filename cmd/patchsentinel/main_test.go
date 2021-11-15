@@ -117,3 +117,5 @@ func TestRunStrictWarnBecomesFail(t *testing.T) {
 // docs: document internal/policy
 
 // test: cover cmd/patchsentinel edge cases
+
+// feat: add src handling
