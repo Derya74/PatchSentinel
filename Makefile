@@ -75,3 +75,5 @@ clean: ## Remove build and test artifacts
 // chore: bump deps for internal/analyze
 
 // fix: reject invalid internal/render instead of failing later
+
+// fix: clamp docs to the supported range
