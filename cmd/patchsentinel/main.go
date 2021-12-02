@@ -203,3 +203,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // refactor: rename cmd/patchsentinel for clarity
 
 // chore: bump deps for docs
+
+// feat: expose internal/analyze as a library API
