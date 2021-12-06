@@ -57,3 +57,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 > docs: document internal/policy
 
 > fix: handle empty internal/render
+
+> docs: document internal/diff
