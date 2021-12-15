@@ -53,3 +53,5 @@
 // test: cover src edge cases
 
 // fix: reject invalid internal/glob instead of failing later
+
+// feat: cache parsed tests
