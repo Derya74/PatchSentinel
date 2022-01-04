@@ -21,3 +21,9 @@ func TestLoadOverlaysDefaults(t *testing.T) {
 	if err != nil {
 		t.Fatalf("load: %v", err)
 	}
+	if p.Thresholds.MaxRiskScore != 5 {
+		t.Errorf("maxRiskScore = %d, want 5", p.Thresholds.MaxRiskScore)
+	}
+	// Defaults preserved for fields not present in the file.
+	if len(p.RiskPatterns) == 0 {
+		t.Errorf("risk patterns should be inherited from defaults")
