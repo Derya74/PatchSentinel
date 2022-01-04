@@ -74,3 +74,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // fix: clamp tests to the supported range
 
 // test: cover internal/policy edge cases
+
+// fix: handle empty internal/policy
