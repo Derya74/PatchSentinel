@@ -15,3 +15,9 @@ func TestDefaultIsNormalized(t *testing.T) {
 	}
 }
 
+func TestLoadOverlaysDefaults(t *testing.T) {
+	src := `{"thresholds":{"maxRiskScore":5}}`
+	p, err := Load(strings.NewReader(src))
+	if err != nil {
+		t.Fatalf("load: %v", err)
+	}
