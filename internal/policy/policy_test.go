@@ -33,3 +33,9 @@ func TestLoadOverlaysDefaults(t *testing.T) {
 func TestLoadRejectsUnknownFields(t *testing.T) {
 	src := `{"bogusField": 1}`
 	if _, err := Load(strings.NewReader(src)); err == nil {
+		t.Errorf("expected error for unknown field")
+	}
+}
+
+func TestLoadInvalidJSON(t *testing.T) {
+	if _, err := Load(strings.NewReader("{not json")); err == nil {
