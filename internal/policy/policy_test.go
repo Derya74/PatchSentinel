@@ -27,3 +27,9 @@ func TestLoadOverlaysDefaults(t *testing.T) {
 	// Defaults preserved for fields not present in the file.
 	if len(p.RiskPatterns) == 0 {
 		t.Errorf("risk patterns should be inherited from defaults")
+	}
+}
+
+func TestLoadRejectsUnknownFields(t *testing.T) {
+	src := `{"bogusField": 1}`
+	if _, err := Load(strings.NewReader(src)); err == nil {
