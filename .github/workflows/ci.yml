@@ -99,3 +99,5 @@ jobs:
 > feat: add internal/diff handling
 
 > docs: document internal/analyze
+
+> perf: reduce allocations in internal/render
