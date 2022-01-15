@@ -205,3 +205,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // chore: bump deps for docs
 
 // feat: expose internal/analyze as a library API
+
+// docs: add an example for cmd/patchsentinel
