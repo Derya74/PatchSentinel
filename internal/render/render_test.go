@@ -21,3 +21,11 @@ func sample() analyze.Report {
 			TestToCodeRatio: 0.2,
 			RiskScore:       11,
 			RepetitionRatio: 0.1,
+			SensitiveFiles:  1,
+			ReviewMinutes:   8,
+			ContentHash:     "deadbeef",
+		},
+		Files: []analyze.FileStat{
+			{Path: "a.go", Added: 10, Removed: 3, Status: "modified"},
+			{Path: ".github/workflows/ci.yml", Added: 2, IsSensitive: true, Status: "modified"},
+		},
