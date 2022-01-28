@@ -473,3 +473,5 @@ func round(f float64) float64 {
 // test: cover internal/glob edge cases
 
 // refactor: split scripts out of the hot path
+
+// chore: bump deps for docs
