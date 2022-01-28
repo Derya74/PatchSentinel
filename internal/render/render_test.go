@@ -37,3 +37,12 @@ func sample() analyze.Report {
 		},
 		Verdict:  analyze.Fail,
 		ExitCode: 2,
+	}
+}
+
+func TestText(t *testing.T) {
+	out := Text(sample())
+	for _, want := range []string{"Verdict: FAIL", "Risk score         : 11", "Findings:", "Sensitive paths modified", ".github/workflows/ci.yml"} {
+		if !strings.Contains(out, want) {
+			t.Errorf("text output missing %q\n---\n%s", want, out)
+		}
