@@ -29,3 +29,11 @@ func sample() analyze.Report {
 			{Path: "a.go", Added: 10, Removed: 3, Status: "modified"},
 			{Path: ".github/workflows/ci.yml", Added: 2, IsSensitive: true, Status: "modified"},
 		},
+		Risks: []analyze.RiskHit{
+			{PatternID: "debug-print", Message: "Debug print | left", Weight: 1, Count: 1, Path: "a.go", Snippet: "fmt.Println(x)"},
+		},
+		Findings: []analyze.Finding{
+			{ID: "sensitive-path", Severity: analyze.SeverityError, Title: "Sensitive paths modified", Detail: "1 file"},
+		},
+		Verdict:  analyze.Fail,
+		ExitCode: 2,
