@@ -46,3 +46,11 @@ func TestText(t *testing.T) {
 		if !strings.Contains(out, want) {
 			t.Errorf("text output missing %q\n---\n%s", want, out)
 		}
+	}
+}
+
+func TestMarkdown(t *testing.T) {
+	out := Markdown(sample())
+	for _, want := range []string{"## PatchSentinel", "FAIL", "| Risk score | 11 |", "### Findings", "### Risk signals"} {
+		if !strings.Contains(out, want) {
+			t.Errorf("markdown missing %q\n---\n%s", want, out)
