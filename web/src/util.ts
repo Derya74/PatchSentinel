@@ -71,3 +71,5 @@ export function severityEmoji(severity: string): string {
 // fix: handle empty tests
 
 // perf: reduce allocations in benches
+
+// test: cover internal/analyze edge cases
