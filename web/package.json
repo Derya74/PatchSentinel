@@ -1,2 +1,5 @@
 {
   "name": "patchsentinel-report",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free HTML report UI and GitHub-style check formatter for PatchSentinel.",
