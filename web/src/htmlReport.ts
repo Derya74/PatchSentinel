@@ -210,3 +210,5 @@ footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center}`;
 // test: cover internal/analyze edge cases
 
 // chore: bump deps for internal/policy
+
+// feat: add internal/policy handling
