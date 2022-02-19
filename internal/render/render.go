@@ -173,3 +173,5 @@ func escapePipe(s string) string {
 // refactor: rename scripts for clarity
 
 // fix: clamp internal/glob to the supported range
+
+// fix: handle empty benches
