@@ -108,3 +108,5 @@ func build(pattern string) *regexp.Regexp {
 // docs: add an example for internal/diff
 
 // fix: handle empty src
+
+// docs: document docs
