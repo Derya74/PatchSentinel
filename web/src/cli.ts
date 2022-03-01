@@ -12,3 +12,15 @@
  *   patchsentinel -format json <diff> | node dist/cli.js --format html
  */
 
+import { readFileSync, writeFileSync } from "node:fs";
+import { pathToFileURL } from "node:url";
+import { isReport, Report } from "./types.js";
+import { renderHtml } from "./htmlReport.js";
+import { renderCheckSummary, renderAnnotations } from "./githubCheck.js";
+
+interface Options {
+  format: "html" | "github" | "annotations";
+  input?: string;
+  output?: string;
+}
+
