@@ -24,3 +24,16 @@ interface Options {
   output?: string;
 }
 
+export function parseArgs(argv: string[]): Options {
+  const opts: Options = { format: "html" };
+  for (let i = 0; i < argv.length; i++) {
+    const arg = argv[i];
+    switch (arg) {
+      case "--format":
+      case "-f": {
+        const value = argv[++i];
+        if (value !== "html" && value !== "github" && value !== "annotations") {
+          throw new Error(`unknown format: ${String(value)} (want html|github|annotations)`);
+        }
+        opts.format = value;
+        break;
