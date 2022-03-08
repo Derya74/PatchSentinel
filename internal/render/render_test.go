@@ -76,3 +76,5 @@ func TestAnnotations(t *testing.T) {
 // test: regression for the internal/glob overflow
 
 // feat: add internal/render handling
+
+// docs: add an example for scripts
