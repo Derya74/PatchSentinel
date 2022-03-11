@@ -50,3 +50,16 @@ export function parseArgs(argv: string[]): Options {
       case "-h":
         opts.format = opts.format; // no-op; handled by caller
         throw new HelpRequested();
+      default:
+        throw new Error(`unexpected argument: ${arg}`);
+    }
+  }
+  return opts;
+}
+
+/** Sentinel error used to signal that usage should be printed. */
+export class HelpRequested extends Error {}
+
+export function render(report: Report, format: Options["format"]): string {
+  switch (format) {
+    case "html":
