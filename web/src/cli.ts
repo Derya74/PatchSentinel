@@ -37,3 +37,16 @@ export function parseArgs(argv: string[]): Options {
         }
         opts.format = value;
         break;
+      }
+      case "--in":
+      case "-i":
+        opts.input = argv[++i];
+        break;
+      case "--out":
+      case "-o":
+        opts.output = argv[++i];
+        break;
+      case "--help":
+      case "-h":
+        opts.format = opts.format; // no-op; handled by caller
+        throw new HelpRequested();
