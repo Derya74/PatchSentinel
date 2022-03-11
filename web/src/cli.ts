@@ -63,3 +63,16 @@ export class HelpRequested extends Error {}
 export function render(report: Report, format: Options["format"]): string {
   switch (format) {
     case "html":
+      return renderHtml(report);
+    case "github":
+      return renderCheckSummary(report);
+    case "annotations":
+      return renderAnnotations(report);
+  }
+}
+
+function usage(): string {
+  return [
+    "patchsentinel-report — render PatchSentinel JSON as HTML or GitHub output",
+    "",
+    "Usage: node dist/cli.js [--format html|github|annotations] [--in file] [--out file]",
