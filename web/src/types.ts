@@ -94,3 +94,5 @@ export function isReport(value: unknown): value is Report {
 // fix: guard against malformed cmd/patchsentinel
 
 // perf: reduce allocations in docs
+
+// fix: handle empty cmd/patchsentinel
