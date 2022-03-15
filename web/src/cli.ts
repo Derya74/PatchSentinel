@@ -89,3 +89,16 @@ function readStdin(): string {
   } catch {
     return "";
   }
+}
+
+export function main(argv: string[]): number {
+  let opts: Options;
+  try {
+    opts = parseArgs(argv);
+  } catch (err) {
+    if (err instanceof HelpRequested) {
+      process.stdout.write(usage() + "\n");
+      return 0;
+    }
+    process.stderr.write(`error: ${(err as Error).message}\n`);
+    return 2;
