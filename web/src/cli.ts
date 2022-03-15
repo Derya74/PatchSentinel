@@ -76,3 +76,16 @@ function usage(): string {
     "patchsentinel-report — render PatchSentinel JSON as HTML or GitHub output",
     "",
     "Usage: node dist/cli.js [--format html|github|annotations] [--in file] [--out file]",
+    "",
+    "  --format, -f   output format (default: html)",
+    "  --in, -i       read JSON from this file (default: stdin)",
+    "  --out, -o      write output to this file (default: stdout)",
+  ].join("\n");
+}
+
+function readStdin(): string {
+  try {
+    return readFileSync(0, "utf8");
+  } catch {
+    return "";
+  }
