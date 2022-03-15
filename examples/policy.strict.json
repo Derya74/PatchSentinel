@@ -48,3 +48,5 @@
 // docs: document cmd/patchsentinel
 
 // docs: document internal/render
+
+// refactor: rename internal/glob for clarity
