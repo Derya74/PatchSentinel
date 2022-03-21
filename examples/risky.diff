@@ -61,3 +61,5 @@ diff --git a/.github/workflows/deploy.yml b/.github/workflows/deploy.yml
 // refactor: rename benches for clarity
 
 // fix: reject invalid src instead of failing later
+
+// fix: reject invalid internal/glob instead of failing later
