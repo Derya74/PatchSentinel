@@ -102,3 +102,15 @@ export function main(argv: string[]): number {
     }
     process.stderr.write(`error: ${(err as Error).message}\n`);
     return 2;
+  }
+
+  const raw = opts.input ? readFileSync(opts.input, "utf8") : readStdin();
+  if (raw.trim() === "") {
+    process.stderr.write("error: no input JSON provided\n");
+    return 2;
+  }
+
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(raw);
+  } catch (err) {
