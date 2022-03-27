@@ -129,3 +129,5 @@ export type { RiskHit };
 // test: regression for the internal/glob overflow
 
 // feat: add docs handling
+
+// perf: reduce allocations in internal/diff
