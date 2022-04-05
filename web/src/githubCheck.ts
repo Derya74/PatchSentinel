@@ -39,3 +39,14 @@ export function renderCheckSummary(report: Report): string {
     lines.push("");
     for (const f of report.findings) {
       lines.push(`- ${severityEmoji(f.severity)} **${f.title}** — ${f.detail}`);
+    }
+  }
+
+  if (report.risks.length > 0) {
+    lines.push("");
+    lines.push("### Risk signals");
+    lines.push("");
+    lines.push("| Pattern | Weight | Count | Path | Detail |");
+    lines.push("|---|---|---|---|---|");
+    for (const r of report.risks) {
+      lines.push(
