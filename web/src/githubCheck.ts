@@ -8,3 +8,13 @@
  */
 
 import { Report, Finding, RiskHit } from "./types.js";
+import {
+  escapePipe,
+  ratio,
+  minutes,
+  verdictMeta,
+  severityEmoji,
+} from "./util.js";
+
+export function renderCheckSummary(report: Report): string {
+  const v = verdictMeta(report.verdict);
