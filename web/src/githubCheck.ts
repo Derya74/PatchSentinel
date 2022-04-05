@@ -29,3 +29,13 @@ export function renderCheckSummary(report: Report): string {
   lines.push(`| Lines added / removed | +${s.linesAdded} / -${s.linesRemoved} |`);
   lines.push(`| Test-to-code ratio | ${ratio(s.testToCodeRatio)} |`);
   lines.push(`| Risk score | ${s.riskScore} |`);
+  lines.push(`| Repetition ratio | ${ratio(s.repetitionRatio)} |`);
+  lines.push(`| Sensitive files | ${s.sensitiveFiles} |`);
+  lines.push(`| Est. review time | ${minutes(s.reviewMinutes)} |`);
+
+  if (report.findings.length > 0) {
+    lines.push("");
+    lines.push("### Findings");
+    lines.push("");
+    for (const f of report.findings) {
+      lines.push(`- ${severityEmoji(f.severity)} **${f.title}** — ${f.detail}`);
