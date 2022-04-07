@@ -71,3 +71,14 @@ export function renderAnnotations(report: Report): string {
   }
   return lines.join("\n") + (lines.length > 0 ? "\n" : "");
 }
+
+function annotationLevel(f: Finding): "error" | "warning" | "notice" {
+  switch (f.severity) {
+    case "error":
+      return "error";
+    case "warn":
+      return "warning";
+    default:
+      return "notice";
+  }
+}
