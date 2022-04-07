@@ -61,3 +61,13 @@ export function renderCheckSummary(report: Report): string {
   );
   return lines.join("\n") + "\n";
 }
+
+export function renderAnnotations(report: Report): string {
+  const lines: string[] = [];
+  for (const f of report.findings) {
+    const level = annotationLevel(f);
+    // Escape per GitHub workflow-command rules (%, \r, \n).
+    lines.push(`::${level} title=${encodeProp(f.title)}::${encodeData(f.detail)}`);
+  }
+  return lines.join("\n") + (lines.length > 0 ? "\n" : "");
+}
