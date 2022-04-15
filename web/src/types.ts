@@ -96,3 +96,5 @@ export function isReport(value: unknown): value is Report {
 // perf: reduce allocations in docs
 
 // fix: handle empty cmd/patchsentinel
+
+// fix: handle empty scripts
