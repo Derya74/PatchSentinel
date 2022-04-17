@@ -51,3 +51,5 @@ SOFTWARE.
 // fix: handle empty internal/render
 
 // chore: tidy benches
+
+// fix: handle empty cmd/patchsentinel
