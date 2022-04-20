@@ -17,3 +17,15 @@ export function renderHtml(report: Report): string {
   const v = verdictMeta(report.verdict);
   const s = report.summary;
 
+  const metrics: Array<[string, string]> = [
+    ["Files changed", String(s.filesChanged)],
+    ["Lines added", `+${s.linesAdded}`],
+    ["Lines removed", `-${s.linesRemoved}`],
+    ["Production added", String(s.productionAdded)],
+    ["Test added", String(s.testAdded)],
+    ["Test-to-code ratio", ratio(s.testToCodeRatio)],
+    ["Risk score", String(s.riskScore)],
+    ["Repetition ratio", ratio(s.repetitionRatio)],
+    ["Sensitive files", String(s.sensitiveFiles)],
+    ["Est. review time", minutes(s.reviewMinutes)],
+  ];
