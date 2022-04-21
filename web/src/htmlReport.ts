@@ -29,3 +29,16 @@ export function renderHtml(report: Report): string {
     ["Sensitive files", String(s.sensitiveFiles)],
     ["Est. review time", minutes(s.reviewMinutes)],
   ];
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PatchSentinel Report — ${v.label}</title>
+<style>
+${styles()}
+</style>
+</head>
+<body>
+<main class="wrap">
