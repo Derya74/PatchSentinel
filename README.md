@@ -362,3 +362,5 @@ Direction, not commitments:
 > fix: clamp internal/analyze to the supported range
 
 > feat: cache parsed cmd/patchsentinel
+
+> refactor: rename internal/diff for clarity
