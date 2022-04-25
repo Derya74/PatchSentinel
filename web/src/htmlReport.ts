@@ -42,3 +42,16 @@ ${styles()}
 </head>
 <body>
 <main class="wrap">
+  <header class="hero" style="border-color:${v.color}">
+    <div class="verdict" style="background:${v.color}">${v.emoji} ${v.label}</div>
+    <div class="hero-meta">
+      <h1>PatchSentinel Report</h1>
+      <p class="sub">Deterministic AI contribution quality gate · schema v${report.schemaVersion} · policy v${report.policyVersion}</p>
+      <p class="hash" title="Content hash">hash: ${escapeHtml(s.contentHash)}</p>
+    </div>
+  </header>
+
+  <section aria-label="Metrics">
+    <div class="grid">
+      ${metrics.map(metricCard).join("\n      ")}
+    </div>
