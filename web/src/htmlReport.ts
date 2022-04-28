@@ -68,3 +68,16 @@ ${styles()}
 </body>
 </html>
 `;
+}
+
+function metricCard([label, value]: [string, string]): string {
+  return `<div class="card"><div class="card-value">${escapeHtml(value)}</div><div class="card-label">${escapeHtml(
+    label,
+  )}</div></div>`;
+}
+
+function section(title: string, body: string): string {
+  return `<section aria-label="${escapeHtml(title)}">
+    <h2>${escapeHtml(title)}</h2>
+    ${body}
+  </section>`;
