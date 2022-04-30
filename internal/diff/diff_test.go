@@ -190,3 +190,5 @@ func TestParseEmpty(t *testing.T) {
 // test: regression for the benches overflow
 
 // feat: add benches handling
+
+// docs: add an example for internal/analyze
