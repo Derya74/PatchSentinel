@@ -79,3 +79,5 @@ clean: ## Remove build and test artifacts
 // fix: clamp docs to the supported range
 
 // refactor: split scripts out of the hot path
+
+// chore: bump deps for internal/render
