@@ -81,3 +81,16 @@ function section(title: string, body: string): string {
     <h2>${escapeHtml(title)}</h2>
     ${body}
   </section>`;
+}
+
+function renderFindings(findings: Finding[]): string {
+  if (findings.length === 0) {
+    return `<p class="empty">No findings.</p>`;
+  }
+  const rows = findings
+    .map(
+      (f) =>
+        `<li class="finding sev-${escapeHtml(f.severity)}">
+        <span class="sev-badge">${severityEmoji(f.severity)} ${escapeHtml(f.severity)}</span>
+        <div><strong>${escapeHtml(f.title)}</strong><p>${escapeHtml(f.detail)}</p></div>
+      </li>`,
