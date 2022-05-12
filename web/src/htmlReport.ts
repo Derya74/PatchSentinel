@@ -94,3 +94,16 @@ function renderFindings(findings: Finding[]): string {
         <span class="sev-badge">${severityEmoji(f.severity)} ${escapeHtml(f.severity)}</span>
         <div><strong>${escapeHtml(f.title)}</strong><p>${escapeHtml(f.detail)}</p></div>
       </li>`,
+    )
+    .join("\n    ");
+  return `<ul class="findings">\n    ${rows}\n  </ul>`;
+}
+
+function renderRisks(risks: RiskHit[]): string {
+  if (risks.length === 0) {
+    return `<p class="empty">No risk signals detected.</p>`;
+  }
+  const rows = risks
+    .map(
+      (r: RiskHit) =>
+        `<tr>
