@@ -76,3 +76,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // test: cover internal/policy edge cases
 
 // fix: handle empty internal/policy
+
+// refactor: split benches out of the hot path
