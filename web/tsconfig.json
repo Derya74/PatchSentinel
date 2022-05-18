@@ -39,3 +39,5 @@
 // chore: tidy cmd/patchsentinel
 
 // docs: add an example for scripts
+
+// refactor: split internal/diff out of the hot path
