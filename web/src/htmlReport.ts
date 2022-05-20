@@ -107,3 +107,16 @@ function renderRisks(risks: RiskHit[]): string {
     .map(
       (r: RiskHit) =>
         `<tr>
+        <td><code>${escapeHtml(r.patternId)}</code></td>
+        <td class="num">${r.weight}</td>
+        <td class="num">${r.count}</td>
+        <td><code>${escapeHtml(r.path)}</code></td>
+        <td>${escapeHtml(r.message)}<div class="snippet">${escapeHtml(r.snippet)}</div></td>
+      </tr>`,
+    )
+    .join("\n    ");
+  return `<table class="tbl">
+    <thead><tr><th>Pattern</th><th>Weight</th><th>Count</th><th>Path</th><th>Detail</th></tr></thead>
+    <tbody>\n    ${rows}\n    </tbody>
+  </table>`;
+}
