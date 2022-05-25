@@ -146,3 +146,16 @@ function renderFiles(files: FileStat[]): string {
 }
 
 function styles(): string {
+  return `:root{--bg:#0d1117;--panel:#161b22;--border:#30363d;--text:#e6edf3;--muted:#8b949e;--add:#1a7f37;--del:#cf222e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:32px 20px}
+.hero{display:flex;gap:20px;align-items:center;background:var(--panel);border:1px solid var(--border);border-left-width:6px;border-radius:12px;padding:20px 24px}
+.verdict{color:#fff;font-weight:700;font-size:18px;padding:10px 16px;border-radius:8px;white-space:nowrap}
+.hero-meta h1{margin:0;font-size:22px}
+.sub{margin:4px 0 0;color:var(--muted);font-size:13px}
+.hash{margin:6px 0 0;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;word-break:break-all}
+section{margin-top:28px}
+h2{font-size:16px;border-bottom:1px solid var(--border);padding-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px}
