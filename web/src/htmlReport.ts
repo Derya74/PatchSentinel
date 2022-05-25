@@ -133,3 +133,16 @@ function renderFiles(files: FileStat[]): string {
       if (f.isBinary) tags.push(`<span class="tag binary">binary</span>`);
       return `<tr>
         <td><span class="status status-${escapeHtml(f.status)}">${escapeHtml(f.status)}</span></td>
+        <td class="num add">+${f.added}</td>
+        <td class="num del">-${f.removed}</td>
+        <td><code>${escapeHtml(f.path)}</code> ${tags.join(" ")}</td>
+      </tr>`;
+    })
+    .join("\n    ");
+  return `<table class="tbl">
+    <thead><tr><th>Status</th><th>+</th><th>-</th><th>Path</th></tr></thead>
+    <tbody>\n    ${rows}\n    </tbody>
+  </table>`;
+}
+
+function styles(): string {
