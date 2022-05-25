@@ -120,3 +120,16 @@ function renderRisks(risks: RiskHit[]): string {
     <tbody>\n    ${rows}\n    </tbody>
   </table>`;
 }
+
+function renderFiles(files: FileStat[]): string {
+  if (files.length === 0) {
+    return `<p class="empty">No files changed.</p>`;
+  }
+  const rows = files
+    .map((f: FileStat) => {
+      const tags: string[] = [];
+      if (f.isTest) tags.push(`<span class="tag test">test</span>`);
+      if (f.isSensitive) tags.push(`<span class="tag sensitive">sensitive</span>`);
+      if (f.isBinary) tags.push(`<span class="tag binary">binary</span>`);
+      return `<tr>
+        <td><span class="status status-${escapeHtml(f.status)}">${escapeHtml(f.status)}</span></td>
