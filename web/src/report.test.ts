@@ -48,3 +48,15 @@ function sampleReport(verdict: Report["verdict"] = "fail"): Report {
     findings: [
       { id: "risk-score", severity: "error", title: "Risk score exceeds maximum", detail: "score 30 >= 25" },
     ],
+    verdict,
+    exitCode: verdict === "fail" ? 2 : verdict === "warn" ? 1 : 0,
+  };
+}
+
+test("isReport accepts valid and rejects invalid", () => {
+  assert.equal(isReport(sampleReport()), true);
+  assert.equal(isReport({}), false);
+  assert.equal(isReport(null), false);
+  assert.equal(isReport("nope"), false);
+});
+
