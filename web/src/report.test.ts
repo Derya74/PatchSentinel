@@ -23,3 +23,16 @@ function sampleReport(verdict: Report["verdict"] = "fail"): Report {
       linesRemoved: 3,
       productionAdded: 10,
       testAdded: 2,
+      testToCodeRatio: 0.2,
+      riskScore: 30,
+      repetitionRatio: 0.1,
+      sensitiveFiles: 1,
+      reviewMinutes: 8,
+      contentHash: "deadbeef",
+    },
+    files: [
+      { path: "a.go", added: 10, removed: 3, isTest: false, isSensitive: false, isBinary: false, status: "modified" },
+      {
+        path: ".github/workflows/ci.yml",
+        added: 2,
+        removed: 0,
