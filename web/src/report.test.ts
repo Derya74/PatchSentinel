@@ -36,3 +36,15 @@ function sampleReport(verdict: Report["verdict"] = "fail"): Report {
         path: ".github/workflows/ci.yml",
         added: 2,
         removed: 0,
+        isTest: false,
+        isSensitive: true,
+        isBinary: false,
+        status: "modified",
+      },
+    ],
+    risks: [
+      { patternId: "hardcoded-secret", message: "Possible secret | leak", weight: 10, path: "a.go", snippet: "key=...", count: 1 },
+    ],
+    findings: [
+      { id: "risk-score", severity: "error", title: "Risk score exceeds maximum", detail: "score 30 >= 25" },
+    ],
