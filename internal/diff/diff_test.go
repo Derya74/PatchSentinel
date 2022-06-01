@@ -192,3 +192,5 @@ func TestParseEmpty(t *testing.T) {
 // feat: add benches handling
 
 // docs: add an example for internal/analyze
+
+// feat: add docs handling
