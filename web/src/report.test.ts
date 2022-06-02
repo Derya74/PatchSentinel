@@ -60,3 +60,16 @@ test("isReport accepts valid and rejects invalid", () => {
   assert.equal(isReport("nope"), false);
 });
 
+test("escapeHtml neutralizes injection", () => {
+  assert.equal(escapeHtml(`<script>"x"&'y'</script>`), "&lt;script&gt;&quot;x&quot;&amp;&#39;y&#39;&lt;/script&gt;");
+});
+
+test("escapePipe protects markdown tables", () => {
+  assert.equal(escapePipe("a|b|c"), "a\\|b\\|c");
+});
+
+test("renderHtml produces a self-contained document", () => {
+  const html = renderHtml(sampleReport());
+  assert.match(html, /<!DOCTYPE html>/);
+  assert.match(html, /FAIL/);
+  assert.match(html, /Risk score/);
