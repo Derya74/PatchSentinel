@@ -73,3 +73,15 @@ test("renderHtml produces a self-contained document", () => {
   assert.match(html, /<!DOCTYPE html>/);
   assert.match(html, /FAIL/);
   assert.match(html, /Risk score/);
+  assert.match(html, /\.github\/workflows\/ci\.yml/);
+  // No external resources.
+  assert.equal(/src\s*=\s*"http/.test(html), false);
+  assert.equal(/href\s*=\s*"http/.test(html), false);
+  // Injection safety: the raw risk message pipe should appear escaped only in
+  // markdown, but in HTML it is plain text; ensure no unescaped script tags.
+  assert.equal(html.includes("<script>"), false);
+});
+
+test("renderHtml is deterministic", () => {
+  const a = renderHtml(sampleReport());
+  const b = renderHtml(sampleReport());
