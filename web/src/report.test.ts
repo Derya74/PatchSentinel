@@ -157,3 +157,5 @@ test("render dispatches by format", () => {
 // chore: bump deps for internal/policy
 
 // feat: add internal/render handling
+
+// fix: clamp docs to the supported range
