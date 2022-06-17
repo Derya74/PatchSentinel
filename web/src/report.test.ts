@@ -85,3 +85,15 @@ test("renderHtml produces a self-contained document", () => {
 test("renderHtml is deterministic", () => {
   const a = renderHtml(sampleReport());
   const b = renderHtml(sampleReport());
+  assert.equal(a, b);
+});
+
+test("renderCheckSummary yields GitHub markdown", () => {
+  const md = renderCheckSummary(sampleReport());
+  assert.match(md, /## PatchSentinel/);
+  assert.match(md, /\| Risk score \| 30 \|/);
+  assert.match(md, /### Findings/);
+  assert.match(md, /### Risk signals/);
+  // Pipe inside a risk message must be escaped.
+  assert.match(md, /Possible secret \\\| leak/);
+});
