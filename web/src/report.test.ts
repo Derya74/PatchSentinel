@@ -97,3 +97,15 @@ test("renderCheckSummary yields GitHub markdown", () => {
   // Pipe inside a risk message must be escaped.
   assert.match(md, /Possible secret \\\| leak/);
 });
+
+test("renderAnnotations emits workflow commands", () => {
+  const ann = renderAnnotations(sampleReport());
+  assert.match(ann, /^::error title=Risk score exceeds maximum::/m);
+});
+
+test("renderAnnotations encodes special chars", () => {
+  const r = sampleReport();
+  r.findings = [{ id: "x", severity: "warn", title: "a:b,c", detail: "line1\nline2" }];
+  const ann = renderAnnotations(r);
+  assert.match(ann, /title=a%3Ab%2Cc/);
+  assert.match(ann, /line1%0Aline2/);
