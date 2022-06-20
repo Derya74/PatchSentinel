@@ -50,3 +50,5 @@
 // docs: document internal/render
 
 // refactor: rename internal/glob for clarity
+
+// chore: tidy internal/policy
