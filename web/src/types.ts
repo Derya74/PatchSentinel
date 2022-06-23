@@ -15,3 +15,13 @@ export interface Summary {
   linesRemoved: number;
   productionAdded: number;
   testAdded: number;
+  testToCodeRatio: number;
+  riskScore: number;
+  repetitionRatio: number;
+  sensitiveFiles: number;
+  reviewMinutes: number;
+  contentHash: string;
+}
+
+export interface FileStat {
+  path: string;
