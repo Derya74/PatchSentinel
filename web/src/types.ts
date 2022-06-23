@@ -25,3 +25,13 @@ export interface Summary {
 
 export interface FileStat {
   path: string;
+  oldPath?: string;
+  added: number;
+  removed: number;
+  isTest: boolean;
+  isSensitive: boolean;
+  isBinary: boolean;
+  status: "added" | "deleted" | "renamed" | "modified";
+}
+
+export interface RiskHit {
