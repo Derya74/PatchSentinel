@@ -6,3 +6,12 @@
  * This module has zero runtime dependencies.
  */
 
+export type Verdict = "pass" | "warn" | "fail";
+export type Severity = "info" | "warn" | "error";
+
+export interface Summary {
+  filesChanged: number;
+  linesAdded: number;
+  linesRemoved: number;
+  productionAdded: number;
+  testAdded: number;
