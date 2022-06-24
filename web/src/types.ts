@@ -54,3 +54,12 @@ export interface Report {
   schemaVersion: number;
   tool: string;
   policyVersion: number;
+  summary: Summary;
+  files: FileStat[];
+  risks: RiskHit[];
+  findings: Finding[];
+  verdict: Verdict;
+  exitCode: number;
+}
+
+/**
