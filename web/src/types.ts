@@ -44,3 +44,13 @@ export interface RiskHit {
 }
 
 export interface Finding {
+  id: string;
+  severity: Severity;
+  title: string;
+  detail: string;
+}
+
+export interface Report {
+  schemaVersion: number;
+  tool: string;
+  policyVersion: number;
