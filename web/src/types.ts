@@ -35,3 +35,12 @@ export interface FileStat {
 }
 
 export interface RiskHit {
+  patternId: string;
+  message: string;
+  weight: number;
+  path: string;
+  snippet: string;
+  count: number;
+}
+
+export interface Finding {
