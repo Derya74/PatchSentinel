@@ -9,3 +9,9 @@ export function escapeHtml(input: string): string {
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+/** Escape a pipe so Markdown table cells are not broken. */
+export function escapePipe(input: string): string {
