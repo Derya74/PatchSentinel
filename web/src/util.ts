@@ -28,3 +28,9 @@ export function minutes(n: number): string {
   return `${Math.round(n)} min`;
 }
 
+/** Map a verdict to a display label and colour token. */
+export function verdictMeta(verdict: string): { label: string; color: string; emoji: string } {
+  switch (verdict) {
+    case "pass":
+      return { label: "PASS", color: "#1a7f37", emoji: "✅" };
+    case "warn":
