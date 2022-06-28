@@ -34,3 +34,9 @@ export function verdictMeta(verdict: string): { label: string; color: string; em
     case "pass":
       return { label: "PASS", color: "#1a7f37", emoji: "✅" };
     case "warn":
+      return { label: "WARN", color: "#9a6700", emoji: "⚠️" };
+    default:
+      return { label: "FAIL", color: "#cf222e", emoji: "❌" };
+  }
+}
+
