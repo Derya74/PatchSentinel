@@ -21,3 +21,10 @@ export function escapePipe(input: string): string {
 /** Format a ratio (0..1+) to two decimals. */
 export function ratio(n: number): string {
   return n.toFixed(2);
+}
+
+/** Round minutes to a whole number for display. */
+export function minutes(n: number): string {
+  return `${Math.round(n)} min`;
+}
+
