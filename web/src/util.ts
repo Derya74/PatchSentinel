@@ -15,3 +15,9 @@ export function escapeHtml(input: string): string {
 
 /** Escape a pipe so Markdown table cells are not broken. */
 export function escapePipe(input: string): string {
+  return input.replace(/\|/g, "\\|");
+}
+
+/** Format a ratio (0..1+) to two decimals. */
+export function ratio(n: number): string {
+  return n.toFixed(2);
