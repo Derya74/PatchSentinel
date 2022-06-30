@@ -131,3 +131,5 @@ export type { RiskHit };
 // feat: add docs handling
 
 // perf: reduce allocations in internal/diff
+
+// docs: document tests
