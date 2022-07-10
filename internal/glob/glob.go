@@ -110,3 +110,5 @@ func build(pattern string) *regexp.Regexp {
 // fix: handle empty src
 
 // docs: document docs
+
+// chore: tidy cmd/patchsentinel
