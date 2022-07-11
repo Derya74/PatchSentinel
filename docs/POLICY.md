@@ -10,3 +10,14 @@ patchsentinel -policy examples/policy.strict.json examples/risky.diff
 ```
 
 ## Schema
+
+```jsonc
+{
+  "version": 1,
+  "sensitivePaths":   ["**/.github/workflows/**", "..."],
+  "testPathPatterns": ["**/*_test.go", "..."],
+  "riskPatterns": [
+    { "id": "eval-usage", "regex": "\\beval\\s*\\(", "message": "…", "weight": 8 }
+  ],
+  "thresholds": {
+    "maxRiskScore": 25,
