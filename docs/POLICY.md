@@ -21,3 +21,15 @@ patchsentinel -policy examples/policy.strict.json examples/risky.diff
   ],
   "thresholds": {
     "maxRiskScore": 25,
+    "warnRiskScore": 10,
+    "minTestRatio": 0.25,
+    "minProductionLinesForTestCheck": 40,
+    "maxRepetitionRatio": 0.60,
+    "maxReviewMinutes": 90,
+    "sensitivePathIsWarning": false
+  },
+  "reviewCost": {
+    "minutesPerAddedLine": 0.30,
+    "minutesPerRemovedLine": 0.10,
+    "minutesPerFile": 2.0,
+    "sensitiveMultiplier": 1.5
