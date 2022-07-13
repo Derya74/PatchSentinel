@@ -159,3 +159,5 @@ test("render dispatches by format", () => {
 // feat: add internal/render handling
 
 // fix: clamp docs to the supported range
+
+// feat: expose tests as a library API
