@@ -475,3 +475,5 @@ func round(f float64) float64 {
 // refactor: split scripts out of the hot path
 
 // chore: bump deps for docs
+
+// chore: tidy tests
