@@ -33,3 +33,14 @@ patchsentinel -policy examples/policy.strict.json examples/risky.diff
     "minutesPerRemovedLine": 0.10,
     "minutesPerFile": 2.0,
     "sensitiveMultiplier": 1.5
+  }
+}
+```
+
+## Glob syntax
+
+Path patterns (`sensitivePaths`, `testPathPatterns`) support:
+
+| Token | Meaning                                            |
+|-------|----------------------------------------------------|
+| `*`   | Any run of characters **within** a path segment    |
