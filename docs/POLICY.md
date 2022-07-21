@@ -44,3 +44,15 @@ Path patterns (`sensitivePaths`, `testPathPatterns`) support:
 | Token | Meaning                                            |
 |-------|----------------------------------------------------|
 | `*`   | Any run of characters **within** a path segment    |
+| `?`   | Exactly one non-separator character                 |
+| `**`  | Any number of path segments (including zero)        |
+
+Paths are always compared using `/` separators; Windows `\` separators are
+normalized automatically.
+
+## Signals & gates
+
+Each gate produces a **finding** with a severity. The overall verdict is the
+worst severity across all findings:
+
+- any `error` → **fail** (exit code `2`)
