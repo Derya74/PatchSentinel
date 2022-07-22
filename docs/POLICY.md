@@ -56,3 +56,14 @@ Each gate produces a **finding** with a severity. The overall verdict is the
 worst severity across all findings:
 
 - any `error` → **fail** (exit code `2`)
+- otherwise any `warn` → **warn** (exit code `1`)
+- otherwise → **pass** (exit code `0`)
+
+### 1. Risk score
+
+Every `riskPattern` whose `regex` matches an **added** line contributes
+`weight × matchCount` to the cumulative risk score.
+
+| Condition                              | Severity |
+|----------------------------------------|----------|
+| `riskScore >= thresholds.maxRiskScore` | error    |
