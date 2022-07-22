@@ -67,3 +67,14 @@ Every `riskPattern` whose `regex` matches an **added** line contributes
 | Condition                              | Severity |
 |----------------------------------------|----------|
 | `riskScore >= thresholds.maxRiskScore` | error    |
+| `riskScore >= thresholds.warnRiskScore`| warn     |
+
+The default patterns cover hardcoded secrets, `eval`, process execution,
+string-built SQL, disabled TLS verification, wildcard CORS, unsafe
+deserialization, debug prints and unfinished-work markers.
+
+### 2. Test-to-code ratio
+
+`testToCodeRatio = testAddedLines / productionAddedLines`. The gate only
+applies once `productionAdded >= minProductionLinesForTestCheck`, so small
+changes are never penalized. Below `minTestRatio` yields a **warn**.
