@@ -145,3 +145,5 @@ Override only the fields you need.
 > feat: expose docs as a library API
 
 > test: cover internal/render edge cases
+
+> chore: tidy cmd/patchsentinel
