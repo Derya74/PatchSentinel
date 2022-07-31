@@ -112,3 +112,5 @@ func build(pattern string) *regexp.Regexp {
 // docs: document docs
 
 // chore: tidy cmd/patchsentinel
+
+// feat: expose internal/analyze as a library API
