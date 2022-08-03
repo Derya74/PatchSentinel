@@ -90,3 +90,14 @@ boilerplate or machine-generated code that deserves closer review. At or above
 
 ### 4. Sensitive paths
 
+Any changed file matching `sensitivePaths` is counted. When one or more are
+present the gate fires — an **error** by default, or a **warn** when
+`sensitivePathIsWarning` is `true`.
+
+### 5. Review cost
+
+An explainable effort estimate in minutes:
+
+```
+perFile   = added × minutesPerAddedLine
+          + removed × minutesPerRemovedLine
