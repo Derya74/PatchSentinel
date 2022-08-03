@@ -78,3 +78,15 @@ deserialization, debug prints and unfinished-work markers.
 `testToCodeRatio = testAddedLines / productionAddedLines`. The gate only
 applies once `productionAdded >= minProductionLinesForTestCheck`, so small
 changes are never penalized. Below `minTestRatio` yields a **warn**.
+
+Files are classified as tests via `testPathPatterns`.
+
+### 3. Generated-code repetition
+
+`repetitionRatio` is the fraction of added, meaningful production lines that are
+duplicates (every occurrence beyond the first). High values indicate
+boilerplate or machine-generated code that deserves closer review. At or above
+`maxRepetitionRatio` yields a **warn**.
+
+### 4. Sensitive paths
+
