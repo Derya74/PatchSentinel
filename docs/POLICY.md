@@ -147,3 +147,5 @@ Override only the fields you need.
 > test: cover internal/render edge cases
 
 > chore: tidy cmd/patchsentinel
+
+> test: regression for the tests overflow
