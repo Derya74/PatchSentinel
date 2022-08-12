@@ -88,3 +88,5 @@
 // docs: document src
 
 // fix: guard against malformed internal/diff
+
+// perf: reduce allocations in src
