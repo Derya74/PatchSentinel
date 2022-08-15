@@ -78,3 +78,5 @@ func TestAnnotations(t *testing.T) {
 // feat: add internal/render handling
 
 // docs: add an example for scripts
+
+// feat: expose docs as a library API
