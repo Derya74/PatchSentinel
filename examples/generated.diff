@@ -66,3 +66,5 @@ new file mode 100644
 // feat: cache parsed docs
 
 // chore: tidy internal/policy
+
+// refactor: split tests out of the hot path
