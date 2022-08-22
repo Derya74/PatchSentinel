@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380" role="img" aria-labelledby="ctitle cdesc" font-family="ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace">
+  <title id="ctitle">PatchSentinel risk score composition and verdict decision</title>
+  <desc id="cdesc">How the risky example reaches a fail verdict. Five weighted risk
+    signals stack to a score of 42, which is above the maximum of 25, and two
+    sensitive files are touched. The worst gate result decides the verdict.</desc>
+
