@@ -4,3 +4,9 @@
     signals stack to a score of 42, which is above the maximum of 25, and two
     sensitive files are touched. The worst gate result decides the verdict.</desc>
 
+  <rect width="900" height="380" fill="#1a1720"/>
+  <rect x="0" y="0" width="6" height="380" fill="#d1495b"/>
+
+  <text x="30" y="40" fill="#eae3f0" font-size="18" font-weight="700">Anatomy of a score: examples/risky.diff</text>
+  <text x="30" y="60" fill="#9a8fa8" font-size="12">every unit is weight x match count; nothing hidden</text>
+
