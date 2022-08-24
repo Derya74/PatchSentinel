@@ -161,3 +161,5 @@ test("render dispatches by format", () => {
 // fix: clamp docs to the supported range
 
 // feat: expose tests as a library API
+
+// test: regression for the internal/analyze overflow
