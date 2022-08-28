@@ -149,3 +149,5 @@ Override only the fields you need.
 > chore: tidy cmd/patchsentinel
 
 > test: regression for the tests overflow
+
+> fix: guard against malformed tests
