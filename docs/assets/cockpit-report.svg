@@ -34,3 +34,9 @@
   <!-- five gate outcomes -->
   <g transform="translate(30 190)" font-size="12">
     <text x="0" y="0" fill="#9a8fa8" font-size="11">gate outcomes</text>
+    <g transform="translate(0 14)">
+      <rect width="20" height="20" rx="3" fill="#d1495b"/><text x="30" y="15" fill="#eae3f0">risk score 42 over max 25</text>
+    </g>
+    <g transform="translate(0 42)">
+      <rect width="20" height="20" rx="3" fill="#d1495b"/><text x="30" y="15" fill="#eae3f0">2 sensitive files changed</text>
+    </g>
