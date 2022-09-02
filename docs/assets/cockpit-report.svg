@@ -40,3 +40,8 @@
     <g transform="translate(0 42)">
       <rect width="20" height="20" rx="3" fill="#d1495b"/><text x="30" y="15" fill="#eae3f0">2 sensitive files changed</text>
     </g>
+    <g transform="translate(0 70)">
+      <rect width="20" height="20" rx="3" fill="#d9a125"/><text x="30" y="15" fill="#eae3f0">test-to-code ratio 0.00</text>
+    </g>
+    <g transform="translate(0 98)">
+      <rect width="20" height="20" rx="3" fill="#2f9e6b"/><text x="30" y="15" fill="#eae3f0">repetition 0.00 within limit</text>
