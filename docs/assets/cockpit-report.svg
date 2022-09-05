@@ -45,3 +45,9 @@
     </g>
     <g transform="translate(0 98)">
       <rect width="20" height="20" rx="3" fill="#2f9e6b"/><text x="30" y="15" fill="#eae3f0">repetition 0.00 within limit</text>
+    </g>
+    <g transform="translate(0 126)">
+      <rect width="20" height="20" rx="3" fill="#2f9e6b"/><text x="30" y="15" fill="#eae3f0">review time 18 min within limit</text>
+    </g>
+  </g>
+
