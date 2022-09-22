@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300" role="img" aria-labelledby="htitle hdesc" font-family="ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace">
+  <title id="htitle">PatchSentinel diff review gates</title>
+  <desc id="hdesc">A unified diff enters from the left and passes four measured
+    gates in order: risk score, test-to-code ratio, repetition, and sensitive
+    paths. Its worst result becomes one verdict stamp: pass, warn, or fail.</desc>
+
+  <rect width="900" height="300" fill="#1a1720"/>
