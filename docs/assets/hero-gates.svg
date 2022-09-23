@@ -19,3 +19,10 @@
     <text x="82" y="60" fill="#d1495b" font-size="13">-</text>
   </g>
 
+  <!-- the four gates -->
+  <g font-size="12" text-anchor="middle">
+    <g transform="translate(190 120)">
+      <rect width="120" height="70" rx="6" fill="#241f2c" stroke="#3a3344"/>
+      <text x="60" y="26" fill="#d9a125" font-size="11">gate 1</text>
+      <text x="60" y="45" fill="#eae3f0">risk score</text>
+      <text x="60" y="61" fill="#9a8fa8" font-size="10">weighted hits</text>
