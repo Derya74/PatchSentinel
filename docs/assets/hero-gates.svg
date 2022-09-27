@@ -40,3 +40,10 @@
       <text x="60" y="61" fill="#9a8fa8" font-size="10">duplicate lines</text>
     </g>
     <g transform="translate(670 120)">
+      <rect width="120" height="70" rx="6" fill="#241f2c" stroke="#3a3344"/>
+      <text x="60" y="26" fill="#d9a125" font-size="11">gate 4</text>
+      <text x="60" y="45" fill="#eae3f0">sensitive</text>
+      <text x="60" y="61" fill="#9a8fa8" font-size="10">path globs</text>
+    </g>
+  </g>
+
