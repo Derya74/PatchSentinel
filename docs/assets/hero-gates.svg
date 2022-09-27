@@ -47,3 +47,10 @@
     </g>
   </g>
 
+  <!-- connectors with a single traveling token; motion shows the diff progressing through gates -->
+  <g stroke="#4a4256" stroke-width="2">
+    <line x1="140" y1="155" x2="190" y2="155"/>
+    <line x1="310" y1="155" x2="350" y2="155"/>
+    <line x1="470" y1="155" x2="510" y2="155"/>
+    <line x1="630" y1="155" x2="670" y2="155"/>
+    <line x1="790" y1="155" x2="828" y2="155"/>
