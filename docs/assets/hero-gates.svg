@@ -54,3 +54,9 @@
     <line x1="470" y1="155" x2="510" y2="155"/>
     <line x1="630" y1="155" x2="670" y2="155"/>
     <line x1="790" y1="155" x2="828" y2="155"/>
+  </g>
+  <circle cx="0" cy="155" r="6" fill="#eae3f0">
+    <animateMotion path="M140 0 H190 M310 0 H350 M470 0 H510 M630 0 H670 M790 0 H828" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="cx" values="140;828" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
