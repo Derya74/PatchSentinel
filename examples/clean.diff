@@ -1,0 +1,3 @@
+diff --git a/pkg/mathutil/mathutil.go b/pkg/mathutil/mathutil.go
+--- a/pkg/mathutil/mathutil.go
++++ b/pkg/mathutil/mathutil.go
