@@ -1,3 +1,8 @@
 diff --git a/pkg/mathutil/mathutil.go b/pkg/mathutil/mathutil.go
 --- a/pkg/mathutil/mathutil.go
 +++ b/pkg/mathutil/mathutil.go
+@@ -1,5 +1,17 @@
+ package mathutil
+ 
++// Clamp constrains v to the inclusive range [lo, hi].
++func Clamp(v, lo, hi int) int {
