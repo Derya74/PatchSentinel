@@ -11,3 +11,8 @@ diff --git a/pkg/mathutil/mathutil.go b/pkg/mathutil/mathutil.go
 +	}
 +	if v > hi {
 +		return hi
++	}
++	return v
++}
++
+ // Abs returns the absolute value of x.
