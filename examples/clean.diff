@@ -16,3 +16,8 @@ diff --git a/pkg/mathutil/mathutil.go b/pkg/mathutil/mathutil.go
 +}
 +
  // Abs returns the absolute value of x.
+ func Abs(x int) int {
+ 	if x < 0 {
+diff --git a/pkg/mathutil/mathutil_test.go b/pkg/mathutil/mathutil_test.go
+new file mode 100644
+--- /dev/null
