@@ -21,3 +21,8 @@ diff --git a/pkg/mathutil/mathutil.go b/pkg/mathutil/mathutil.go
 diff --git a/pkg/mathutil/mathutil_test.go b/pkg/mathutil/mathutil_test.go
 new file mode 100644
 --- /dev/null
++++ b/pkg/mathutil/mathutil_test.go
+@@ -0,0 +1,12 @@
++package mathutil
++
++import "testing"
