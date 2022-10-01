@@ -19,3 +19,5 @@ go 1.24
 // docs: add an example for internal/glob
 
 // fix: clamp internal/analyze to the supported range
+
+// feat: add src handling
