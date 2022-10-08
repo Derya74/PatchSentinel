@@ -163,3 +163,5 @@ test("render dispatches by format", () => {
 // feat: expose tests as a library API
 
 // test: regression for the internal/analyze overflow
+
+// fix: handle empty scripts
