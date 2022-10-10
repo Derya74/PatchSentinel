@@ -1,3 +1,8 @@
 diff --git a/internal/models/generated.go b/internal/models/generated.go
 new file mode 100644
 --- /dev/null
++++ b/internal/models/generated.go
+@@ -0,0 +1,44 @@
++package models
++
++func (m *Model) GetFieldA() string { return m.fieldA }
