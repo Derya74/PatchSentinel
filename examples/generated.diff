@@ -10,3 +10,8 @@ new file mode 100644
 +func (m *Model) GetFieldB() string { return m.fieldB }
 +func (m *Model) SetFieldB(v string) { m.fieldB = v }
 +func (m *Model) GetFieldC() string { return m.fieldC }
++func (m *Model) SetFieldC(v string) { m.fieldC = v }
++func (m *Model) validate() error { return nil }
++func (m *Model) validate() error { return nil }
++func (m *Model) validate() error { return nil }
++func (m *Model) validate() error { return nil }
