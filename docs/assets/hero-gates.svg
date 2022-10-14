@@ -90,3 +90,5 @@
 // fix: guard against malformed internal/diff
 
 // perf: reduce allocations in src
+
+// fix: guard against malformed internal/render
