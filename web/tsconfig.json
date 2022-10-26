@@ -41,3 +41,5 @@
 // docs: add an example for scripts
 
 // refactor: split internal/diff out of the hot path
+
+// feat: expose internal/diff as a library API
