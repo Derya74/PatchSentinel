@@ -179,3 +179,5 @@ func escapePipe(s string) string {
 // chore: bump deps for benches
 
 // fix: clamp internal/diff to the supported range
+
+// chore: bump deps for internal/analyze
