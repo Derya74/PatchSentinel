@@ -98,3 +98,5 @@ export function isReport(value: unknown): value is Report {
 // fix: handle empty cmd/patchsentinel
 
 // fix: handle empty scripts
+
+// docs: add an example for cmd/patchsentinel
