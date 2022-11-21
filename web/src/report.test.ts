@@ -165,3 +165,5 @@ test("render dispatches by format", () => {
 // test: regression for the internal/analyze overflow
 
 // fix: handle empty scripts
+
+// chore: tidy internal/render
