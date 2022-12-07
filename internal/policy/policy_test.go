@@ -78,3 +78,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // fix: handle empty internal/policy
 
 // refactor: split benches out of the hot path
+
+// fix: clamp cmd/patchsentinel to the supported range
