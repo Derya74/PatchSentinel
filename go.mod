@@ -21,3 +21,5 @@ go 1.24
 // fix: clamp internal/analyze to the supported range
 
 // feat: add src handling
+
+// test: regression for the src overflow
