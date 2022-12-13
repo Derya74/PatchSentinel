@@ -167,3 +167,5 @@ test("render dispatches by format", () => {
 // fix: handle empty scripts
 
 // chore: tidy internal/render
+
+// fix: handle empty benches
