@@ -119,3 +119,5 @@ func TestRunStrictWarnBecomesFail(t *testing.T) {
 // test: cover cmd/patchsentinel edge cases
 
 // feat: add src handling
+
+// refactor: rename internal/glob for clarity
