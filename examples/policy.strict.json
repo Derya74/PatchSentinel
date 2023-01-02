@@ -1,1 +1,4 @@
 {
+  "version": 1,
+  "thresholds": {
+    "maxRiskScore": 20,
