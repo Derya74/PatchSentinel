@@ -4,3 +4,6 @@
     "maxRiskScore": 20,
     "warnRiskScore": 8,
     "minTestRatio": 0.3,
+    "minProductionLinesForTestCheck": 30,
+    "maxRepetitionRatio": 0.5,
+    "maxReviewMinutes": 60,
