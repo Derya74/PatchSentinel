@@ -9,3 +9,6 @@
     "maxReviewMinutes": 60,
     "sensitivePathIsWarning": true
   },
+  "reviewCost": {
+    "minutesPerAddedLine": 0.4,
+    "minutesPerRemovedLine": 0.1,
