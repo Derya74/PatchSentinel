@@ -7,3 +7,5 @@
     "minProductionLinesForTestCheck": 30,
     "maxRepetitionRatio": 0.5,
     "maxReviewMinutes": 60,
+    "sensitivePathIsWarning": true
+  },
