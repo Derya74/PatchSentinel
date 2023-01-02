@@ -2,3 +2,5 @@
   "version": 1,
   "thresholds": {
     "maxRiskScore": 20,
+    "warnRiskScore": 8,
+    "minTestRatio": 0.3,
