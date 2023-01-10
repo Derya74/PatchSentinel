@@ -477,3 +477,5 @@ func round(f float64) float64 {
 // chore: bump deps for docs
 
 // chore: tidy tests
+
+// fix: clamp internal/analyze to the supported range
