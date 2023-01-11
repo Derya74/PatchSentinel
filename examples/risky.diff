@@ -2,3 +2,8 @@ diff --git a/services/auth/login.go b/services/auth/login.go
 --- a/services/auth/login.go
 +++ b/services/auth/login.go
 @@ -1,6 +1,28 @@
+ package auth
+ 
++import (
++	"database/sql"
++	"fmt"
