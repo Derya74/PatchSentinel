@@ -83,3 +83,5 @@ clean: ## Remove build and test artifacts
 // chore: bump deps for internal/render
 
 // refactor: split scripts out of the hot path
+
+// fix: reject invalid internal/diff instead of failing later
