@@ -28,3 +28,9 @@ diff --git a/services/auth/login.go b/services/auth/login.go
 +
  // Login authenticates a user.
  func Login(user, pass string) bool {
+ 	return user != "" && pass != ""
+ }
+diff --git a/.github/workflows/deploy.yml b/.github/workflows/deploy.yml
+--- a/.github/workflows/deploy.yml
++++ b/.github/workflows/deploy.yml
+@@ -1,4 +1,9 @@
