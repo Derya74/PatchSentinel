@@ -13,3 +13,8 @@ diff --git a/services/auth/login.go b/services/auth/login.go
 +// hardcoded credentials — should be flagged as a secret.
 +var apiKey = "sk_live_51H8xYzABCDEFghijklmnop"
 +var adminPassword = "P@ssw0rd-do-not-ship"
++
++// buildQuery concatenates user input directly into SQL.
++func buildQuery(db *sql.DB, name string) string {
++	return fmt.Sprintf("SELECT * FROM users WHERE name = '" + name + "'")
++}
