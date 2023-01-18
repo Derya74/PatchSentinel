@@ -18,3 +18,8 @@ diff --git a/services/auth/login.go b/services/auth/login.go
 +func buildQuery(db *sql.DB, name string) string {
 +	return fmt.Sprintf("SELECT * FROM users WHERE name = '" + name + "'")
 +}
++
++// handler disables TLS verification and sets a wildcard CORS origin.
++func handler(w http.ResponseWriter, r *http.Request) {
++	w.Header().Set("Access-Control-Allow-Origin", "*")
++	eval("dangerousDynamicCode()")
