@@ -7,3 +7,9 @@ diff --git a/services/auth/login.go b/services/auth/login.go
 +import (
 +	"database/sql"
 +	"fmt"
++	"net/http"
++)
++
++// hardcoded credentials — should be flagged as a secret.
++var apiKey = "sk_live_51H8xYzABCDEFghijklmnop"
++var adminPassword = "P@ssw0rd-do-not-ship"
