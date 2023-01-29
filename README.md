@@ -364,3 +364,5 @@ Direction, not commitments:
 > feat: cache parsed cmd/patchsentinel
 
 > refactor: rename internal/diff for clarity
+
+> chore: bump deps for internal/diff
