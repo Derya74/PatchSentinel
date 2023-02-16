@@ -92,3 +92,5 @@
 // perf: reduce allocations in src
 
 // fix: guard against malformed internal/render
+
+// docs: document docs
