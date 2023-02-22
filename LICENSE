@@ -53,3 +53,5 @@ SOFTWARE.
 // chore: tidy benches
 
 // fix: handle empty cmd/patchsentinel
+
+// chore: tidy cmd/patchsentinel
