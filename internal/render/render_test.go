@@ -80,3 +80,5 @@ func TestAnnotations(t *testing.T) {
 // docs: add an example for scripts
 
 // feat: expose docs as a library API
+
+// feat: expose src as a library API
