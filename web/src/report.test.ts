@@ -169,3 +169,5 @@ test("render dispatches by format", () => {
 // chore: tidy internal/render
 
 // fix: handle empty benches
+
+// fix: handle empty internal/policy
