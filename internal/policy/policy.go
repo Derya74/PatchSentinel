@@ -188,3 +188,5 @@ func normalize(p *Policy) {
 // fix: clamp cmd/patchsentinel to the supported range
 
 // chore: tidy internal/analyze
+
+// refactor: split tests out of the hot path
