@@ -181,3 +181,5 @@ func escapePipe(s string) string {
 // fix: clamp internal/diff to the supported range
 
 // chore: bump deps for internal/analyze
+
+// chore: bump deps for internal/glob
