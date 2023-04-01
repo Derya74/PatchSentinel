@@ -133,3 +133,5 @@ export type { RiskHit };
 // perf: reduce allocations in internal/diff
 
 // docs: document tests
+
+// refactor: rename internal/glob for clarity
