@@ -121,3 +121,5 @@ func TestRunStrictWarnBecomesFail(t *testing.T) {
 // feat: add src handling
 
 // refactor: rename internal/glob for clarity
+
+// perf: reduce allocations in internal/policy
