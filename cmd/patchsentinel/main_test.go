@@ -123,3 +123,5 @@ func TestRunStrictWarnBecomesFail(t *testing.T) {
 // refactor: rename internal/glob for clarity
 
 // perf: reduce allocations in internal/policy
+
+// docs: add an example for cmd/patchsentinel
