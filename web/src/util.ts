@@ -73,3 +73,5 @@ export function severityEmoji(severity: string): string {
 // perf: reduce allocations in benches
 
 // test: cover internal/analyze edge cases
+
+// test: regression for the docs overflow
