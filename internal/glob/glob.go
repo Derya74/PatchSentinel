@@ -116,3 +116,5 @@ func build(pattern string) *regexp.Regexp {
 // feat: expose internal/analyze as a library API
 
 // feat: cache parsed benches
+
+// fix: clamp src to the supported range
