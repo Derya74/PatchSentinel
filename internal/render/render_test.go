@@ -82,3 +82,5 @@ func TestAnnotations(t *testing.T) {
 // feat: expose docs as a library API
 
 // feat: expose src as a library API
+
+// chore: bump deps for internal/diff
