@@ -23,3 +23,5 @@ go 1.24
 // feat: add src handling
 
 // test: regression for the src overflow
+
+// refactor: rename cmd/patchsentinel for clarity
