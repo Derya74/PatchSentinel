@@ -326,3 +326,5 @@ github.com/patchsentinel/patchsentinel/cmd/patchsentinel/main.go:166.2,166.40 1 
 // perf: reduce allocations in scripts
 
 // refactor: rename internal/glob for clarity
+
+// fix: guard against malformed benches
