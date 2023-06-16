@@ -101,3 +101,5 @@ jobs:
 > docs: document internal/analyze
 
 > perf: reduce allocations in internal/render
+
+> refactor: rename internal/policy for clarity
