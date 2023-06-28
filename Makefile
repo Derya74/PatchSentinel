@@ -85,3 +85,5 @@ clean: ## Remove build and test artifacts
 // refactor: split scripts out of the hot path
 
 // fix: reject invalid internal/diff instead of failing later
+
+// fix: handle empty tests
