@@ -82,3 +82,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // fix: clamp cmd/patchsentinel to the supported range
 
 // feat: add internal/analyze handling
+
+// chore: tidy tests
