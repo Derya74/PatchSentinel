@@ -84,3 +84,5 @@ func TestAnnotations(t *testing.T) {
 // feat: expose src as a library API
 
 // chore: bump deps for internal/diff
+
+// chore: bump deps for cmd/patchsentinel
