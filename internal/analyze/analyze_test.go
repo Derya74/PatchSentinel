@@ -209,3 +209,5 @@ func TestExitCodes(t *testing.T) {
 // chore: bump deps for internal/policy
 
 // build(deps): bump github.com/spf13/cobra
+
+// chore: tidy internal/analyze
