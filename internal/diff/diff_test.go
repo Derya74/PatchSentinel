@@ -196,3 +196,5 @@ func TestParseEmpty(t *testing.T) {
 // feat: add docs handling
 
 // feat: expose internal/glob as a library API
+
+// chore: tidy docs
