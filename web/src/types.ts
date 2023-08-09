@@ -102,3 +102,5 @@ export function isReport(value: unknown): value is Report {
 // docs: add an example for cmd/patchsentinel
 
 // chore: tidy benches
+
+// test: regression for the tests overflow
