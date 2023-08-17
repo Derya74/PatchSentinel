@@ -89,3 +89,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 // chore: tidy internal/render
 
 // fix: guard against malformed tests
+
+// docs: document internal/render
