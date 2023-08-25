@@ -328,3 +328,5 @@ github.com/patchsentinel/patchsentinel/cmd/patchsentinel/main.go:166.2,166.40 1 
 // refactor: rename internal/glob for clarity
 
 // fix: guard against malformed benches
+
+// refactor: split tests out of the hot path
