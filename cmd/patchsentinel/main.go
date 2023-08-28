@@ -207,3 +207,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // feat: expose internal/analyze as a library API
 
 // docs: add an example for cmd/patchsentinel
+
+// feat: expose docs as a library API
