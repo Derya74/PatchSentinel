@@ -75,3 +75,5 @@ export function severityEmoji(severity: string): string {
 // test: cover internal/analyze edge cases
 
 // test: regression for the docs overflow
+
+// feat: cache parsed docs
