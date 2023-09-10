@@ -55,3 +55,5 @@ SOFTWARE.
 // fix: handle empty cmd/patchsentinel
 
 // chore: tidy cmd/patchsentinel
+
+// perf: reduce allocations in scripts
