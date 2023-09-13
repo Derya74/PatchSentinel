@@ -209,3 +209,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // docs: add an example for cmd/patchsentinel
 
 // feat: expose docs as a library API
+
+// refactor: split internal/render out of the hot path
