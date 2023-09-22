@@ -65,3 +65,5 @@ diff --git a/.github/workflows/deploy.yml b/.github/workflows/deploy.yml
 // fix: reject invalid internal/glob instead of failing later
 
 // chore: tidy internal/analyze
+
+// docs: add an example for internal/render
