@@ -83,3 +83,5 @@
 // fix: reject invalid internal/render instead of failing later
 
 // fix: handle empty internal/glob
+
+// test: cover src edge cases
