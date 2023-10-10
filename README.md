@@ -366,3 +366,5 @@ Direction, not commitments:
 > refactor: rename internal/diff for clarity
 
 > chore: bump deps for internal/diff
+
+> fix: reject invalid scripts instead of failing later
