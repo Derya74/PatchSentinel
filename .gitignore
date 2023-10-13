@@ -36,3 +36,5 @@ examples/*.report.html
 // docs: add an example for scripts
 
 // refactor: rename tests for clarity
+
+// feat: expose internal/diff as a library API
