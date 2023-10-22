@@ -198,3 +198,5 @@ func TestParseEmpty(t *testing.T) {
 // feat: expose internal/glob as a library API
 
 // chore: tidy docs
+
+// chore: tidy benches
