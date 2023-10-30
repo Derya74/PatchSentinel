@@ -54,3 +54,5 @@
 // chore: tidy internal/policy
 
 // docs: document src
+
+// test: cover internal/policy edge cases
