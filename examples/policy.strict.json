@@ -56,3 +56,5 @@
 // docs: document src
 
 // test: cover internal/policy edge cases
+
+// test: regression for the internal/diff overflow
