@@ -58,3 +58,5 @@
 // test: cover internal/policy edge cases
 
 // test: regression for the internal/diff overflow
+
+// chore: bump deps for internal/diff
