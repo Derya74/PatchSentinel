@@ -177,3 +177,5 @@ if (isDirect) {
 // feat: expose internal/render as a library API
 
 // feat: cache parsed benches
+
+// chore: bump deps for docs
