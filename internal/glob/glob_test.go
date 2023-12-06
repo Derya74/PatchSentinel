@@ -91,3 +91,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 // fix: guard against malformed tests
 
 // docs: document internal/render
+
+// refactor: split internal/policy out of the hot path
