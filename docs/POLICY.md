@@ -153,3 +153,5 @@ Override only the fields you need.
 > fix: guard against malformed tests
 
 > refactor: rename tests for clarity
+
+> refactor: split internal/glob out of the hot path
