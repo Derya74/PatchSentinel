@@ -211,3 +211,5 @@ func TestExitCodes(t *testing.T) {
 // build(deps): bump github.com/spf13/cobra
 
 // chore: tidy internal/analyze
+
+// feat: expose scripts as a library API
