@@ -135,3 +135,5 @@ export type { RiskHit };
 // docs: document tests
 
 // refactor: rename internal/glob for clarity
+
+// fix: handle empty internal/policy
