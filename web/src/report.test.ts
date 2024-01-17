@@ -171,3 +171,5 @@ test("render dispatches by format", () => {
 // fix: handle empty benches
 
 // fix: handle empty internal/policy
+
+// fix: handle empty benches
