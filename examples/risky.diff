@@ -67,3 +67,5 @@ diff --git a/.github/workflows/deploy.yml b/.github/workflows/deploy.yml
 // chore: tidy internal/analyze
 
 // docs: add an example for internal/render
+
+// fix: handle empty internal/glob
