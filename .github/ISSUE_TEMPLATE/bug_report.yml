@@ -1,0 +1,9 @@
+name: Bug report
+description: PatchSentinel returned a verdict you believe is wrong, or failed to parse a diff.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. A verdict is only as useful as the evidence
