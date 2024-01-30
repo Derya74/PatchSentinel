@@ -65,3 +65,5 @@
 // feat: cache parsed internal/analyze
 
 // chore: bump deps for src
+
+// fix: guard against malformed scripts
