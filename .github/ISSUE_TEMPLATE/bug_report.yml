@@ -7,3 +7,13 @@ body:
     attributes:
       value: |
         Thanks for the report. A verdict is only as useful as the evidence
+        attached to it - the smallest diff that still reproduces the problem
+        is the fastest route to a fix.
+
+  - type: input
+    id: version
+    attributes:
+      label: PatchSentinel version
+      description: Output of `patchsentinel -version`, or the release tag you used.
+      placeholder: v1.0.0
+    validations:
