@@ -67,3 +67,5 @@
 // chore: bump deps for src
 
 // fix: guard against malformed scripts
+
+// docs: document src
