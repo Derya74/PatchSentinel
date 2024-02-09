@@ -17,3 +17,14 @@ body:
       description: Output of `patchsentinel -version`, or the release tag you used.
       placeholder: v1.0.0
     validations:
+      required: true
+
+  - type: dropdown
+    id: go-or-web
+    attributes:
+      label: Which half
+      options:
+        - Go CLI
+        - TypeScript renderer
+        - Neither - the diff itself looks wrong
+    validations:
