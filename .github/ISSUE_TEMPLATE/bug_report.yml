@@ -38,3 +38,14 @@ body:
       placeholder: patchsentinel -policy examples/policy.strict.json -format text pr.diff
     validations:
       required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: The diff, or the smallest excerpt that still reproduces it.
+      render: diff
+    validations:
+      required: true
+
+  - type: textarea
