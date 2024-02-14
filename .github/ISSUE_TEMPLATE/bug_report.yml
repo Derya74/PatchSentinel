@@ -28,3 +28,13 @@ body:
         - TypeScript renderer
         - Neither - the diff itself looks wrong
     validations:
+      required: true
+
+  - type: input
+    id: command
+    attributes:
+      label: Command
+      description: The exact command and flags you ran.
+      placeholder: patchsentinel -policy examples/policy.strict.json -format text pr.diff
+    validations:
+      required: true
