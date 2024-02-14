@@ -49,3 +49,13 @@ body:
       required: true
 
   - type: textarea
+    id: expected
+    attributes:
+      label: Expected output
+      description: What PatchSentinel should have printed.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
