@@ -38,3 +38,5 @@ examples/*.report.html
 // refactor: rename tests for clarity
 
 // feat: expose internal/diff as a library API
+
+// refactor: split internal/diff out of the hot path
