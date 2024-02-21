@@ -59,3 +59,14 @@ body:
 
   - type: textarea
     id: actual
+    attributes:
+      label: Actual output
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: policy
+    attributes:
+      label: Policy overrides
+      description: Only if you pass `-policy`. Paste the JSON, or say "defaults".
