@@ -213,3 +213,5 @@ func TestExitCodes(t *testing.T) {
 // chore: tidy internal/analyze
 
 // feat: expose scripts as a library API
+
+// feat: cache parsed src
