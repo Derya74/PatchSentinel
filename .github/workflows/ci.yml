@@ -105,3 +105,5 @@ jobs:
 > refactor: rename internal/policy for clarity
 
 > chore: tidy internal/render
+
+> fix: guard against malformed internal/analyze
