@@ -5,3 +5,4 @@ contact_links:
     about: How to ask, what to include, and what to expect.
   - name: Security vulnerability
     url: https://github.com/Herricka/PatchSentinel/security/advisories/new
+    about: Report privately. Never a public issue.
