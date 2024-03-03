@@ -3,3 +3,5 @@ contact_links:
   - name: Support question
     url: https://github.com/Herricka/PatchSentinel/blob/main/SUPPORT.md
     about: How to ask, what to include, and what to expect.
+  - name: Security vulnerability
+    url: https://github.com/Herricka/PatchSentinel/security/advisories/new
