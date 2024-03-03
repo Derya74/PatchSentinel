@@ -54,3 +54,15 @@ func TestMarkdown(t *testing.T) {
 	for _, want := range []string{"## PatchSentinel", "FAIL", "| Risk score | 11 |", "### Findings", "### Risk signals"} {
 		if !strings.Contains(out, want) {
 			t.Errorf("markdown missing %q\n---\n%s", want, out)
+		}
+	}
+	// Pipe in a risk message must be escaped so it does not break the table.
+	if !strings.Contains(out, "Debug print \\| left") {
+		t.Errorf("pipe not escaped in markdown table")
+	}
+}
+
+func TestAnnotations(t *testing.T) {
+	out := AnnotationsText(sample())
+	if !strings.Contains(out, "::error title=Sensitive paths modified::") {
+		t.Errorf("annotations missing error line:\n%s", out)
