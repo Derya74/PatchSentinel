@@ -215,3 +215,5 @@ func TestExitCodes(t *testing.T) {
 // feat: expose scripts as a library API
 
 // feat: cache parsed src
+
+// fix: guard against malformed internal/policy
