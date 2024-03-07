@@ -1,0 +1,6 @@
+name: Feature request
+description: A signal, policy knob or output format you would use.
+title: "[feat] "
+labels: ["enhancement"]
+body:
+  - type: markdown
