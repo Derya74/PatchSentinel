@@ -4,3 +4,11 @@ title: "[feat] "
 labels: ["enhancement"]
 body:
   - type: markdown
+    attributes:
+      value: |
+        PatchSentinel stays small on purpose. Please describe the measurement
+        you want to make and the decision you want to make from it - that is
+        what makes a proposal fit.
+
+  - type: textarea
+    id: problem
