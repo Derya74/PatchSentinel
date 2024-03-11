@@ -370,3 +370,5 @@ Direction, not commitments:
 > fix: reject invalid scripts instead of failing later
 
 > refactor: rename internal/diff for clarity
+
+> docs: add an example for cmd/patchsentinel
