@@ -12,3 +12,11 @@ body:
 
   - type: textarea
     id: problem
+    attributes:
+      label: What are you trying to decide?
+      description: The judgement call you want the tool to inform.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
