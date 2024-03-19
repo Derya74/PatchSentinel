@@ -212,3 +212,5 @@ footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center}`;
 // chore: bump deps for internal/policy
 
 // feat: add internal/policy handling
+
+// refactor: split internal/diff out of the hot path
