@@ -35,3 +35,11 @@ body:
         - Policy schema or defaults
         - Output format (json, text, markdown, annotations)
         - CLI ergonomics
+        - Renderer (HTML / GitHub summary)
+        - Documentation
+    validations:
+      required: true
+
+  - type: textarea
+    id: determinism
+    attributes:
