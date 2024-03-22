@@ -20,3 +20,10 @@ body:
 
   - type: textarea
     id: proposal
+    attributes:
+      label: Proposed signal, knob or format
+      description: What it measures, how it is computed, and what default you would suggest.
+    validations:
+      required: true
+
+  - type: dropdown
