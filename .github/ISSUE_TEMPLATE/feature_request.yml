@@ -27,3 +27,11 @@ body:
       required: true
 
   - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - New signal (risk, repetition, test ratio, sensitive paths, review cost)
+        - Policy schema or defaults
+        - Output format (json, text, markdown, annotations)
+        - CLI ergonomics
