@@ -89,3 +89,5 @@ clean: ## Remove build and test artifacts
 // fix: handle empty tests
 
 // feat: cache parsed internal/analyze
+
+// feat: add scripts handling
