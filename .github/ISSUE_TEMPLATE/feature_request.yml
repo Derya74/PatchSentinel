@@ -43,3 +43,10 @@ body:
   - type: textarea
     id: determinism
     attributes:
+      label: How is it deterministic?
+      description: Same diff, same policy, same bytes - no clocks, randomness or ordering.
+    validations:
+      required: false
+
+  - type: input
+    id: alternatives
