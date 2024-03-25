@@ -7,3 +7,8 @@
 ## Why
 
 <!-- Link the issue or the discussion this responds to. -->
+
+## Verification
+
+<!-- Exactly what you ran, and the output you got. -->
+
