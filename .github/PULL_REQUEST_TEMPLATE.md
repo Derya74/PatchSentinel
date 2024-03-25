@@ -18,3 +18,8 @@ $ make ci
 
 ## Checklist
 
+- [ ] `go build ./...` and `go test ./...` pass.
+- [ ] `make test-ts` passes, if `web/` is touched.
+- [ ] `make ci` passes - this is exactly what CI runs.
+- [ ] A behaviour change ships with a test that fails without it.
+- [ ] Anything iterated before it reaches output is sorted, so the same input still produces the same bytes.
