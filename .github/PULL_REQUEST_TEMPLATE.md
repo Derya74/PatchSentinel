@@ -12,3 +12,9 @@
 
 <!-- Exactly what you ran, and the output you got. -->
 
+```text
+$ make ci
+```
+
+## Checklist
+
