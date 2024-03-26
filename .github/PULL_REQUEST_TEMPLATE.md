@@ -23,3 +23,9 @@ $ make ci
 - [ ] `make ci` passes - this is exactly what CI runs.
 - [ ] A behaviour change ships with a test that fails without it.
 - [ ] Anything iterated before it reaches output is sorted, so the same input still produces the same bytes.
+- [ ] Values landing in HTML, Markdown or a workflow annotation are escaped for that format.
+- [ ] `CHANGELOG.md` has an entry under `[Unreleased]`.
+- [ ] No new runtime dependency in `internal/`.
+
+## Before / after
+
