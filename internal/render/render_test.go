@@ -86,3 +86,5 @@ func TestAnnotations(t *testing.T) {
 // chore: bump deps for internal/diff
 
 // chore: bump deps for cmd/patchsentinel
+
+// docs: document internal/render
