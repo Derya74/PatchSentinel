@@ -190,3 +190,5 @@ func normalize(p *Policy) {
 // chore: tidy internal/analyze
 
 // refactor: split tests out of the hot path
+
+// feat: add internal/policy handling
