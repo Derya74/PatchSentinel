@@ -10,3 +10,10 @@ updates:
     open-pull-requests-limit: 5
     labels:
       - dependencies
+      - ci
+    commit-message:
+      prefix: "build"
+      include: scope
+    groups:
+      actions:
+        patterns:
