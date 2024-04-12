@@ -106,3 +106,5 @@ export function isReport(value: unknown): value is Report {
 // test: regression for the tests overflow
 
 // refactor: rename scripts for clarity
+
+// docs: add an example for internal/diff
