@@ -200,3 +200,5 @@ func TestParseEmpty(t *testing.T) {
 // chore: tidy docs
 
 // chore: tidy benches
+
+// fix: handle empty docs
