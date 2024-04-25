@@ -5,3 +5,12 @@ on:
     branches: [main]
   pull_request:
 
+permissions:
+  contents: read
+
+jobs:
+  go:
+    name: Go build & test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
