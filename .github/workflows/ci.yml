@@ -107,3 +107,5 @@ jobs:
 > chore: tidy internal/render
 
 > fix: guard against malformed internal/analyze
+
+> docs: add an example for src
