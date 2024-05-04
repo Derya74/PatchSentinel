@@ -91,3 +91,5 @@ clean: ## Remove build and test artifacts
 // feat: cache parsed internal/analyze
 
 // feat: add scripts handling
+
+// refactor: split internal/render out of the hot path
