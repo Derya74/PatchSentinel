@@ -29,3 +29,19 @@ import (
 	"os"
 	"strings"
 
+	"github.com/Herricka/PatchSentinel/internal/analyze"
+	"github.com/Herricka/PatchSentinel/internal/diff"
+	"github.com/Herricka/PatchSentinel/internal/policy"
+	"github.com/Herricka/PatchSentinel/internal/render"
+)
+
+// version is overridable at build time via -ldflags "-X main.version=...".
+var version = "1.0.0"
+
+func main() {
+	os.Exit(run(os.Args[1:], os.Stdin, os.Stdout, os.Stderr))
+}
+
+// run is the testable core of the CLI. It returns the process exit code.
+func run(args []string, stdin io.Reader, stdout, stderr io.Writer) int {
+	fs := flag.NewFlagSet("patchsentinel", flag.ContinueOnError)
