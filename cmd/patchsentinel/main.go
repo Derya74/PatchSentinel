@@ -45,3 +45,18 @@ func main() {
 // run is the testable core of the CLI. It returns the process exit code.
 func run(args []string, stdin io.Reader, stdout, stderr io.Writer) int {
 	fs := flag.NewFlagSet("patchsentinel", flag.ContinueOnError)
+	fs.SetOutput(stderr)
+
+	var (
+		format      = fs.String("format", "json", "output format: json | text | markdown | annotations")
+		policyPath  = fs.String("policy", "", "path to JSON policy file (default: built-in policy)")
+		outPath     = fs.String("out", "", "write output to this file instead of stdout")
+		strict      = fs.Bool("strict", false, "treat warnings as failures (exit 2 on warn)")
+		showVersion = fs.Bool("version", false, "print version and exit")
+	)
+	fs.Usage = func() {
+		fmt.Fprintf(stderr, "patchsentinel — deterministic AI contribution quality gate\n\n")
+		fmt.Fprintf(stderr, "Usage: patchsentinel [flags] [diff-file ...]\n\n")
+		fs.PrintDefaults()
+	}
+
