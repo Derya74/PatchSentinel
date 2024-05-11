@@ -60,3 +60,18 @@ func run(args []string, stdin io.Reader, stdout, stderr io.Writer) int {
 		fs.PrintDefaults()
 	}
 
+	if err := fs.Parse(args); err != nil {
+		return 2
+	}
+	if *showVersion {
+		fmt.Fprintf(stdout, "patchsentinel %s\n", version)
+		return 0
+	}
+
+	// Load policy.
+	pol := policy.Default()
+	if *policyPath != "" {
+		f, err := os.Open(*policyPath)
+		if err != nil {
+			fmt.Fprintf(stderr, "error: open policy: %v\n", err)
+			return 2
