@@ -75,3 +75,18 @@ func run(args []string, stdin io.Reader, stdout, stderr io.Writer) int {
 		if err != nil {
 			fmt.Fprintf(stderr, "error: open policy: %v\n", err)
 			return 2
+		}
+		loaded, err := policy.Load(f)
+		f.Close()
+		if err != nil {
+			fmt.Fprintf(stderr, "error: %v\n", err)
+			return 2
+		}
+		pol = loaded
+	}
+
+	// Read diff input from files or stdin.
+	raw, err := readInput(fs.Args(), stdin)
+	if err != nil {
+		fmt.Fprintf(stderr, "error: read input: %v\n", err)
+		return 2
