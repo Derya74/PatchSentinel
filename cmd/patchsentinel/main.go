@@ -90,3 +90,18 @@ func run(args []string, stdin io.Reader, stdout, stderr io.Writer) int {
 	if err != nil {
 		fmt.Fprintf(stderr, "error: read input: %v\n", err)
 		return 2
+	}
+
+	patch, err := diff.Parse(bytes.NewReader(raw))
+	if err != nil {
+		fmt.Fprintf(stderr, "error: parse diff: %v\n", err)
+		return 2
+	}
+
+	report := analyze.Analyze(patch, pol)
+
+	out, err := format2bytes(*format, report)
+	if err != nil {
+		fmt.Fprintf(stderr, "error: %v\n", err)
+		return 2
+	}
