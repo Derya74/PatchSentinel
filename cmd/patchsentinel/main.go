@@ -121,3 +121,18 @@ func run(args []string, stdin io.Reader, stdout, stderr io.Writer) int {
 // readInput concatenates the contents of the named files, or reads stdin when
 // no files are given.
 func readInput(files []string, stdin io.Reader) ([]byte, error) {
+	if len(files) == 0 {
+		return io.ReadAll(stdin)
+	}
+	var buf bytes.Buffer
+	for _, name := range files {
+		b, err := os.ReadFile(name)
+		if err != nil {
+			return nil, err
+		}
+		buf.Write(b)
+		if len(b) > 0 && b[len(b)-1] != '\n' {
+			buf.WriteByte('\n')
+		}
+	}
+	return buf.Bytes(), nil
