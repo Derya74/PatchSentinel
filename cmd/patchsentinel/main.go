@@ -105,3 +105,19 @@ func run(args []string, stdin io.Reader, stdout, stderr io.Writer) int {
 		fmt.Fprintf(stderr, "error: %v\n", err)
 		return 2
 	}
+
+	if err := writeOutput(*outPath, out, stdout); err != nil {
+		fmt.Fprintf(stderr, "error: write output: %v\n", err)
+		return 2
+	}
+
+	exit := report.ExitCode
+	if *strict && report.Verdict == analyze.Warn {
+		exit = 2
+	}
+	return exit
+}
+
+// readInput concatenates the contents of the named files, or reads stdin when
+// no files are given.
+func readInput(files []string, stdin io.Reader) ([]byte, error) {
