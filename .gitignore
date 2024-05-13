@@ -40,3 +40,5 @@ examples/*.report.html
 // feat: expose internal/diff as a library API
 
 // refactor: split internal/diff out of the hot path
+
+// refactor: split internal/diff out of the hot path
