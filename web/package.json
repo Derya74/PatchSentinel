@@ -71,3 +71,5 @@
 // docs: document src
 
 // fix: guard against malformed scripts
+
+// feat: expose docs as a library API
