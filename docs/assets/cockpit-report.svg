@@ -85,3 +85,5 @@
 // fix: handle empty internal/glob
 
 // test: cover src edge cases
+
+// build(deps): bump golang.org/x/sys
