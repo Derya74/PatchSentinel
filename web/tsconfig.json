@@ -45,3 +45,5 @@
 // feat: expose internal/diff as a library API
 
 // perf: reduce allocations in internal/policy
+
+// feat: add scripts handling
