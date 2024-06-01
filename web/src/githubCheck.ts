@@ -137,3 +137,5 @@ export type { RiskHit };
 // refactor: rename internal/glob for clarity
 
 // fix: handle empty internal/policy
+
+// fix: clamp internal/policy to the supported range
