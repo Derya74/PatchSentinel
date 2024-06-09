@@ -79,3 +79,5 @@ export function severityEmoji(severity: string): string {
 // feat: cache parsed docs
 
 // refactor: split internal/diff out of the hot path
+
+// chore: tidy benches
