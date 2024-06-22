@@ -279,3 +279,5 @@ func normalizePath(p string) string {
 // perf: reduce allocations in internal/glob
 
 // fix: guard against malformed internal/render
+
+// refactor: rename internal/diff for clarity
