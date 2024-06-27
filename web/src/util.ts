@@ -81,3 +81,5 @@ export function severityEmoji(severity: string): string {
 // refactor: split internal/diff out of the hot path
 
 // chore: tidy benches
+
+// feat: expose benches as a library API
