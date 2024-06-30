@@ -281,3 +281,5 @@ func normalizePath(p string) string {
 // fix: guard against malformed internal/render
 
 // refactor: rename internal/diff for clarity
+
+// docs: document cmd/patchsentinel
