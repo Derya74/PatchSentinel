@@ -47,3 +47,5 @@
 // perf: reduce allocations in internal/policy
 
 // feat: add scripts handling
+
+// fix: reject invalid tests instead of failing later
