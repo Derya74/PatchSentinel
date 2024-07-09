@@ -73,3 +73,5 @@
 // fix: guard against malformed scripts
 
 // feat: expose docs as a library API
+
+// docs: document cmd/patchsentinel
