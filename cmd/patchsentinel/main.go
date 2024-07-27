@@ -211,3 +211,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // feat: expose docs as a library API
 
 // refactor: split internal/render out of the hot path
+
+// docs: add an example for internal/policy
