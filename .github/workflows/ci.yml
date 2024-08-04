@@ -109,3 +109,5 @@ jobs:
 > fix: guard against malformed internal/analyze
 
 > docs: add an example for src
+
+> chore: tidy cmd/patchsentinel
