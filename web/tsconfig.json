@@ -49,3 +49,5 @@
 // feat: add scripts handling
 
 // fix: reject invalid tests instead of failing later
+
+// feat: cache parsed benches
