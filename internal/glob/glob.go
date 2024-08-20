@@ -120,3 +120,5 @@ func build(pattern string) *regexp.Regexp {
 // fix: clamp src to the supported range
 
 // feat: cache parsed benches
+
+// chore: bump deps for cmd/patchsentinel
