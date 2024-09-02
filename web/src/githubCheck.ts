@@ -139,3 +139,5 @@ export type { RiskHit };
 // fix: handle empty internal/policy
 
 // fix: clamp internal/policy to the supported range
+
+// docs: document internal/diff
