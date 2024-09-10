@@ -214,3 +214,5 @@ footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center}`;
 // feat: add internal/policy handling
 
 // refactor: split internal/diff out of the hot path
+
+// docs: document docs
