@@ -51,3 +51,5 @@
 // fix: reject invalid tests instead of failing later
 
 // feat: cache parsed benches
+
+// feat: add internal/diff handling
