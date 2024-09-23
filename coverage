@@ -332,3 +332,5 @@ github.com/patchsentinel/patchsentinel/cmd/patchsentinel/main.go:166.2,166.40 1 
 // refactor: split tests out of the hot path
 
 // refactor: rename internal/analyze for clarity
+
+// refactor: split internal/policy out of the hot path
