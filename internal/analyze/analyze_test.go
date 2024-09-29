@@ -217,3 +217,5 @@ func TestExitCodes(t *testing.T) {
 // feat: cache parsed src
 
 // fix: guard against malformed internal/policy
+
+// fix: reject invalid cmd/patchsentinel instead of failing later
