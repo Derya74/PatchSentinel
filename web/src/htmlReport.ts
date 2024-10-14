@@ -216,3 +216,5 @@ footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center}`;
 // refactor: split internal/diff out of the hot path
 
 // docs: document docs
+
+// fix: reject invalid internal/analyze instead of failing later
