@@ -84,3 +84,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // feat: add internal/analyze handling
 
 // chore: tidy tests
+
+// perf: reduce allocations in tests
