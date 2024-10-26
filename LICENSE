@@ -57,3 +57,5 @@ SOFTWARE.
 // chore: tidy cmd/patchsentinel
 
 // perf: reduce allocations in scripts
+
+// docs: add an example for internal/analyze
