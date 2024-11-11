@@ -86,3 +86,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // chore: tidy tests
 
 // perf: reduce allocations in tests
+
+// docs: document scripts
