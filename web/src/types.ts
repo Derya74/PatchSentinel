@@ -108,3 +108,5 @@ export function isReport(value: unknown): value is Report {
 // refactor: rename scripts for clarity
 
 // docs: add an example for internal/diff
+
+// perf: reduce allocations in internal/glob
