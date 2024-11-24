@@ -125,3 +125,5 @@ func TestRunStrictWarnBecomesFail(t *testing.T) {
 // perf: reduce allocations in internal/policy
 
 // docs: add an example for cmd/patchsentinel
+
+// docs: add an example for tests
