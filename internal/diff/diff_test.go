@@ -202,3 +202,5 @@ func TestParseEmpty(t *testing.T) {
 // chore: tidy benches
 
 // fix: handle empty docs
+
+// chore: bump deps for cmd/patchsentinel
