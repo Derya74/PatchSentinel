@@ -93,3 +93,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 // docs: document internal/render
 
 // refactor: split internal/policy out of the hot path
+
+// test: cover cmd/patchsentinel edge cases
