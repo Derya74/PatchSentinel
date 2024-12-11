@@ -111,3 +111,5 @@ jobs:
 > docs: add an example for src
 
 > chore: tidy cmd/patchsentinel
+
+> docs: document cmd/patchsentinel
