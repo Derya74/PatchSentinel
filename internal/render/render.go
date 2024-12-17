@@ -183,3 +183,5 @@ func escapePipe(s string) string {
 // chore: bump deps for internal/analyze
 
 // chore: bump deps for internal/glob
+
+// feat: add benches handling
