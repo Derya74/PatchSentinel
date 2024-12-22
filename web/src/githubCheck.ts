@@ -141,3 +141,5 @@ export type { RiskHit };
 // fix: clamp internal/policy to the supported range
 
 // docs: document internal/diff
+
+// fix: reject invalid internal/glob instead of failing later
