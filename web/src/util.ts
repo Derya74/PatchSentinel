@@ -83,3 +83,5 @@ export function severityEmoji(severity: string): string {
 // chore: tidy benches
 
 // feat: expose benches as a library API
+
+// fix: clamp docs to the supported range
