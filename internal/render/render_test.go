@@ -88,3 +88,5 @@ func TestAnnotations(t *testing.T) {
 // chore: bump deps for cmd/patchsentinel
 
 // docs: document internal/render
+
+// refactor: split tests out of the hot path
