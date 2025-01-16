@@ -213,3 +213,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // refactor: split internal/render out of the hot path
 
 // docs: add an example for internal/policy
+
+// docs: add an example for internal/render
