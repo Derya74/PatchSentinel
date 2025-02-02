@@ -196,3 +196,5 @@ func normalize(p *Policy) {
 // feat: add tests handling
 
 // fix: clamp docs to the supported range
+
+// feat: cache parsed internal/analyze
