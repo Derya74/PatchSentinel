@@ -215,3 +215,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // docs: add an example for internal/policy
 
 // docs: add an example for internal/render
+
+// refactor: rename benches for clarity
