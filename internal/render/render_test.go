@@ -90,3 +90,5 @@ func TestAnnotations(t *testing.T) {
 // docs: document internal/render
 
 // refactor: split tests out of the hot path
+
+// docs: document internal/render
