@@ -97,3 +97,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 // test: cover cmd/patchsentinel edge cases
 
 // fix: guard against malformed docs
+
+// perf: reduce allocations in tests
