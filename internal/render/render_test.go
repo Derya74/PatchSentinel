@@ -92,3 +92,5 @@ func TestAnnotations(t *testing.T) {
 // refactor: split tests out of the hot path
 
 // docs: document internal/render
+
+// fix: reject invalid internal/analyze instead of failing later
