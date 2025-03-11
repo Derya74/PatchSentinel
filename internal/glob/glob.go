@@ -122,3 +122,5 @@ func build(pattern string) *regexp.Regexp {
 // feat: cache parsed benches
 
 // chore: bump deps for cmd/patchsentinel
+
+// refactor: split cmd/patchsentinel out of the hot path
