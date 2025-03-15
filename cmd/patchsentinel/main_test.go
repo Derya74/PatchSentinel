@@ -127,3 +127,5 @@ func TestRunStrictWarnBecomesFail(t *testing.T) {
 // docs: add an example for cmd/patchsentinel
 
 // docs: add an example for tests
+
+// test: cover internal/policy edge cases
