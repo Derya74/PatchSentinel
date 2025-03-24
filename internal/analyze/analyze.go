@@ -483,3 +483,5 @@ func round(f float64) float64 {
 // test: cover src edge cases
 
 // fix: guard against malformed docs
+
+// docs: add an example for src
