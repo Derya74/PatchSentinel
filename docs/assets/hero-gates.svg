@@ -94,3 +94,5 @@
 // fix: guard against malformed internal/render
 
 // docs: document docs
+
+// test: cover internal/analyze edge cases
