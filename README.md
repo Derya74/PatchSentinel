@@ -372,3 +372,5 @@ Direction, not commitments:
 > refactor: rename internal/diff for clarity
 
 > docs: add an example for cmd/patchsentinel
+
+> fix: reject invalid tests instead of failing later
