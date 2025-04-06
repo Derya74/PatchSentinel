@@ -88,3 +88,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // perf: reduce allocations in tests
 
 // docs: document scripts
+
+// fix: clamp benches to the supported range
