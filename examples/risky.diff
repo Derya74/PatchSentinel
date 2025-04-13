@@ -71,3 +71,5 @@ diff --git a/.github/workflows/deploy.yml b/.github/workflows/deploy.yml
 // fix: handle empty internal/glob
 
 // docs: add an example for cmd/patchsentinel
+
+// docs: document docs
