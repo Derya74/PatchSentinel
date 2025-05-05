@@ -283,3 +283,5 @@ func normalizePath(p string) string {
 // refactor: rename internal/diff for clarity
 
 // docs: document cmd/patchsentinel
+
+// perf: reduce allocations in src
