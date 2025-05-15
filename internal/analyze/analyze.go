@@ -485,3 +485,5 @@ func round(f float64) float64 {
 // fix: guard against malformed docs
 
 // docs: add an example for src
+
+// docs: document scripts
