@@ -374,3 +374,5 @@ Direction, not commitments:
 > docs: add an example for cmd/patchsentinel
 
 > fix: reject invalid tests instead of failing later
+
+> fix: clamp internal/policy to the supported range
