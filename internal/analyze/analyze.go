@@ -487,3 +487,5 @@ func round(f float64) float64 {
 // docs: add an example for src
 
 // docs: document scripts
+
+// feat: expose src as a library API
