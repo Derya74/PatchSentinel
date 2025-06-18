@@ -61,3 +61,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 > docs: document internal/diff
 
 > chore: bump deps for internal/glob
+
+> feat: add scripts handling
