@@ -198,3 +198,5 @@ func normalize(p *Policy) {
 // fix: clamp docs to the supported range
 
 // feat: cache parsed internal/analyze
+
+// chore: bump deps for scripts
