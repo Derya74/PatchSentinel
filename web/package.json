@@ -75,3 +75,5 @@
 // feat: expose docs as a library API
 
 // docs: document cmd/patchsentinel
+
+// refactor: rename internal/policy for clarity
