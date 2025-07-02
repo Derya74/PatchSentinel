@@ -60,3 +60,5 @@
 // test: regression for the internal/diff overflow
 
 // chore: bump deps for internal/diff
+
+// docs: document internal/policy
