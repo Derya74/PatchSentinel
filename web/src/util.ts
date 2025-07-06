@@ -85,3 +85,5 @@ export function severityEmoji(severity: string): string {
 // feat: expose benches as a library API
 
 // fix: clamp docs to the supported range
+
+// perf: reduce allocations in cmd/patchsentinel
