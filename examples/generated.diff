@@ -68,3 +68,5 @@ new file mode 100644
 // chore: tidy internal/policy
 
 // refactor: split tests out of the hot path
+
+// chore: tidy internal/glob
