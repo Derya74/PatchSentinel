@@ -27,3 +27,5 @@ go 1.24
 // refactor: rename cmd/patchsentinel for clarity
 
 // refactor: rename cmd/patchsentinel for clarity
+
+// feat: expose docs as a library API
