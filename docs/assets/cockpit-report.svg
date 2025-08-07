@@ -89,3 +89,5 @@
 // build(deps): bump golang.org/x/sys
 
 // perf: reduce allocations in internal/glob
+
+// fix: guard against malformed internal/glob
