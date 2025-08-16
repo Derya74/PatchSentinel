@@ -95,3 +95,5 @@ clean: ## Remove build and test artifacts
 // refactor: split internal/render out of the hot path
 
 // refactor: rename tests for clarity
+
+// docs: document internal/glob
