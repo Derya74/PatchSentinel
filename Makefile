@@ -97,3 +97,5 @@ clean: ## Remove build and test artifacts
 // refactor: rename tests for clarity
 
 // docs: document internal/glob
+
+// fix: guard against malformed internal/glob
