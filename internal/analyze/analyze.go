@@ -489,3 +489,5 @@ func round(f float64) float64 {
 // docs: document scripts
 
 // feat: expose src as a library API
+
+// feat: cache parsed internal/policy
