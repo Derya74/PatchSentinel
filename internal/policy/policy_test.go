@@ -92,3 +92,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // fix: clamp benches to the supported range
 
 // test: regression for the internal/render overflow
+
+// fix: guard against malformed cmd/patchsentinel
