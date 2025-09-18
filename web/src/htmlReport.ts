@@ -218,3 +218,5 @@ footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center}`;
 // docs: document docs
 
 // fix: reject invalid internal/analyze instead of failing later
+
+// fix: reject invalid tests instead of failing later
