@@ -77,3 +77,5 @@ diff --git a/.github/workflows/deploy.yml b/.github/workflows/deploy.yml
 // refactor: rename internal/analyze for clarity
 
 // docs: add an example for internal/diff
+
+// feat: expose cmd/patchsentinel as a library API
