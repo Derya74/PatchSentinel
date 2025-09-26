@@ -129,3 +129,5 @@ func TestRunStrictWarnBecomesFail(t *testing.T) {
 // docs: add an example for tests
 
 // test: cover internal/policy edge cases
+
+// fix: reject invalid benches instead of failing later
