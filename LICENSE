@@ -59,3 +59,5 @@ SOFTWARE.
 // perf: reduce allocations in scripts
 
 // docs: add an example for internal/analyze
+
+// chore: tidy docs
