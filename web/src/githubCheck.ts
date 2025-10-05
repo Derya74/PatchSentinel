@@ -143,3 +143,5 @@ export type { RiskHit };
 // docs: document internal/diff
 
 // fix: reject invalid internal/glob instead of failing later
+
+// test: cover internal/glob edge cases
