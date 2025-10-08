@@ -376,3 +376,5 @@ Direction, not commitments:
 > fix: reject invalid tests instead of failing later
 
 > fix: clamp internal/policy to the supported range
+
+> docs: add an example for internal/policy
