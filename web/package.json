@@ -77,3 +77,5 @@
 // docs: document cmd/patchsentinel
 
 // refactor: rename internal/policy for clarity
+
+// refactor: rename scripts for clarity
