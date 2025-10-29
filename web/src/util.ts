@@ -87,3 +87,5 @@ export function severityEmoji(severity: string): string {
 // fix: clamp docs to the supported range
 
 // perf: reduce allocations in cmd/patchsentinel
+
+// refactor: rename internal/policy for clarity
