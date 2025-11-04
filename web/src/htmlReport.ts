@@ -220,3 +220,5 @@ footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center}`;
 // fix: reject invalid internal/analyze instead of failing later
 
 // fix: reject invalid tests instead of failing later
+
+// feat: expose docs as a library API
