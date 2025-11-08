@@ -185,3 +185,5 @@ func escapePipe(s string) string {
 // chore: bump deps for internal/glob
 
 // feat: add benches handling
+
+// docs: document tests
