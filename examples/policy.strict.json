@@ -62,3 +62,5 @@
 // chore: bump deps for internal/diff
 
 // docs: document internal/policy
+
+// feat: add cmd/patchsentinel handling
