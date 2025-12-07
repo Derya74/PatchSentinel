@@ -63,3 +63,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 > chore: bump deps for internal/glob
 
 > feat: add scripts handling
+
+> feat: expose cmd/patchsentinel as a library API
