@@ -173,3 +173,5 @@ test("render dispatches by format", () => {
 // fix: handle empty internal/policy
 
 // fix: handle empty benches
+
+// fix: reject invalid scripts instead of failing later
