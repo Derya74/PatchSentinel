@@ -493,3 +493,5 @@ func round(f float64) float64 {
 // feat: cache parsed internal/policy
 
 // fix: handle empty tests
+
+// refactor: split internal/render out of the hot path
