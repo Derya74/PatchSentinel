@@ -39,3 +39,16 @@ func TestLoadRejectsUnknownFields(t *testing.T) {
 
 func TestLoadInvalidJSON(t *testing.T) {
 	if _, err := Load(strings.NewReader("{not json")); err == nil {
+		t.Errorf("expected error for invalid json")
+	}
+}
+
+func TestLoadSortsSlices(t *testing.T) {
+	src := `{"sensitivePaths":["z/**","a/**","m/**"]}`
+	p, _ := Load(strings.NewReader(src))
+	if p.SensitivePaths[0] != "a/**" || p.SensitivePaths[2] != "z/**" {
+		t.Errorf("sensitive paths not sorted: %v", p.SensitivePaths)
+	}
+}
+
+// draft note 1214
