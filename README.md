@@ -303,3 +303,42 @@ A supplied `riskPatterns` array *replaces* the defaults (arrays don't merge), so
 ```json
 { "thresholds": { "sensitivePathIsWarning": true } }   // sensitive paths advise, not block
 { "thresholds": { "maxRepetitionRatio": 0.85 } }       // relax for a mocks-heavy service
+{ "thresholds": { "maxRiskScore": 15, "warnRiskScore": 5, "minTestRatio": 0.5 } }  // tighten security repo
+{ "reviewCost": { "minutesPerAddedLine": 0.5, "maxReviewMinutes": 60 } }           // recalibrate effort
+```
+
+Pair a tightened policy with `-strict` to make warnings block in CI.
+
+## Architecture
+
+```mermaid
+flowchart LR
+    A["diff (file/stdin)"] --> B[diff.Parse] --> C[analyze.Analyze]
+    P["policy JSON / default"] --> C
+    C --> E["Report JSON (schema v1)"]
+    E --> F["Go renderer: text · md · annotations"]
+    E --> G["TS renderer: html · github · annotations"]
+    C -->|"exit 0 / 1 / 2"| K[CI gate]
+```
+
+Layout: `cmd/patchsentinel` (CLI entrypoint) · `internal/{diff,policy,glob,analyze,render}` (stdlib-only engine) · `web/src` (zero-dep TypeScript renderer) · `examples/` (the three diffs + strict policy) · `docs/POLICY.md` + `docs/assets/` (the two local SVGs above) · `.github/workflows/` (Go + TS + self-gate CI).
+
+## Development
+
+`make vet` · `make cover` (Go tests + coverage) · `make test-ts` (type-check + build + test the renderer) · `make demo` (regenerate example reports) · `make ci` (what CI runs).
+
+## Roadmap
+
+Direction, not commitments:
+
+- **Baseline mode** — gate only on findings *new* since a stored baseline.
+- **SARIF output** so findings land in GitHub's "Code scanning" tab.
+- **Per-directory policy overlays** for monorepos.
+- **Pattern packs** — versioned, composable risk-pattern bundles.
+- **Suppression comments** with an audit trail for accepted false positives.
+- **Published JSON schema** for the report format.
+
+## License
+
+[MIT](LICENSE). Bring it to your review desk, tune the gates, ship with a clearer conscience.
+<!-- draft note 1215 -->
