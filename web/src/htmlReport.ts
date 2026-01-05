@@ -222,3 +222,5 @@ footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center}`;
 // fix: reject invalid tests instead of failing later
 
 // feat: expose docs as a library API
+
+// perf: reduce allocations in tests
