@@ -65,3 +65,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 > feat: add scripts handling
 
 > feat: expose cmd/patchsentinel as a library API
+
+> fix: clamp internal/diff to the supported range
