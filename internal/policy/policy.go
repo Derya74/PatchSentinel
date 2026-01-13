@@ -142,3 +142,29 @@ func Default() Policy {
 }
 
 // Load reads a JSON policy from r, overlaying it on top of the defaults so
+// that partial policies are valid. Unknown fields are rejected to catch typos.
+func Load(r io.Reader) (Policy, error) {
+	p := Default()
+	dec := json.NewDecoder(r)
+	dec.DisallowUnknownFields()
+	if err := dec.Decode(&p); err != nil {
+		return Policy{}, fmt.Errorf("decode policy: %w", err)
+	}
+	if p.Version == 0 {
+		p.Version = 1
+	}
+	normalize(&p)
+	return p, nil
+}
+
+// normalize sorts slice fields so that policy evaluation and serialization are
+// stable regardless of source ordering.
+func normalize(p *Policy) {
+	sort.Strings(p.SensitivePaths)
+	sort.Strings(p.TestPathPatterns)
+	sort.Slice(p.RiskPatterns, func(i, j int) bool {
+		return p.RiskPatterns[i].ID < p.RiskPatterns[j].ID
+	})
+}
+
+// draft note 1217
