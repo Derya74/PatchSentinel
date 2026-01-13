@@ -159,3 +159,34 @@ section{margin-top:28px}
 h2{font-size:16px;border-bottom:1px solid var(--border);padding-bottom:8px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
 .card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px}
+.card-value{font-size:22px;font-weight:700}
+.card-label{color:var(--muted);font-size:12px;margin-top:4px}
+.findings{list-style:none;padding:0;margin:0}
+.finding{display:flex;gap:12px;background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.finding p{margin:4px 0 0;color:var(--muted)}
+.finding.sev-error{border-left:4px solid var(--del)}
+.finding.sev-warn{border-left:4px solid #9a6700}
+.finding.sev-info{border-left:4px solid #1f6feb}
+.sev-badge{font-size:12px;text-transform:uppercase;white-space:nowrap}
+.tbl{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.tbl th,.tbl td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+.tbl th{background:#1c2128;font-size:12px;text-transform:uppercase;color:var(--muted)}
+.tbl tr:last-child td{border-bottom:none}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.add{color:var(--add)}.del{color:var(--del)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:#1c2128;padding:1px 5px;border-radius:5px}
+.snippet{margin-top:6px;color:var(--muted);font-family:ui-monospace,monospace;font-size:12px}
+.tag{font-size:11px;padding:1px 6px;border-radius:10px;margin-left:4px}
+.tag.test{background:#12341f;color:#3fb950}
+.tag.sensitive{background:#3d1113;color:#ff7b72}
+.tag.binary{background:#2d2a12;color:#d29922}
+.status{font-size:12px;padding:2px 8px;border-radius:10px}
+.status-added{background:#12341f;color:#3fb950}
+.status-deleted{background:#3d1113;color:#ff7b72}
+.status-renamed{background:#1c2c3d;color:#58a6ff}
+.status-modified{background:#2d2a12;color:#d29922}
+.empty{color:var(--muted)}
+footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center}`;
+}
+
+// draft note 1216
