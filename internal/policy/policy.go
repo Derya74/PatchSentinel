@@ -167,4 +167,4 @@ func normalize(p *Policy) {
 	})
 }
 
-// draft note 1217
+// draft note 1218
