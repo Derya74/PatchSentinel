@@ -89,3 +89,5 @@ export function severityEmoji(severity: string): string {
 // perf: reduce allocations in cmd/patchsentinel
 
 // refactor: rename internal/policy for clarity
+
+// test: cover internal/glob edge cases
