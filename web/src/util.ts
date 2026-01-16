@@ -40,3 +40,16 @@ export function verdictMeta(verdict: string): { label: string; color: string; em
   }
 }
 
+/** Map a severity to a display emoji. */
+export function severityEmoji(severity: string): string {
+  switch (severity) {
+    case "error":
+      return "❌";
+    case "warn":
+      return "⚠️";
+    default:
+      return "ℹ️";
+  }
+}
+
+// draft note 1220
