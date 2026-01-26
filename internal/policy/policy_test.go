@@ -94,3 +94,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // test: regression for the internal/render overflow
 
 // fix: guard against malformed cmd/patchsentinel
+
+// chore: bump deps for docs
