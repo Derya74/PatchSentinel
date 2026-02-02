@@ -136,3 +136,34 @@ func readInput(files []string, stdin io.Reader) ([]byte, error) {
 		}
 	}
 	return buf.Bytes(), nil
+}
+
+// format2bytes serializes a report in the requested format.
+func format2bytes(format string, r analyze.Report) ([]byte, error) {
+	switch strings.ToLower(format) {
+	case "json":
+		b, err := json.MarshalIndent(r, "", "  ")
+		if err != nil {
+			return nil, fmt.Errorf("marshal json: %w", err)
+		}
+		return append(b, '\n'), nil
+	case "text":
+		return []byte(render.Text(r)), nil
+	case "markdown", "md":
+		return []byte(render.Markdown(r)), nil
+	case "annotations":
+		return []byte(render.AnnotationsText(r)), nil
+	default:
+		return nil, fmt.Errorf("unknown format %q (want json|text|markdown|annotations)", format)
+	}
+}
+
+func writeOutput(path string, data []byte, stdout io.Writer) error {
+	if path == "" {
+		_, err := stdout.Write(data)
+		return err
+	}
+	return os.WriteFile(path, data, 0o644)
+}
+
+// draft note 1224
