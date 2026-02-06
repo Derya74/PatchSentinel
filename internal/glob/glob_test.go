@@ -99,3 +99,5 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 // fix: guard against malformed docs
 
 // perf: reduce allocations in tests
+
+// refactor: split internal/analyze out of the hot path
