@@ -109,3 +109,29 @@ test("renderAnnotations encodes special chars", () => {
   const ann = renderAnnotations(r);
   assert.match(ann, /title=a%3Ab%2Cc/);
   assert.match(ann, /line1%0Aline2/);
+  assert.match(ann, /^::warning /m);
+});
+
+test("parseArgs parses format/in/out", () => {
+  const opts = parseArgs(["--format", "github", "--in", "r.json", "--out", "o.md"]);
+  assert.equal(opts.format, "github");
+  assert.equal(opts.input, "r.json");
+  assert.equal(opts.output, "o.md");
+});
+
+test("parseArgs rejects unknown format", () => {
+  assert.throws(() => parseArgs(["--format", "pdf"]), /unknown format/);
+});
+
+test("parseArgs signals help", () => {
+  assert.throws(() => parseArgs(["--help"]), HelpRequested);
+});
+
+test("render dispatches by format", () => {
+  const rep = sampleReport("pass");
+  assert.match(render(rep, "html"), /<!DOCTYPE html>/);
+  assert.match(render(rep, "github"), /## PatchSentinel/);
+  assert.equal(typeof render(rep, "annotations"), "string");
+});
+
+// draft note 1228
