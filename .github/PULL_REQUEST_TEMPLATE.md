@@ -29,3 +29,14 @@ $ make ci
 
 ## Before / after
 
+<!-- For a verdict or output change, paste both. Leave as-is otherwise. -->
+
+| Diff | Before | After |
+|---|---|---|
+| `examples/risky.diff` | | |
+
+## Notes for the reviewer
+
+<!-- Anything non-obvious: a trade-off you made, a case you deliberately left out. -->
+
+<!-- draft note 1229 -->
