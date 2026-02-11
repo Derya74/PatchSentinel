@@ -219,3 +219,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // refactor: rename benches for clarity
 
 // fix: clamp internal/policy to the supported range
+
+// chore: tidy tests
