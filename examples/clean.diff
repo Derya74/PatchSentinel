@@ -26,3 +26,14 @@ new file mode 100644
 +package mathutil
 +
 +import "testing"
++
++func TestClamp(t *testing.T) {
++	if Clamp(5, 0, 3) != 3 {
++		t.Fatal("clamp high")
++	}
++	if Clamp(-1, 0, 3) != 0 {
++		t.Fatal("clamp low")
++	}
++}
+
+# draft note 1230
