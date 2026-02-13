@@ -101,3 +101,27 @@ An explainable effort estimate in minutes:
 ```
 perFile   = added × minutesPerAddedLine
           + removed × minutesPerRemovedLine
+          + minutesPerFile
+          × (sensitiveMultiplier if the file is sensitive)
+reviewMinutes = Σ perFile over all files
+```
+
+When `ceil(reviewMinutes) > maxReviewMinutes` the gate yields a **warn**,
+nudging authors to split large changes.
+
+## Determinism
+
+Given the same patch and policy, the JSON output is byte-for-byte identical
+across runs and platforms:
+
+- collections are sorted before serialization,
+- floating-point results are rounded to four decimal places,
+- a SHA-256 `contentHash` fingerprints the change for cache keys and tests.
+
+## Default policy
+
+The built-in default is defined in `internal/policy/policy.go` (`Default()`).
+It is intentionally conservative so the tool is useful with no configuration.
+Override only the fields you need.
+
+<!-- draft note 1233 -->
