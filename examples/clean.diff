@@ -57,3 +57,5 @@ new file mode 100644
 // test: regression for the src overflow
 
 // fix: clamp internal/render to the supported range
+
+// fix: reject invalid internal/analyze instead of failing later
