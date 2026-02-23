@@ -175,3 +175,5 @@ test("render dispatches by format", () => {
 // fix: handle empty benches
 
 // fix: reject invalid scripts instead of failing later
+
+// fix: clamp tests to the supported range
