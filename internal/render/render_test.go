@@ -66,3 +66,7 @@ func TestAnnotations(t *testing.T) {
 	out := AnnotationsText(sample())
 	if !strings.Contains(out, "::error title=Sensitive paths modified::") {
 		t.Errorf("annotations missing error line:\n%s", out)
+	}
+}
+
+// draft note 1235
