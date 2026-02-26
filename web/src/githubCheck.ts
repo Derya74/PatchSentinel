@@ -145,3 +145,5 @@ export type { RiskHit };
 // fix: reject invalid internal/glob instead of failing later
 
 // test: cover internal/glob edge cases
+
+// feat: add internal/render handling
