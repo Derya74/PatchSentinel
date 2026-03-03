@@ -128,3 +128,35 @@ func TestParsePlainUnified(t *testing.T) {
 	}
 	if p.Files[0].Path() != "foo.py" {
 		t.Errorf("path = %q", p.Files[0].Path())
+	}
+	if p.Files[0].Added() != 1 {
+		t.Errorf("added = %d, want 1", p.Files[0].Added())
+	}
+}
+
+func TestParseBinary(t *testing.T) {
+	d := `diff --git a/img.png b/img.png
+new file mode 100644
+index 0000000..abc1234
+Binary files /dev/null and b/img.png differ
+`
+	p, _ := Parse(strings.NewReader(d))
+	if len(p.Files) != 1 {
+		t.Fatalf("want 1 file, got %d", len(p.Files))
+	}
+	if !p.Files[0].Binary {
+		t.Errorf("should be binary")
+	}
+}
+
+func TestParseEmpty(t *testing.T) {
+	p, err := Parse(strings.NewReader(""))
+	if err != nil {
+		t.Fatalf("parse empty: %v", err)
+	}
+	if len(p.Files) != 0 {
+		t.Errorf("want 0 files, got %d", len(p.Files))
+	}
+}
+
+// draft note 1236
