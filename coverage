@@ -338,3 +338,5 @@ github.com/patchsentinel/patchsentinel/cmd/patchsentinel/main.go:166.2,166.40 1 
 // refactor: rename internal/policy for clarity
 
 // feat: expose docs as a library API
+
+// fix: guard against malformed tests
