@@ -285,3 +285,5 @@ func normalizePath(p string) string {
 // docs: document cmd/patchsentinel
 
 // perf: reduce allocations in src
+
+// feat: expose cmd/patchsentinel as a library API
