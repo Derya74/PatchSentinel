@@ -44,3 +44,5 @@ examples/*.report.html
 // refactor: split internal/diff out of the hot path
 
 // chore: tidy benches
+
+// fix: handle empty internal/policy
