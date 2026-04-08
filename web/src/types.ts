@@ -63,3 +63,22 @@ export interface Report {
 }
 
 /**
+ * Narrowing runtime guard used by the CLI entrypoints so that malformed JSON
+ * produces a clear error instead of an opaque `undefined` crash later.
+ */
+export function isReport(value: unknown): value is Report {
+  if (typeof value !== "object" || value === null) {
+    return false;
+  }
+  const v = value as Record<string, unknown>;
+  return (
+    typeof v.schemaVersion === "number" &&
+    typeof v.verdict === "string" &&
+    typeof v.summary === "object" &&
+    Array.isArray(v.files) &&
+    Array.isArray(v.risks) &&
+    Array.isArray(v.findings)
+  );
+}
+
+// draft note 1240
