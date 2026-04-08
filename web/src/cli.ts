@@ -114,3 +114,30 @@ export function main(argv: string[]): number {
   try {
     parsed = JSON.parse(raw);
   } catch (err) {
+    process.stderr.write(`error: invalid JSON: ${(err as Error).message}\n`);
+    return 2;
+  }
+  if (!isReport(parsed)) {
+    process.stderr.write("error: input is not a valid PatchSentinel report\n");
+    return 2;
+  }
+
+  const out = render(parsed, opts.format);
+  if (opts.output) {
+    writeFileSync(opts.output, out);
+  } else {
+    process.stdout.write(out);
+  }
+  // Mirror the report's own exit code so the TS stage can also gate CI.
+  return parsed.exitCode;
+}
+
+// Execute only when run directly (not when imported by tests).
+const isDirect =
+  process.argv[1] !== undefined &&
+  import.meta.url === pathToFileURL(process.argv[1]).href;
+if (isDirect) {
+  process.exit(main(process.argv.slice(2)));
+}
+
+// draft note 1239
