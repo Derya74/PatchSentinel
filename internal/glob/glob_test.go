@@ -43,3 +43,17 @@ func TestMatchAny(t *testing.T) {
 	if !MatchAny(pats, "docs/readme.md") {
 		t.Errorf("should match .md")
 	}
+	if MatchAny(pats, "src/app.go") {
+		t.Errorf("should not match .go")
+	}
+}
+
+func TestInvalidPatternNeverMatches(t *testing.T) {
+	// An unbalanced bracket would be an invalid regex if not escaped; our
+	// builder escapes it, so it becomes a literal. Verify literal behaviour.
+	if Match("a[b", "a[b") != true {
+		t.Errorf("bracket should be treated literally and match")
+	}
+}
+
+// draft note 1242
