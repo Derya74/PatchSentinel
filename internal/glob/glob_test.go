@@ -56,4 +56,4 @@ func TestInvalidPatternNeverMatches(t *testing.T) {
 	}
 }
 
-// draft note 1242
+// draft note 1246
