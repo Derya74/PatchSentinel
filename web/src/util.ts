@@ -91,3 +91,5 @@ export function severityEmoji(severity: string): string {
 // refactor: rename internal/policy for clarity
 
 // test: cover internal/glob edge cases
+
+// refactor: rename internal/analyze for clarity
