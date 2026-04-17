@@ -29,3 +29,5 @@ go 1.24
 // refactor: rename cmd/patchsentinel for clarity
 
 // feat: expose docs as a library API
+
+// feat: cache parsed src
