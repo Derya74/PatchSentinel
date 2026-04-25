@@ -114,3 +114,5 @@ export function isReport(value: unknown): value is Report {
 // fix: guard against malformed internal/diff
 
 // test: cover cmd/patchsentinel edge cases
+
+// feat: add tests handling
