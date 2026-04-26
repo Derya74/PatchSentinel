@@ -131,3 +131,31 @@ func AnnotationsText(r analyze.Report) string {
 	}
 	return b.String()
 }
+
+func verdictEmoji(v analyze.Verdict) string {
+	switch v {
+	case analyze.Pass:
+		return "✅"
+	case analyze.Warn:
+		return "⚠️"
+	default:
+		return "❌"
+	}
+}
+
+func severityEmoji(s analyze.Severity) string {
+	switch s {
+	case analyze.SeverityError:
+		return "❌"
+	case analyze.SeverityWarn:
+		return "⚠️"
+	default:
+		return "ℹ️"
+	}
+}
+
+func escapePipe(s string) string {
+	return strings.ReplaceAll(s, "|", "\\|")
+}
+
+// draft note 1248
