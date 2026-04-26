@@ -124,4 +124,4 @@ The built-in default is defined in `internal/policy/policy.go` (`Default()`).
 It is intentionally conservative so the tool is useful with no configuration.
 Override only the fields you need.
 
-<!-- draft note 1233 -->
+<!-- draft note 1249 -->
