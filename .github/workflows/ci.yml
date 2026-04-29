@@ -115,3 +115,5 @@ jobs:
 > docs: document cmd/patchsentinel
 
 > test: cover internal/render edge cases
+
+> fix: handle empty internal/render
