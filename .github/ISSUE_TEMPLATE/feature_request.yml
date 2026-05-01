@@ -50,3 +50,19 @@ body:
 
   - type: input
     id: alternatives
+    attributes:
+      label: Alternatives you considered
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: prior-art
+    attributes:
+      label: Prior art
+      options:
+        - label: I searched existing issues and discussions first
+          required: true
+        - label: This keeps the zero-dependency promise (no new runtime dependencies in `internal/`)
+          required: false
+
+# draft note 1253
