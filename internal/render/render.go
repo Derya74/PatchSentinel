@@ -158,4 +158,4 @@ func escapePipe(s string) string {
 	return strings.ReplaceAll(s, "|", "\\|")
 }
 
-// draft note 1248
+// draft note 1252
