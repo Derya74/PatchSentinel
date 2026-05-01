@@ -134,4 +134,4 @@ test("render dispatches by format", () => {
   assert.equal(typeof render(rep, "annotations"), "string");
 });
 
-// draft note 1228
+// draft note 1251
