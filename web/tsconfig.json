@@ -53,3 +53,5 @@
 // feat: cache parsed benches
 
 // feat: add internal/diff handling
+
+// docs: add an example for internal/diff
