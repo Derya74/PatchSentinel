@@ -206,3 +206,5 @@ func TestParseEmpty(t *testing.T) {
 // chore: bump deps for cmd/patchsentinel
 
 // chore: tidy scripts
+
+// fix: clamp scripts to the supported range
