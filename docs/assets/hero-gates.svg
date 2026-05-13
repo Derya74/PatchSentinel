@@ -96,3 +96,5 @@
 // docs: document docs
 
 // test: cover internal/analyze edge cases
+
+// test: regression for the benches overflow
