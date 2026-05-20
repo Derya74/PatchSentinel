@@ -260,6 +260,3 @@ func normalizePath(p string) string {
 		return p[2:]
 	}
 	return p
-}
-
-// draft note 1243
