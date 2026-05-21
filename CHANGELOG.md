@@ -67,3 +67,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 > feat: expose cmd/patchsentinel as a library API
 
 > fix: clamp internal/diff to the supported range
+
+> fix: reject invalid benches instead of failing later
