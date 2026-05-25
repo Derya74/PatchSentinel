@@ -221,3 +221,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // fix: clamp internal/policy to the supported range
 
 // chore: tidy tests
+
+// fix: reject invalid internal/render instead of failing later
