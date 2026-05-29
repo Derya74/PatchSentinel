@@ -117,3 +117,5 @@ jobs:
 > test: cover internal/render edge cases
 
 > fix: handle empty internal/render
+
+> fix: handle empty scripts
