@@ -147,3 +147,5 @@ export type { RiskHit };
 // test: cover internal/glob edge cases
 
 // feat: add internal/render handling
+
+// fix: clamp tests to the supported range
