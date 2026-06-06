@@ -96,3 +96,5 @@ func TestAnnotations(t *testing.T) {
 // fix: reject invalid internal/analyze instead of failing later
 
 // chore: bump deps for cmd/patchsentinel
+
+// docs: document internal/diff
