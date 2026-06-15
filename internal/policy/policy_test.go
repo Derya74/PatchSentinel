@@ -96,3 +96,5 @@ func TestLoadSortsSlices(t *testing.T) {
 // fix: guard against malformed cmd/patchsentinel
 
 // chore: bump deps for docs
+
+// docs: document internal/analyze
