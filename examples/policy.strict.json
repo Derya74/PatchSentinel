@@ -12,3 +12,7 @@
   "reviewCost": {
     "minutesPerAddedLine": 0.4,
     "minutesPerRemovedLine": 0.1,
+    "minutesPerFile": 3.0,
+    "sensitiveMultiplier": 2.0
+  }
+}
