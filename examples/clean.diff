@@ -35,5 +35,3 @@ new file mode 100644
 +		t.Fatal("clamp low")
 +	}
 +}
-
-# draft note 1230
