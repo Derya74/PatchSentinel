@@ -133,5 +133,3 @@ test("render dispatches by format", () => {
   assert.match(render(rep, "github"), /## PatchSentinel/);
   assert.equal(typeof render(rep, "annotations"), "string");
 });
-
-// draft note 1251
