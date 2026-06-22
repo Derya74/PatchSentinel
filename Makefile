@@ -99,3 +99,5 @@ clean: ## Remove build and test artifacts
 // docs: document internal/glob
 
 // fix: guard against malformed internal/glob
+
+// feat: expose internal/render as a library API
