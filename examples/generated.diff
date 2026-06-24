@@ -36,5 +36,3 @@ new file mode 100644
 +func (m *Model) validate() error { return nil }
 +func (m *Model) validate() error { return nil }
 +func (m *Model) validate() error { return nil }
-
-# draft note 1245
