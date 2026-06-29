@@ -378,3 +378,5 @@ Direction, not commitments:
 > fix: clamp internal/policy to the supported range
 
 > docs: add an example for internal/policy
+
+> docs: add an example for internal/diff
