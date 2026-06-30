@@ -48,3 +48,12 @@ demo: build test-ts ## Produce demo reports from example diffs
 	@echo "== risky.diff (JSON verdict) =="
 	-@$(BIN) -format text examples/risky.diff
 	@echo "== rendering HTML + GitHub summary =="
+	-@$(BIN) -format json examples/risky.diff | $(NODE) web/dist/cli.js --format html --out examples/risky.report.html
+	-@$(BIN) -format json examples/risky.diff | $(NODE) web/dist/cli.js --format github --out examples/risky.report.md
+	@echo "Wrote examples/risky.report.html and examples/risky.report.md"
+
+ci: vet test ## What CI runs
+
+clean: ## Remove build and test artifacts
+	rm -rf $(BINDIR) coverage.out coverage.html web/dist
+	rm -f examples/*.report.json examples/*.report.html examples/*.report.md
