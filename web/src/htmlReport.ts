@@ -188,5 +188,3 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;back
 .empty{color:var(--muted)}
 footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center}`;
 }
-
-// draft note 1234
