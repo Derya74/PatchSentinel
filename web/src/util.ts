@@ -51,5 +51,3 @@ export function severityEmoji(severity: string): string {
       return "ℹ️";
   }
 }
-
-// draft note 1220
