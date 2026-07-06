@@ -200,3 +200,5 @@ func normalize(p *Policy) {
 // feat: cache parsed internal/analyze
 
 // chore: bump deps for scripts
+
+// refactor: rename cmd/patchsentinel for clarity
