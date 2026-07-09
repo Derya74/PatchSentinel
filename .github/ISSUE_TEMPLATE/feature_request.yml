@@ -64,5 +64,3 @@ body:
           required: true
         - label: This keeps the zero-dependency promise (no new runtime dependencies in `internal/`)
           required: false
-
-# draft note 1253
