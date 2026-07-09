@@ -82,3 +82,22 @@ function annotationLevel(f: Finding): "error" | "warning" | "notice" {
       return "notice";
   }
 }
+
+function encodeData(s: string): string {
+  return s.replace(/%/g, "%25").replace(/\r/g, "%0D").replace(/\n/g, "%0A");
+}
+
+function encodeProp(s: string): string {
+  return encodeData(s).replace(/:/g, "%3A").replace(/,/g, "%2C");
+}
+
+/** Convenience helper returning both artifacts at once. */
+export function renderGitHub(report: Report): { summary: string; annotations: string } {
+  return {
+    summary: renderCheckSummary(report),
+    annotations: renderAnnotations(report),
+  };
+}
+
+// Re-export RiskHit so consumers importing this module have the type available.
+export type { RiskHit };
