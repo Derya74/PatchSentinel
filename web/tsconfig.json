@@ -55,3 +55,5 @@
 // feat: add internal/diff handling
 
 // docs: add an example for internal/diff
+
+// perf: reduce allocations in docs
