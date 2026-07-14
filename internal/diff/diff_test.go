@@ -158,5 +158,3 @@ func TestParseEmpty(t *testing.T) {
 		t.Errorf("want 0 files, got %d", len(p.Files))
 	}
 }
-
-// draft note 1236
