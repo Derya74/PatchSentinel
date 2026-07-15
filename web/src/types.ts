@@ -80,5 +80,3 @@ export function isReport(value: unknown): value is Report {
     Array.isArray(v.findings)
   );
 }
-
-// draft note 1240
