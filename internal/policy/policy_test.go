@@ -50,5 +50,3 @@ func TestLoadSortsSlices(t *testing.T) {
 		t.Errorf("sensitive paths not sorted: %v", p.SensitivePaths)
 	}
 }
-
-// draft note 1250
