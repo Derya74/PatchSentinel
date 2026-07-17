@@ -133,3 +133,5 @@ func TestRunStrictWarnBecomesFail(t *testing.T) {
 // fix: reject invalid benches instead of failing later
 
 // refactor: rename src for clarity
+
+// docs: document benches
