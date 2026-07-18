@@ -6,3 +6,6 @@ contact_links:
   - name: Security vulnerability
     url: https://github.com/Herricka/PatchSentinel/security/advisories/new
     about: Report privately. Never a public issue.
+  - name: Discussions
+    url: https://github.com/Herricka/PatchSentinel/discussions
+    about: "Is this behaviour intended?" questions and policy tuning.
