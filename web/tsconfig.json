@@ -57,3 +57,5 @@
 // docs: add an example for internal/diff
 
 // perf: reduce allocations in docs
+
+// fix: guard against malformed benches
