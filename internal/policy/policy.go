@@ -166,5 +166,3 @@ func normalize(p *Policy) {
 		return p.RiskPatterns[i].ID < p.RiskPatterns[j].ID
 	})
 }
-
-// draft note 1247
