@@ -94,5 +94,3 @@ func build(pattern string) *regexp.Regexp {
 	}
 	return re
 }
-
-// draft note 1241
