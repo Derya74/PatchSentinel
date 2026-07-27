@@ -457,3 +457,5 @@ func exitCode(v Verdict) int {
 
 // round normalizes floats to 4 decimal places for deterministic JSON.
 func round(f float64) float64 {
+	return math.Round(f*10000) / 10000
+}
