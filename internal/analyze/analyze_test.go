@@ -163,3 +163,35 @@ func TestReviewMinutes(t *testing.T) {
 // TestDeterminism guarantees identical byte output across repeated runs.
 func TestDeterminism(t *testing.T) {
 	patch := parse(t, secretDiff)
+	pol := policy.Default()
+	var prev string
+	for i := 0; i < 5; i++ {
+		rep := Analyze(patch, pol)
+		b, err := json.MarshalIndent(rep, "", "  ")
+		if err != nil {
+			t.Fatalf("marshal: %v", err)
+		}
+		cur := string(b)
+		if i > 0 && cur != prev {
+			t.Fatalf("non-deterministic output on iteration %d", i)
+		}
+		prev = cur
+	}
+}
+
+func TestContentHashStable(t *testing.T) {
+	p1 := parse(t, cleanDiff)
+	p2 := parse(t, cleanDiff)
+	if contentHash(p1) != contentHash(p2) {
+		t.Errorf("content hash not stable")
+	}
+	if contentHash(p1) == contentHash(parse(t, secretDiff)) {
+		t.Errorf("different content should hash differently")
+	}
+}
+
+func TestExitCodes(t *testing.T) {
+	if exitCode(Pass) != 0 || exitCode(Warn) != 1 || exitCode(Fail) != 2 {
+		t.Errorf("exit code mapping wrong")
+	}
+}
