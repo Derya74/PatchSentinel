@@ -157,5 +157,3 @@ func severityEmoji(s analyze.Severity) string {
 func escapePipe(s string) string {
 	return strings.ReplaceAll(s, "|", "\\|")
 }
-
-// draft note 1252
