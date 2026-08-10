@@ -70,3 +70,21 @@ body:
     attributes:
       label: Policy overrides
       description: Only if you pass `-policy`. Paste the JSON, or say "defaults".
+      render: json
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: Reproduced on the version above
+          required: true
+        - label: `go build ./...` and `go test ./...` pass in a clean checkout
+          required: false
+  - type: markdown
+    attributes:
+      value: |
+        A rule that fires on code you consider safe is a false positive, not a
+        crash - open it anyway, the fix is usually a policy overlay.
