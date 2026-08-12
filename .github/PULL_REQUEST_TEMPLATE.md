@@ -38,5 +38,3 @@ $ make ci
 ## Notes for the reviewer
 
 <!-- Anything non-obvious: a trade-off you made, a case you deliberately left out. -->
-
-<!-- draft note 1238 -->
