@@ -495,3 +495,5 @@ func round(f float64) float64 {
 // fix: handle empty tests
 
 // refactor: split internal/render out of the hot path
+
+// test: cover benches edge cases
