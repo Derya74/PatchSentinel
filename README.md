@@ -380,3 +380,5 @@ Direction, not commitments:
 > docs: add an example for internal/policy
 
 > docs: add an example for internal/diff
+
+> fix: reject invalid tests instead of failing later
