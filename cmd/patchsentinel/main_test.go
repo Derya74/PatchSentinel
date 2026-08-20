@@ -78,3 +78,22 @@ func TestRunFailExit(t *testing.T) {
 }
 
 func TestRunStrictWarnBecomesFail(t *testing.T) {
+	// A sensitive-path-as-warning policy produces a warn; -strict escalates.
+	pol := `{"thresholds":{"sensitivePathIsWarning":true}}`
+	polFile := t.TempDir() + "/pol.json"
+	if err := writeFile(polFile, pol); err != nil {
+		t.Fatal(err)
+	}
+	sensitive := `diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -1 +1,2 @@
+ name: ci
++run: echo hi
+`
+	var out, errBuf bytes.Buffer
+	code := run([]string{"-strict", "-policy", polFile, "-format", "text"}, strings.NewReader(sensitive), &out, &errBuf)
+	if code != 2 {
+		t.Errorf("strict warn should exit 2, got %d\n%s", code, out.String())
+	}
+}
