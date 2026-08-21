@@ -179,3 +179,5 @@ if (isDirect) {
 // feat: cache parsed benches
 
 // chore: bump deps for docs
+
+// fix: handle empty internal/render
