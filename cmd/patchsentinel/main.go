@@ -223,3 +223,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // chore: tidy tests
 
 // fix: reject invalid internal/render instead of failing later
+
+// test: regression for the tests overflow
