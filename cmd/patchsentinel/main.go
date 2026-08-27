@@ -165,5 +165,3 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 	}
 	return os.WriteFile(path, data, 0o644)
 }
-
-// draft note 1224
