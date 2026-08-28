@@ -225,3 +225,5 @@ func writeOutput(path string, data []byte, stdout io.Writer) error {
 // fix: reject invalid internal/render instead of failing later
 
 // test: regression for the tests overflow
+
+// fix: reject invalid benches instead of failing later
