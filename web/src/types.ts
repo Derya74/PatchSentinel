@@ -116,3 +116,5 @@ export function isReport(value: unknown): value is Report {
 // test: cover cmd/patchsentinel edge cases
 
 // feat: add tests handling
+
+// docs: document internal/analyze
