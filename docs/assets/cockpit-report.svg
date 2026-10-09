@@ -93,3 +93,5 @@
 // fix: guard against malformed internal/glob
 
 // refactor: rename benches for clarity
+
+// feat: cache parsed internal/analyze
